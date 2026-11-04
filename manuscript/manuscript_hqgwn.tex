@@ -281,6 +281,7 @@ To evaluate cross-domain generalization across distinct physical telemetry regim
 \centering
 \caption{Cross-Domain Empirical Telemetry Benchmark across 3 Physical Sensing Regimes (Mean $\pm$ Standard Deviation across 5-Fold Cross-Validation)}
 \label{tab:multidomain}
+\resizebox{\textwidth}{!}{
 \begin{tabular}{lcccc}
 \toprule
 \textbf{Model Paradigm} & \textbf{Clinical Epilepsy ECoG (16 Ch)} & \textbf{Motor Imagery BCI (16 Ch)} & \textbf{Multipath Wireless RF (16 Ch)} & \textbf{Mean Latency (ms)} \\
@@ -293,6 +294,7 @@ Riemannian Covariance \cite{barachant2012multiclass}& $34.06 \pm 0.65\%$ & $33.4
 \textbf{Full Proposed HQGWN}                       & $\mathbf{91.28 \pm 3.98\%}$ & $49.96 \pm 8.07\%$ & $39.64 \pm 1.71\%$ & $3.98$~ms \\
 \bottomrule
 \end{tabular}
+}
 \end{table*}
 
 \begin{figure}[!t]
@@ -340,7 +342,7 @@ Riemannian Covariance \cite{barachant2012multiclass}& $51.68 \pm 1.49$ & $34.06 
 \label{fig:dirichlet}
 \end{figure*}
 
-As illustrated in Fig.~\ref{fig:dirichlet}(a), classical Markov message passing suffers from rapid Dirichlet energy decay ($E(t) \to 0$), causing feature collapse as network depth increases. In contrast, HQGWN's unitary generator maintains persistent non-zero oscillatory energy ($E(5.0) = 0.023288$), theoretically validating Theorem 4. Furthermore, Fig.~\ref{fig:dirichlet}(b) demonstrates that HQGWN exhibits exceptional sample efficiency, maintaining $100.00\%$ Macro-F1 even when trained on only $20\%$ of available clinical samples ($N=22$), whereas deep non-physical models overfit in small-sample regimes \cite{hajisafi2024dynamic}. In Fig.~\ref{fig:dirichlet}(c), continuous walk horizon sweep confirms a broad operating sweet-spot for $\tau \in [1.0, 3.0]$~s.
+As illustrated in Fig.~\ref{fig:dirichlet}(a), classical Markov message passing suffers from rapid Dirichlet energy decay ($E(t) \to 0$), causing feature collapse as network depth increases. In contrast, HQGWN's unitary generator maintains persistent non-zero oscillatory energy ($E(5.0) = 0.023288$), theoretically validating Theorem 4. Furthermore, Fig.~\ref{fig:dirichlet}(b) demonstrates that HQGWN exhibits exceptional sample efficiency, maintaining robust classification fidelity ($73.12\%$--$94.34\%$ Macro-F1) across restricted training fractions ($20\%$ to $100\%$), outperforming purely data-driven baselines in limited-sample regimes \cite{hajisafi2024dynamic}. In Fig.~\ref{fig:dirichlet}(c), continuous walk horizon sweep confirms a broad operating sweet-spot for $\tau \in [1.0, 3.0]$~s.
 
 ---
 
