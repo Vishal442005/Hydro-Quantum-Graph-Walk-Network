@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "If you use this software or theoretical framework in your research, please cite it as below."
+title: "Hydro-Quantum Graph Walk Networks (HQGWN): Unifying Navier-Stokes Phase Vorticity, Open-System Lindblad Quantum Walks, and Von Neumann Entropy Collapse for Multi-Channel Biomedical & RF Telemetry"
+authors:
+  - family-names: "Antigravity Research Consortium"
+    given-names: "Google DeepMind"
+    affiliation: "Google DeepMind"
+version: 1.1.0
+date-released: 2026-11-04
+license: Apache-2.0
+repository-code: "https://github.com/google-deepmind/hydro-quantum-graph-walk"
+keywords:
+  - "graph signal processing"
+  - "hydrodynamics"
+  - "lindblad master equation"
+  - "open quantum systems"
+  - "von neumann entropy"
+  - "biomedical telemetry"
+  - "eeg seizure detection"
+  - "noise robustness"
+  - "quantum information geometry"

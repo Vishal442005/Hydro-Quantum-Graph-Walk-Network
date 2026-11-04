@@ -1,0 +1,304 @@
+[
+  {
+    "id": "2210.15139v1",
+    "title": "Non-Equilibrium Properties of Open Quantum Systems",
+    "pdf_url": "https://arxiv.org/pdf/2210.15139v1",
+    "summary": "We study two classes of open systems: discrete-time quantum walks (a type of Floquet-engineered discrete quantum map) and the Lindblad master equation (a general framework of dissipative quantum systems), focusing on the non-equilibrium properties of these systems. We study localization and delocalization phenomena, soliton-like excitations, and quasi-stationary properties of open quantum systems.",
+    "published": "2022-10-27T02:58:08Z",
+    "primary_category": "cond-mat.dis-nn",
+    "authors": [
+      "Ihor Vakulchyk"
+    ],
+    "clean_id": "2210.15139v1",
+    "year": 2022,
+    "relevance_score": 36.2,
+    "pdf_path": "related_papers\\01_2210.15139v1_Non-Equilibrium_Properties_of_Open_Quantum_Sy.pdf",
+    "pdf_filename": "01_2210.15139v1_Non-Equilibrium_Properties_of_Open_Quantum_Sy.pdf",
+    "file_size_kb": 6948.7
+  },
+  {
+    "id": "2601.22064v3",
+    "title": "Thermodynamics of linear open quantum walks",
+    "pdf_url": "https://arxiv.org/pdf/2601.22064v3",
+    "summary": "Open quantum systems interact with their environment, leading to nonunitary dynamics. We investigate the thermodynamics of linear Open Quantum Walks (OQWs), a class of quantum walks whose dynamics is entirely driven by the environment. We define an equilibrium temperature, identify a population inversion near a finite critical value of a control parameter, analyze the thermalization process, and develop the statistical mechanics needed to describe the thermodynamical properties of linear OQWs. We also study nonequilibrium thermodynamics by analyzing the time evolution of entropy, energy, and temperature, while providing analytical tools to understand the system's evolution as it converges to the thermalized state. We examine the validity of the second and third laws of thermodynamics in this setting. Finally, we employ these developments to shed light on dissipative quantum computation within the OQW framework.",
+    "published": "2026-01-29T18:01:11Z",
+    "comment": "Accepted in Physical Review A",
+    "primary_category": "quant-ph",
+    "doi": "10.1103/kl4t-xx2n",
+    "authors": [
+      "Pedro Linck",
+      "Nadja Kolb Bernardes"
+    ],
+    "clean_id": "2601.22064v3",
+    "year": 2026,
+    "relevance_score": 36.0,
+    "pdf_path": "related_papers\\02_2601.22064v3_Thermodynamics_of_linear_open_quantum_walks.pdf",
+    "pdf_filename": "02_2601.22064v3_Thermodynamics_of_linear_open_quantum_walks.pdf",
+    "file_size_kb": 454.4
+  },
+  {
+    "id": "2610.22691v1",
+    "title": "Quantum-Classical Neural Networks for Solving Lindblad Master Equations",
+    "pdf_url": "https://arxiv.org/pdf/2610.22691v1",
+    "summary": "Variational quantum algorithms have emerged as a promising approach for simulating open quantum systems, yet their expressive power and trainability remain poorly understood. We propose a variational framework for solving Lindblad master equations by minimizing a residual cost function using a compositional ansatz obtained by combining a classical neural network with a parameterized quantum circuit. The density matrix is represented through a purification on an enlarged Hilbert space, ensuring positivity, Hermiticity, and unit trace by construction, while all gradients are evaluated exactly via the parameter-shift rule. Beyond the algorithmic formulation, we derive an upper bound for the covering number of the proposed compositional model and compare it with that of purely quantum neural networks. Our analysis shows that the classical parametrization enlarges the effective hypothesis class while providing finer control over its complexity, thereby establishing a theoretical connection between expressivity, covering numbers, effective dimension, and the barren plateau phenomenon. Numerical experiments validate both the accuracy of the proposed method for representative Lindblad master equations and the theoretical predictions regarding gradient concentration. These results provide a unified variational and theoretical framework for the simulation of dissipative quantum dynamics using compositional quantum machine learning models.",
+    "published": "2026-10-15T21:59:04Z",
+    "primary_category": "quant-ph",
+    "authors": [
+      "Rafael Florencio D\u00edaz",
+      "Julio Guerrero Garc\u00eda",
+      "Elvira Romera Guti\u00e9rrez"
+    ],
+    "clean_id": "2610.22691v1",
+    "year": 2026,
+    "relevance_score": 35.6,
+    "pdf_path": "related_papers\\03_2610.22691v1_Quantum-Classical_Neural_Networks_for_Solving.pdf",
+    "pdf_filename": "03_2610.22691v1_Quantum-Classical_Neural_Networks_for_Solving.pdf",
+    "file_size_kb": 5088.0
+  },
+  {
+    "id": "2609.04358v2",
+    "title": "p-Adic Dirac Equations, Continuous-Time Quantum Walks, and Quantum Networks",
+    "pdf_url": "https://arxiv.org/pdf/2609.04358v2",
+    "summary": "We introduce a new class of p-adic Dirac equations, formulated in the standard axiomatic framework of quantum mechanics, in which the ordinary momentum operators are replaced by bounded non-local operators built from arbitrary integrable radial kernels. We diagonalize the free Dirac Hamiltonian in momentum space, construct its plane-wave solutions, and determine its spectrum, which is pure point, with eigenvalues of infinite multiplicity; in the massless case we describe the zero-energy subspace explicitly. We identify the charge-conjugation symmetry of the model: it is given by an antiunitary operator whose square is minus the identity, it exchanges the positive- and negative-energy subspaces, and in an external electromagnetic field it reverses the sign of both the charge and the vector potential. We then discretize the free equation in two ways, both giving genuine continuous-time quantum walks rather than discrete-time, coined walks: one on a countable graph and one on a finite, tree-like graph. In both cases the discretization is exact: the walk is the restriction of the p-adic Dirac evolution to an invariant subspace, and its Hamiltonian is a Dirac-type combination of weighted graph Laplacians with ultrametric weights. We prove that the Born-rule transition probabilities, summed over the internal degrees of freedom and averaged over the initial internal state, form a doubly stochastic matrix at every instant, and that, as for any non-trivial continuous-time quantum walk, this family of matrices is not a Markov semigroup. We discuss how the construction can serve as the foundation of a quantum network with four-component spinor degrees of freedom, complementing earlier, non-relativistic p-adic quantum neural networks, and prove global well-posedness of the associated nonlinear network equation. We close with a discussion of open problems.",
+    "published": "2026-09-03T18:20:40Z",
+    "comment": "The paper was fully revised. Several new results and references were added",
+    "primary_category": "quant-ph",
+    "authors": [
+      "W. A. Z\u00fa\u00f1iga-Galindo"
+    ],
+    "clean_id": "2609.04358v2",
+    "year": 2026,
+    "relevance_score": 34.400000000000006,
+    "pdf_path": "related_papers\\04_2609.04358v2_p-Adic_Dirac_Equations_Continuous-Time_Quant.pdf",
+    "pdf_filename": "04_2609.04358v2_p-Adic_Dirac_Equations_Continuous-Time_Quant.pdf",
+    "file_size_kb": 478.6
+  },
+  {
+    "id": "2603.16010v2",
+    "title": "Dissipative realization of a quantum distance-based classifier using open quantum walks",
+    "pdf_url": "https://arxiv.org/pdf/2603.16010v2",
+    "summary": "Open quantum walks (OQWs) constitute a class of quantum walks whose dynamics are entirely driven by interactions with the environment. It is well known that OQWs provide a general framework for implementing dissipative quantum computation. In this work, we demonstrate the feasibility of running the previously proposed quantum distance-based classifier within the open quantum walk computation model, and we show that its expected runtime remains finite even in the slower regime.",
+    "published": "2026-03-16T23:39:15Z",
+    "primary_category": "quant-ph",
+    "journal_ref": "Entropy 2026, 28(2), 239",
+    "doi": "10.3390/e28020239",
+    "authors": [
+      "Pedro Linck",
+      "Graeme Pleasance",
+      "Francesco Petruccione",
+      "Nadja K. Bernardes"
+    ],
+    "clean_id": "2603.16010v2",
+    "year": 2026,
+    "relevance_score": 34.0,
+    "pdf_path": "related_papers\\05_2603.16010v2_Dissipative_realization_of_a_quantum_distance.pdf",
+    "pdf_filename": "05_2603.16010v2_Dissipative_realization_of_a_quantum_distance.pdf",
+    "file_size_kb": 423.7
+  },
+  {
+    "id": "2611.04919v1",
+    "title": "Transferable Lindblad Variational Ansatz for Accelerated Steady-State Preparation",
+    "pdf_url": "https://arxiv.org/pdf/2611.04919v1",
+    "summary": "Open quantum systems naturally relax toward steady states that underpin diverse nonequilibrium phenomena and quantum technologies. We independently control the coherent and dissipative constituents of a Lindblad generator to construct a variational product formula, termed the Lindblad variational ansatz (LVA), that accelerates steady-state preparation over natural relaxation through an optimized preparation path. The protocol consists of small-system learning, continuation to greater depth, and transfer to larger systems, followed when needed by reference-free post-training on quantum simulators. We demonstrate LVA in a bulk-dissipative Ising chain and a boundary-driven Heisenberg chain, where transferred protocols achieve matched preparation accuracies with fewer generator blocks than time-optimized first- and second-order Trotter formulas. The acceleration arises from coordinated endpoint preparation: earlier controls shape the dissipative-mode amplitudes so that the final dissipative step brings multiple components simultaneously close to their target values. Our results suggest a route to open-system quantum simulation that combines classical training on small systems with deployment and optional refinement on larger quantum devices.",
+    "published": "2026-11-03T13:57:33Z",
+    "comment": "27 pages, 6 figures, including Supplemental Material",
+    "primary_category": "quant-ph",
+    "authors": [
+      "Yun-Zhuo Fan",
+      "Dan-Bo Zhang"
+    ],
+    "clean_id": "2611.04919v1",
+    "year": 2026,
+    "relevance_score": 32.0,
+    "pdf_path": "related_papers\\06_2611.04919v1_Transferable_Lindblad_Variational_Ansatz_for.pdf",
+    "pdf_filename": "06_2611.04919v1_Transferable_Lindblad_Variational_Ansatz_for.pdf",
+    "file_size_kb": 913.3
+  },
+  {
+    "id": "2608.20738v1",
+    "title": "Continuous-Time Quantum Walks based Graph Neural Network",
+    "pdf_url": "https://arxiv.org/pdf/2608.20738v1",
+    "summary": "Graph Neural Networks (GNNs) are widely used on graph-structured data, but most suffer from two key weaknesses. First, message passing behaves as a low-pass filter under the homophily assumption, leading to poor performance on heterophilic graphs. Second, stacking layers drives node features toward constants, causing over-smoothing. Existing methods usually address these issues separately, while the few joint solutions rely largely on empirical heuristics, and many over-smoothing remedies sacrifice model expressiveness.   We propose \\textbf{CTQW-GNN}, a GNN based on Continuous-Time Quantum Walks (CTQW), to address both issues with theoretical justification. Its design exploits two properties of the CTQW propagator $e^{-\\mathrm{i}Ht}$. First, it is unitary and has eigenvalues on the unit circle, so no frequency component is damped, counteracting the low-pass bias. Second, unitarity preserves feature norms and prevents the Dirichlet energy from decaying exponentially with depth, thereby mitigating over-smoothing.   CTQW-GNN combines three complementary aggregation modules. \\textit{CTQW-based Aggregation} evolves node features through the unitary propagator, preserving mid- and high-frequency signals for heterophilic graphs while preventing Dirichlet-energy collapse. \\textit{CTQW-Attention Aggregation} constructs a multi-hop neighbor graph from CTQW amplitudes and applies attention over it, enabling access to distant homophilic nodes missed by single-hop aggregation. \\textit{LF Aggregation} uses a standard low-pass GAT branch to retain strong performance on homophilic graphs, where pure CTQW aggregation can be suboptimal. We further provide a spectral-gap analysis explaining energy preservation and a Lieb--Robinson-type bound that gives a principled rule for selecting the walk time $t$.",
+    "published": "2026-08-21T04:53:16Z",
+    "primary_category": "cs.AI",
+    "journal_ref": "CIKM 2026",
+    "authors": [
+      "Yuliang Zhan",
+      "Zefeng Gao",
+      "Jian Li",
+      "Yang Liu",
+      "Hao sun"
+    ],
+    "clean_id": "2608.20738v1",
+    "year": 2026,
+    "relevance_score": 30.799999999999997,
+    "pdf_path": "related_papers\\07_2608.20738v1_Continuous-Time_Quantum_Walks_based_Graph_Neu.pdf",
+    "pdf_filename": "07_2608.20738v1_Continuous-Time_Quantum_Walks_based_Graph_Neu.pdf",
+    "file_size_kb": 2235.0
+  },
+  {
+    "id": "2407.11782v3",
+    "title": "Quantum Dissipative Search via Lindbladians",
+    "pdf_url": "https://arxiv.org/pdf/2407.11782v3",
+    "summary": "Closed quantum systems follow a unitary time evolution that can be simulated on quantum computers. By incorporating non-unitary effects via, e.g., measurements on ancilla qubits, these algorithms can be extended to open-system dynamics, such as Markovian processes described by the Lindblad master equation. In this paper, we analyze the convergence criteria and speed of a Markovian, purely dissipative quantum random walk on an unstructured classical search space. Notably, we show that certain jump operators make the quantum process replicate a classical one, while others yield differences between open quantum (OQRW) and classical random walks. We also clarify a previously observed quadratic speedup, demonstrating that OQRWs are no more efficient than classical search. Finally, we analyze a dissipative discrete-time ground-state preparation algorithm with a lower implementation cost. This allows us to interpolate between the dissipative and the unitary domain and thereby illustrate the important role of coherence for the quadratic speedup.",
+    "published": "2024-07-16T14:39:18Z",
+    "comment": "21 pages, 4 figures, submitted to PRA",
+    "primary_category": "quant-ph",
+    "doi": "10.1103/PhysRevA.111.042430",
+    "authors": [
+      "Peter J. Eder",
+      "Jernej Rudi Fin\u017egar",
+      "Sarah Braun",
+      "Christian B. Mendl"
+    ],
+    "clean_id": "2407.11782v3",
+    "year": 2024,
+    "relevance_score": 30.400000000000002,
+    "pdf_path": "related_papers\\08_2407.11782v3_Quantum_Dissipative_Search_via_Lindbladians.pdf",
+    "pdf_filename": "08_2407.11782v3_Quantum_Dissipative_Search_via_Lindbladians.pdf",
+    "file_size_kb": 738.6
+  },
+  {
+    "id": "2603.18035v1",
+    "title": "Taming Epilepsy: Mean Field Control of Whole-Brain Dynamics",
+    "pdf_url": "https://arxiv.org/pdf/2603.18035v1",
+    "summary": "Controlling the high-dimensional neural dynamics during epileptic seizures remains a significant challenge due to the nonlinear characteristics and complex connectivity of the brain. In this paper, we propose a novel framework, namely Graph-Regularized Koopman Mean-Field Game (GK-MFG), which integrates Reservoir Computing (RC) for Koopman operator approximation with Alternating Population and Agent Control Network (APAC-Net) for solving distributional control problems. By embedding Electroencephalogram (EEG) dynamics into a linear latent space and imposing graph Laplacian constraints derived from the Phase Locking Value (PLV), our method achieves robust seizure suppression while respecting the functional topological structure of the brain.",
+    "published": "2026-03-11T14:38:20Z",
+    "comment": "22 pages, 7 figures",
+    "primary_category": "cs.LG",
+    "authors": [
+      "Ming Li",
+      "Ting Gao",
+      "Jingqiao Dua"
+    ],
+    "clean_id": "2603.18035v1",
+    "year": 2026,
+    "relevance_score": 28.599999999999998,
+    "pdf_path": "related_papers\\09_2603.18035v1_Taming_Epilepsy_Mean_Field_Control_of_Whole-.pdf",
+    "pdf_filename": "09_2603.18035v1_Taming_Epilepsy_Mean_Field_Control_of_Whole-.pdf",
+    "file_size_kb": 2398.6
+  },
+  {
+    "id": "2609.10429v1",
+    "title": "Faster Computation with the Generalized Laplacian Quantum Walk",
+    "pdf_url": "https://arxiv.org/pdf/2609.10429v1",
+    "summary": "Quantum walks are the quantum analogues of classical random walks or Markov chains. They are universal models of quantum computing, and they underpin a variety of quantum algorithms. We prove that a continuous-time quantum walk effected by a generalized Laplacian, which can arise in spin chains, can solve a computational problem more quickly than typical quantum walks governed by the standard Laplacian or adjacency matrix. This generalized Laplacian consists of the standard Laplacian plus a real-valued multiple of the degree matrix, and we prove that as the magnitude of the multiple of the degree matrix is increased, its corresponding quantum walk can search the complete bipartite graph with multiple marked vertices in time that approaches the optimal. This raises the potential for the generalized Laplacian quantum walk to be a useful method for developing additional faster quantum algorithms.",
+    "published": "2026-09-09T16:41:48Z",
+    "comment": "6 pages, 3 figures; additional 7 pages of supplemental material",
+    "primary_category": "quant-ph",
+    "authors": [
+      "Jonas Duda",
+      "Thomas G. Wong"
+    ],
+    "clean_id": "2609.10429v1",
+    "year": 2026,
+    "relevance_score": 26.799999999999997,
+    "pdf_path": "related_papers\\10_2609.10429v1_Faster_Computation_with_the_Generalized_Lapla.pdf",
+    "pdf_filename": "10_2609.10429v1_Faster_Computation_with_the_Generalized_Lapla.pdf",
+    "file_size_kb": 800.7
+  },
+  {
+    "id": "2405.09568v1",
+    "title": "Dynamic GNNs for Precise Seizure Detection and Classification from EEG Data",
+    "pdf_url": "https://arxiv.org/pdf/2405.09568v1",
+    "summary": "Diagnosing epilepsy requires accurate seizure detection and classification, but traditional manual EEG signal analysis is resource-intensive. Meanwhile, automated algorithms often overlook EEG's geometric and semantic properties critical for interpreting brain activity. This paper introduces NeuroGNN, a dynamic Graph Neural Network (GNN) framework that captures the dynamic interplay between the EEG electrode locations and the semantics of their corresponding brain regions. The specific brain region where an electrode is placed critically shapes the nature of captured EEG signals. Each brain region governs distinct cognitive functions, emotions, and sensory processing, influencing both the semantic and spatial relationships within the EEG data. Understanding and modeling these intricate brain relationships are essential for accurate and meaningful insights into brain activity. This is precisely where the proposed NeuroGNN framework excels by dynamically constructing a graph that encapsulates these evolving spatial, temporal, semantic, and taxonomic correlations to improve precision in seizure detection and classification. Our extensive experiments with real-world data demonstrate that NeuroGNN significantly outperforms existing state-of-the-art models.",
+    "published": "2024-05-08T21:36:49Z",
+    "comment": "This preprint has not undergone any post-submission improvements or corrections. The Version of Record of this contribution is published in the proceedings of the 28th Pacific-Asia Conference on Knowledge Discovery and Data Mining (PAKDD 2024), Taipei, Taiwan, May 7-10, 2024, and is available online at https://doi.org/10.1007/978-981-97-2238-9_16",
+    "primary_category": "eess.SP",
+    "journal_ref": "Pacific-Asia Conference on Knowledge Discovery and Data Mining (PAKDD'24). Singapore: Springer Nature Singapore, 2024",
+    "doi": "10.1007/978-981-97-2238-9_16",
+    "authors": [
+      "Arash Hajisafi",
+      "Haowen Lin",
+      "Yao-Yi Chiang",
+      "Cyrus Shahabi"
+    ],
+    "clean_id": "2405.09568v1",
+    "year": 2024,
+    "relevance_score": 26.0,
+    "pdf_path": "related_papers\\11_2405.09568v1_Dynamic_GNNs_for_Precise_Seizure_Detection_an.pdf",
+    "pdf_filename": "11_2405.09568v1_Dynamic_GNNs_for_Precise_Seizure_Detection_an.pdf",
+    "file_size_kb": 1148.5
+  },
+  {
+    "id": "2609.18463v1",
+    "title": "Simplification Rules for Continuous-Time Quantum Walks on Dynamic Graphs",
+    "pdf_url": "https://arxiv.org/pdf/2609.18463v1",
+    "summary": "Continuous-time quantum walks (CTQWs) on dynamic graphs realize quantum gates as sequences of time-evolving graph Hamiltonians, but naive constructions produce long sequences with redundancy. Simplification rules, which are graph rewrite rules that shorten a dynamic graph sequence while preserving the unitary it implements, are the CTQW analogue of circuit identities in the gate model. In this work, we give CTQW realizations of the standard single-qubit gates and introduce new graph rewrite rules. We demonstrate the simplification rules through worked circuit reductions and outline their use as transpilation primitives for converting between the circuit model and the dynamic graph framework.",
+    "published": "2026-09-16T10:58:12Z",
+    "primary_category": "quant-ph",
+    "authors": [
+      "Mostafa Atallah",
+      "Daniel Dilley",
+      "Jishnu Mahmud",
+      "Zain H Saleem",
+      "Rebekah Herrman"
+    ],
+    "clean_id": "2609.18463v1",
+    "year": 2026,
+    "relevance_score": 23.799999999999997,
+    "pdf_path": "related_papers\\12_2609.18463v1_Simplification_Rules_for_Continuous-Time_Quan.pdf",
+    "pdf_filename": "12_2609.18463v1_Simplification_Rules_for_Continuous-Time_Quan.pdf",
+    "file_size_kb": 403.1
+  },
+  {
+    "id": "2610.14214v1",
+    "title": "Embedding Graph Kernel Entropy (EGKE): Fine-grained Hallucination Detection for LLMs from Embeddings",
+    "pdf_url": "https://arxiv.org/pdf/2610.14214v1",
+    "summary": "Hallucination detection is critical for ensuring the reliability of Large Language Models (LLMs) in real-world deployments. While recent works, such as Semantic Entropy (SE) and Kernel Language Entropy (KLE), identify hallucinations by measuring semantic disagreement across multiple generated responses using Natural Language Inference (NLI) models, these methods depend on separately loaded NLI classifiers to estimate pairwise semantic similarity, introducing significant computational overhead. We propose Embedding Graph Kernel Entropy (EGKE), a variant of Kernel Language Entropy (KLE) that replaces its NLI-derived semantic graph with a Radial Basis Function (RBF) kernel applied to dense sentence embeddings generated by a BGE embedding model, while retaining KLE's graph Laplacian, heat kernel, and von Neumann entropy formulation unchanged. By computing similarities directly in a continuous embedding space, the proposed method provides a symmetric and computationally efficient alternative to NLI-based semantic comparison. We evaluate our approach across 30 experimental setups (covering multiple question-answer datasets and open-weight LLM families) using both AUROC and AUARC, and demonstrate that this RBF-based method achieves competitive hallucination detection performance against state-of-the-art methods.",
+    "published": "2026-10-09T18:27:55Z",
+    "comment": "Accepted for ICKG 2026",
+    "primary_category": "cs.LG",
+    "authors": [
+      "Dilrangi Sankalpana",
+      "Pragatheeswaran Vipulanandan",
+      "Uthayasanker Thayasivam",
+      "Kamal Premaratne"
+    ],
+    "clean_id": "2610.14214v1",
+    "year": 2026,
+    "relevance_score": 23.599999999999998,
+    "pdf_path": "related_papers\\13_2610.14214v1_Embedding_Graph_Kernel_Entropy_EGKE_Fine-g.pdf",
+    "pdf_filename": "13_2610.14214v1_Embedding_Graph_Kernel_Entropy_EGKE_Fine-g.pdf",
+    "file_size_kb": 279.4
+  },
+  {
+    "id": "2512.09639v2",
+    "title": "Modules as effective nodes in coarse-grained networks of Kuramoto oscillators",
+    "pdf_url": "https://arxiv.org/pdf/2512.09639v2",
+    "summary": "Most real-world networks exhibit a significant degree of modularity. Understanding the effects of such topology on dynamical processes is pivotal for advances in social and natural sciences. In this work we consider the dynamics of Kuramoto oscillators on modular networks and propose a simple coarse-graining procedure where modules are replaced by effective single oscillators. The method is inspired by EEG measurements, where very large groups of neurons under each electrode are interpreted as single nodes in a correlation network. We expose the interplay between intra-module and inter-module coupling strengths in keeping the coarse-graining process meaningful. We show that, when modules are well synchronized, the phase transition from asynchronous to synchronous motion in networks with 2 and 3 modules is very well described by their respective reduced systems, regardless of the network structure connecting the modules. Applications of the method to real networks with small modularity coefficients reveals that the approximation is also very accurate if oscillators in each module are identical. The method reproduces global synchronization patterns despite the low synchronizability of some modules, possibly allowing for the inference of the mean synchrony of each module when individual dynamics are not known.",
+    "published": "2025-12-10T13:30:07Z",
+    "comment": "26 pages, 6 figures, revised with new results",
+    "primary_category": "nlin.AO",
+    "authors": [
+      "Leonardo L. Bosnardo",
+      "Marcus A. M. de Aguiar"
+    ],
+    "clean_id": "2512.09639v2",
+    "year": 2025,
+    "relevance_score": 23.0,
+    "pdf_path": "related_papers\\14_2512.09639v2_Modules_as_effective_nodes_in_coarse-grained.pdf",
+    "pdf_filename": "14_2512.09639v2_Modules_as_effective_nodes_in_coarse-grained.pdf",
+    "file_size_kb": 1621.6
+  },
+  {
+    "id": "2608.27944v1",
+    "title": "Quantum geometric bounds at finite temperature for one-dimensional chiral systems",
+    "pdf_url": "https://arxiv.org/pdf/2608.27944v1",
+    "summary": "The geometry and topology of quantum states are intimately related at zero temperature through exact bounds that constrain geometric quantities from below by topological invariants. At finite-temperature, however, the analogous relations remain unclear. Here we establish rigorous geometric lower bounds for one-dimensional (1D) chiral-symmetric systems at finite temperature within the Uhlmann's framework for mixed states. We show that the Bures length is bounded by a continuous geometric phase angle. We further derive a temperature-dependent bound that interpolates between the zero-temperature limit and a trivial high-temperature regime. Our results are verified analytically and numerically using the Su-Schrieffer-Heeger (SSH) model and the spinless Kitaev chain model. Finally, we discuss potential ways to detect the geometry of the density matrix in quantum circuits, with the quantum imaginary time evolution (QITE) method.",
+    "published": "2026-08-28T05:35:32Z",
+    "comment": "9 pages, 3 figures",
+    "primary_category": "cond-mat.mes-hall",
+    "authors": [
+      "Peng He",
+      "Hai-Tao Ding",
+      "Yu-Guo Liu"
+    ],
+    "clean_id": "2608.27944v1",
+    "year": 2026,
+    "relevance_score": 22.799999999999997,
+    "pdf_path": "related_papers\\15_2608.27944v1_Quantum_geometric_bounds_at_finite_temperatur.pdf",
+    "pdf_filename": "15_2608.27944v1_Quantum_geometric_bounds_at_finite_temperatur.pdf",
+    "file_size_kb": 516.2
+  }
+]

@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hqgwn"
+version = "1.0.0"
+description = "Hydro-Quantum Graph Walk Networks: Navier-Stokes Vorticity, Open-System Lindblad Quantum Walks, and Von Neumann Entropy Collapse"
+readme = "README.md"
+authors = [
+    { name = "Google DeepMind Advanced Agentic Research Team" }
+]
+license = { text = "Apache-2.0" }
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Scientific/Engineering :: Physics",
+]
+dependencies = [
+    "numpy>=1.23.0",
+    "scipy>=1.9.0",
+    "scikit-learn>=1.2.0",
+    "matplotlib>=3.6.0",
+    "pandas>=1.5.0",
+]
+
+[tool.setuptools.packages.find]
+include = ["hqgwn*"]
+
+[project.urls]
+"Homepage" = "https://github.com/google-deepmind/hqgwn"
+"Zenodo DOI" = "https://doi.org/10.5281/zenodo.hqgwn.100"

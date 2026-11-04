@@ -1,0 +1,39 @@
+# Virtual Environments
+.venv/
+env/
+venv/
+ENV/
+
+# Python Cache & Build Artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# LaTeX Auxiliary Files (preserve .tex, .pdf, .bib)
+manuscript/*.aux
+manuscript/*.bbl
+manuscript/*.blg
+manuscript/*.log
+manuscript/*.out
+manuscript/*.synctex.gz
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+
+# Temporary / Scratch files
+scratch/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# OS / Editor Artifacts
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
