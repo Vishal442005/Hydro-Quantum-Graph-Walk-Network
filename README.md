@@ -1,9 +1,10 @@
 # Hydro-Quantum Graph Walk Network (HQGWN)
+[![DOI](https://zenodo.org/badge/1445760922.svg)](https://zenodo.org/badge/latestdoi/1445760922)
+[![GitHub Release](https://img.shields.io/github/v/release/Vishal442005/Hydro-Quantum-Graph-Walk-Network?color=blue&label=Release)](https://github.com/Vishal442005/Hydro-Quantum-Graph-Walk-Network/releases/tag/v1.0.0)
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
-[![Elsevier-PR-DOCX](https://img.shields.io/badge/Manuscript-Elsevier_PR_DOCX-orange)](elseiver/elseiver_graph.docx)
-[![Manuscript-PDF](https://img.shields.io/badge/Manuscript-IEEE_PDF-red)](manuscript/manuscript_hqgwn.pdf)
-[![Manuscript-DOCX](https://img.shields.io/badge/Manuscript-Word_OMML-brightgreen)](manuscript/manuscript_hqgwn.docx)
+[![Elsevier-PR-DOCX](https://img.shields.io/badge/Manuscript-Elsevier_PR_DOCX-orange)](https://github.com/Vishal442005/Hydro-Quantum-Graph-Walk-Network/releases/download/v1.0.0/elseiver_graph.docx)
+[![Manuscript-PDF](https://img.shields.io/badge/Manuscript-IEEE_PDF-red)](https://github.com/Vishal442005/Hydro-Quantum-Graph-Walk-Network/releases/download/v1.0.0/manuscript_hqgwn.pdf)
 
 > **Official Implementation & Research Artifact for:**  
 > *Hydro-Quantum Graph Walk Network (HQGWN): Vorticity-Aware Open Quantum Markov Dynamics and Thermodynamic Invariant Collapse for Robust Spatio-Temporal Telemetry Sensing*  

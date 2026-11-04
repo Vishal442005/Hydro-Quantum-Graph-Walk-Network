@@ -1,21 +1,32 @@
 cff-version: 1.2.0
-message: "If you use this software or theoretical framework in your research, please cite it as below."
-title: "Hydro-Quantum Graph Walk Networks (HQGWN): Unifying Navier-Stokes Phase Vorticity, Open-System Lindblad Quantum Walks, and Von Neumann Entropy Collapse for Multi-Channel Biomedical & RF Telemetry"
+message: "If you use this research artifact, empirical benchmarks, or software framework, please cite it as below."
+title: "Hydro-Quantum Graph Walk Network (HQGWN): Vorticity-Aware Open Quantum Markov Dynamics and Thermodynamic Invariant Collapse for Robust Spatio-Temporal Telemetry Sensing"
 authors:
-  - family-names: "Antigravity Research Consortium"
-    given-names: "Google DeepMind"
-    affiliation: "Google DeepMind"
-version: 1.1.0
-date-released: 2026-11-04
-license: Apache-2.0
-repository-code: "https://github.com/google-deepmind/hydro-quantum-graph-walk"
+  - family-names: "Sharma"
+    given-names: "Vishal"
+    email: "vishal442005@outlook.com"
+    affiliation: "Department of Electronics and Communication Engineering"
+version: "1.0.0"
+date-released: "2026-11-04"
+license: "Apache-2.0"
+repository-code: "https://github.com/Vishal442005/Hydro-Quantum-Graph-Walk-Network"
+url: "https://github.com/Vishal442005/Hydro-Quantum-Graph-Walk-Network"
 keywords:
-  - "graph signal processing"
   - "hydrodynamics"
-  - "lindblad master equation"
   - "open quantum systems"
+  - "lindblad master equation"
+  - "quantum graph walk"
   - "von neumann entropy"
   - "biomedical telemetry"
-  - "eeg seizure detection"
-  - "noise robustness"
-  - "quantum information geometry"
+  - "epilepsy ecog"
+  - "brain-computer interface"
+  - "pattern recognition"
+preferred-citation:
+  type: article
+  authors:
+    - family-names: "Sharma"
+      given-names: "Vishal"
+  title: "Hydro-Quantum Graph Walk Network (HQGWN): Vorticity-Aware Open Quantum Markov Dynamics and Thermodynamic Invariant Collapse for Robust Spatio-Temporal Telemetry Sensing"
+  journal: "Pattern Recognition"
+  year: 2026
+  month: 11
