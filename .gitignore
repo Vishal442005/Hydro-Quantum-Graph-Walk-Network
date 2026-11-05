@@ -19,6 +19,8 @@ build/
 *.rtf
 elseiver/
 elsevier/
+Elseiver_EAAI/
+elsevier_eaai/
 manuscript/
 
 # LaTeX Auxiliary Files
