@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "hqgwn"
 version = "1.1.0"
-description = "Hydro-Quantum Graph Walk Networks: Navier-Stokes Vorticity, Open-System Lindblad Quantum Walks, and Von Neumann Entropy Collapse"
+description = "Hydro-Quantum Graph Networks: Navier-Stokes Vorticity, Open-System Lindblad Quantum Walks, and Von Neumann Entropy Collapse"
 readme = "README.md"
 authors = [
     { name = "Vishal Chandel", email = "vishal442005@outlook.com" }

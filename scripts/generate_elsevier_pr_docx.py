@@ -277,7 +277,7 @@ def add_booktabs_table(doc: docx.Document, table_num: int, caption: str, headers
             p.paragraph_format.space_before = Pt(2)
             p.paragraph_format.space_after = Pt(2)
             for r in p.runs:
-                is_bold = ("Full Proposed HQGWN" in str(val) or "A6" in str(val))
+                is_bold = ("Proposed HQGN" in str(val) or "A6" in str(val))
                 set_run_font(r, font_name=FONT_FAMILY, size_pt=9.0, color=COLOR_BLACK, bold=is_bold)
                 
     # Column widths
@@ -315,7 +315,7 @@ def generate_elsevier_pr_manuscript(output_docx_path: str):
     p_title.alignment = WD_ALIGN_PARAGRAPH.CENTER
     p_title.paragraph_format.space_before = Pt(12)
     p_title.paragraph_format.space_after = Pt(8)
-    r_title = p_title.add_run("Hydro-Quantum Graph Walk Network (HQGWN): Vorticity-Aware Open Quantum Markov Dynamics and Thermodynamic Invariant Collapse for Robust Spatio-Temporal Telemetry Sensing")
+    r_title = p_title.add_run("Hydro-Quantum Graph Network (HQGN): Vorticity-Aware Open Quantum Markov Dynamics and Thermodynamic Invariant Collapse for Robust Spatio-Temporal Telemetry Sensing")
     set_run_font(r_title, font_name=FONT_FAMILY, size_pt=16.0, color=COLOR_BLACK, bold=True)
     
     # 3. Authors and Affiliations
@@ -366,7 +366,7 @@ def generate_elsevier_pr_manuscript(output_docx_path: str):
         "electrode drift, and spatial volume conduction. Contemporary spatio-temporal graph neural networks (ST-GNNs) and "
         "continuous-time quantum walk (CTQW) architectures remain inherently constrained: classical Markov diffusion collapses "
         "exponentially into trivial oversmoothed consensus, while closed unitary quantum walks lack open thermodynamic dissipation "
-        "sinks required to extinguish environmental noise. This paper introduces the Hydro-Quantum Graph Walk Network (HQGWN), "
+        "sinks required to extinguish environmental noise. This paper introduces the Hydro-Quantum Graph Network (HQGN), "
         "a mathematically unified framework synthesizing fluid vorticity dynamics, open-system Lindblad stochastic quantum walks, "
         "and quantum thermodynamic invariants. Stage I maps multi-channel temporal trajectories onto a continuous 2D fluid manifold, "
         "constructing a Poincaré-Cartan phase-vorticity graph with an antisymmetric curl circulation tensor. Stage II evolves the "
@@ -377,7 +377,7 @@ def generate_elsevier_pr_manuscript(output_docx_path: str):
         "trace preservation, asymptotic noise contraction, Bures non-expansiveness, and non-collapsing Dirichlet energy ($E(5.0) = 0.023 > 0$). "
         "Empirical evaluation across three authentic physical domains—real human clinical epilepsy intracranial ECoG (149 windows), "
         "real sensorimotor scalp EEG (BCI Competition IV-2a, 144 trials), and multi-carrier wireless RF telemetry under Rayleigh fading—demonstrates "
-        "that HQGWN achieves high classification fidelity (92.62% clinical ECoG accuracy, 92.61% Macro-F1), maintains noise robustness "
+        "that HQGN achieves high classification fidelity (92.62% clinical ECoG accuracy, 92.61% Macro-F1), maintains noise robustness "
         "down to -10 dB SNR where classical baselines collapse to chance level, and delivers closed-form gradient-free interpretability via the "
         "Quantum Fisher Information Matrix (QFIM)."
     )
@@ -465,7 +465,7 @@ def generate_elsevier_pr_manuscript(output_docx_path: str):
         "fluid mechanics, open quantum Markovian dynamics, and quantum thermodynamics. The primary contributions of this work are:"
     )
     add_p_with_math(doc,
-        "• Tri-Domain Physical Unification: The Hydro-Quantum Graph Walk Network (HQGWN) is introduced, unifying 2D Navier-Stokes phase-vorticity "
+        "• Tri-Domain Physical Unification: The Hydro-Quantum Graph Network (HQGN) is introduced, unifying 2D Navier-Stokes phase-vorticity "
         "coupling, Gorini-Kossakowski-Sudarshan-Lindblad (GKSL) stochastic master equations, and Bures-Wasserstein quantum relative entropy."
     )
     add_p_with_math(doc,
@@ -490,7 +490,7 @@ def generate_elsevier_pr_manuscript(output_docx_path: str):
     add_subsection_heading(doc, 1, 4, "Article organization")
     add_p_with_math(doc,
         "The remainder of this article is structured as follows. Section 2 reviews foundational and recent literature spanning 2020 to 2026. "
-        "Section 3 details the mathematical foundations and theoretical theorems. Section 4 presents the complete architectural pipeline of HQGWN. "
+        "Section 3 details the mathematical foundations and theoretical theorems. Section 4 presents the complete architectural pipeline of HQGN. "
         "Section 5 describes the physical telemetry datasets, baselines, and experimental setup. Section 6 provides empirical results, multi-domain "
         "benchmarks, and ablation studies. Section 7 presents explainability via QFIM and adversarial robustness. Section 8 evaluates computational "
         "acceleration and hardware profiling. Section 9 discusses practical implications and limitations. Section 10 concludes the article."
@@ -683,26 +683,26 @@ def generate_elsevier_pr_manuscript(output_docx_path: str):
     add_subsubsection_heading(doc, 3, 4, 4, "Theorem 4: Non-collapsing Dirichlet energy and oversmoothing prevention")
     add_p_with_math(doc,
         "Statement: Let $E(\rho(\tau)) = \frac{1}{2} \operatorname{Tr}(\rho(\tau) L_S \rho(\tau))$ define the graph Dirichlet energy. Under continuous "
-        "classical Markov diffusion, $E(\tau) \to 0$ exponentially as $\tau \to \infty$ (oversmoothing collapse). Under the proposed HQGWN evolution, "
+        "classical Markov diffusion, $E(\tau) \to 0$ exponentially as $\tau \to \infty$ (oversmoothing collapse). Under the proposed HQGN evolution, "
         "there exists a strictly positive lower bound $E_{\min} > 0$ such that $\inf_{\tau > 0} E(\rho(\tau)) \ge E_{\min} > 0$, preventing representational collapse."
     )
     add_p_with_math(doc,
         "Proof: In classical Markov diffusion $\dot{p} = -L p$, the spectral theorem gives $p(\tau) = \sum_j e^{-\mu_j \tau} c_j v_j$. As $\tau \to \infty$, "
         "all terms with eigenvalue $\mu_j > 0$ decay to zero, leaving only the stationary ground state $v_1 = \frac{1}{\sqrt{M}} \mathbf{1}$, for which $L v_1 = 0$, "
-        "forcing $E(p(\tau)) = \frac{1}{2} p(\tau)^T L p(\tau) \to 0$ (complete oversmoothing). In HQGWN, the Hamiltonian contains a skew-symmetric circulation "
+        "forcing $E(p(\tau)) = \frac{1}{2} p(\tau)^T L p(\tau) \to 0$ (complete oversmoothing). In HQGN, the Hamiltonian contains a skew-symmetric circulation "
         "operator $\Omega$ with purely imaginary eigenvalues $\pm i \omega_k \ne 0$. The unitary generator $\exp(-i H \tau)$ induces continuous phase oscillation "
         "$\exp(\pm i \omega_k \tau) \ne 0$. Because the commutator $[L_S, \Omega] \ne 0$, the state is continuously rotated away from the kernel of $L_S$, "
         "guaranteeing $\inf_{\tau > 0} \operatorname{Tr}(\rho(\tau) L_S \rho(\tau)) \ge \frac{1}{2} \min_{k} \omega_k^2 > 0$. Representational collapse is rigorously prevented. $\blacksquare$"
     )
 
     # =======================================================================
-    # SECTION 4: PROPOSED METHODOLOGY (HQGWN)
+    # SECTION 4: PROPOSED METHODOLOGY (HQGN)
     # =======================================================================
-    add_section_heading(doc, 4, "Proposed methodology: Hydro-Quantum Graph Walk Network (HQGWN)")
+    add_section_heading(doc, 4, "Proposed methodology: Hydro-Quantum Graph Network (HQGN)")
     
     add_subsection_heading(doc, 4, 1, "Overall architectural processing pipeline")
     add_p_with_math(doc,
-        "The end-to-end processing pipeline of HQGWN executes across three physically grounded computational stages: "
+        "The end-to-end processing pipeline of HQGN executes across three physically grounded computational stages: "
         "(I) Hydrodynamic Phase-Vorticity Laplacian Construction, (II) Second-Order Strang-Splitting Stochastic Quantum Walk Evolution, and "
         "(III) Quantum Thermodynamic Invariant Extraction and Prototype Projection."
     )
@@ -718,7 +718,7 @@ def generate_elsevier_pr_manuscript(output_docx_path: str):
     add_subsection_heading(doc, 4, 3, "Stage II: Strang operator splitting for unitary-dissipative evolution")
     add_p_with_math(doc,
         "Direct numerical integration of Eq. (5) via dense 4th-order Runge-Kutta on $\mathbb{C}^{M^2}$ vectors scales as $\mathcal{O}(M^4)$ and violates "
-        "complete positivity due to truncation errors. HQGWN resolves this via second-order symmetric Strang operator splitting [28]. The Lindblad "
+        "complete positivity due to truncation errors. HQGN resolves this via second-order symmetric Strang operator splitting [28]. The Lindblad "
         "superoperator $\mathcal{L} = \mathcal{U} + \mathcal{D}$ is split into unitary rotation $\mathcal{U}[\rho] = -i[H, \rho]$ and dissipative decay $\mathcal{D}[\rho]$:"
     )
     add_display_equation(doc, r"\rho(\tau + \Delta t) = e^{\frac{\Delta t}{2}\mathcal{D}} \circ e^{\Delta t \mathcal{U}} \circ e^{\frac{\Delta t}{2}\mathcal{D}} [\rho(\tau)] + \mathcal{O}(\Delta t^3)", eq_num=15)
@@ -751,7 +751,7 @@ def generate_elsevier_pr_manuscript(output_docx_path: str):
     
     add_subsection_heading(doc, 5, 1, "Real-world multi-domain telemetry datasets")
     add_p_with_math(doc,
-        "To evaluate HQGWN across realistic, non-saturated sensing conditions, three distinct physical telemetry datasets were curated:"
+        "To evaluate HQGN across realistic, non-saturated sensing conditions, three distinct physical telemetry datasets were curated:"
     )
     add_p_with_math(doc,
         "1. Domain 1: Human Clinical Intracranial Telemetry (MNE Epilepsy ECoG): Real invasive electrocorticography recordings from clinical pre-surgical "
@@ -782,7 +782,7 @@ def generate_elsevier_pr_manuscript(output_docx_path: str):
 
     add_subsection_heading(doc, 5, 2, "Baseline paradigms and comparative state-of-the-art models (2020-2026)")
     add_p_with_math(doc,
-        "HQGWN is benchmarked directly against five leading paradigms representing the modern state of the art in time-series and graph telemetry:"
+        "HQGN is benchmarked directly against five leading paradigms representing the modern state of the art in time-series and graph telemetry:"
     )
     add_p_with_math(doc,
         "• Dense 1D-CNN (Schirrmeister et al. 2017) [5]: Deep multi-scale temporal filterbank convolutional baseline with pooling.\n"
@@ -807,8 +807,8 @@ def generate_elsevier_pr_manuscript(output_docx_path: str):
     add_subsection_heading(doc, 6, 1, "Head-to-head comparative analysis on clinical ECoG telemetry")
     add_p_with_math(doc,
         "Table 2 presents the head-to-head comparative benchmark on the real clinical intracranial ECoG dataset. Both Dense 1D-CNN ($93.31\%$ Accuracy) "
-        "and Full HQGWN ($91.29\%$ Accuracy, $91.28\%$ Macro-F1) demonstrate competitive performance on high-SNR baseline data. However, as evaluated "
-        "in Section 6.4, Dense 1D-CNN experiences catastrophic failure under physical noise, whereas HQGWN maintains robust stability."
+        "and Proposed HQGN ($91.29\%$ Accuracy, $91.28\%$ Macro-F1) demonstrate competitive performance on high-SNR baseline data. However, as evaluated "
+        "in Section 6.4, Dense 1D-CNN experiences catastrophic failure under physical noise, whereas HQGN maintains robust stability."
     )
     add_p_with_math(doc,
         "Notably, Riemannian Covariance achieved only $51.68\%$ Accuracy ($34.06\%$ F1) on raw intracranial ECoG. Because raw ECoG contains non-stationary "
@@ -823,7 +823,7 @@ def generate_elsevier_pr_manuscript(output_docx_path: str):
         ["Unitary CTQW-GNN [26]", "89.24 ± 3.35", "89.20 ± 3.35", "84.42 ± 6.41", "94.38 ± 5.32", "95.21 ± 2.90", "2.98 ms"],
         ["Dissipative OQW [27]", "87.91 ± 1.72", "87.83 ± 1.78", "86.92 ± 7.39", "88.95 ± 7.15", "96.47 ± 1.44", "2.29 ms"],
         ["Riemannian Covariance [3]", "51.68 ± 1.49", "34.06 ± 0.65", "100.00 ± 0.00", "0.00 ± 0.00", "24.33 ± 21.14", "0.12 ms"],
-        ["Full Proposed HQGWN", "91.29 ± 3.98", "91.28 ± 3.98", "88.25 ± 5.04", "94.57 ± 5.02", "95.06 ± 2.50", "2.84 ms"]
+        ["Proposed HQGN", "91.29 ± 3.98", "91.28 ± 3.98", "88.25 ± 5.04", "94.57 ± 5.02", "95.06 ± 2.50", "2.84 ms"]
     ]
     add_booktabs_table(doc, 2, "Head-to-Head Comparative Study on Real Clinical Intracranial Telemetry (MNE Epilepsy ECoG, 5-Fold Cross-Validation, Mean ± Standard Deviation)",
                        clinical_comp_headers, clinical_comp_rows, col_widths=[2.1, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9])
@@ -836,9 +836,9 @@ def generate_elsevier_pr_manuscript(output_docx_path: str):
     add_p_with_math(doc,
         "In Domain 1 (Clinical ECoG), high SNR and prominent spatial traveling wave patterns allow both temporal convolutions ($93.26\%$) and quantum graph "
         "walks ($91.28\%$) to excel. In Domain 2 (Scalp BCI), where skull volume conduction attenuates high-frequency phase signals, Dense 1D-CNN achieves "
-        "$63.70\%$, followed by CTQW-GNN ($54.65\%$) and HQGWN ($49.96\%$). Crucially, in Domain 3 (Wireless Multipath RF), where rapid non-stationary "
+        "$63.70\%$, followed by CTQW-GNN ($54.65\%$) and HQGN ($49.96\%$). Crucially, in Domain 3 (Wireless Multipath RF), where rapid non-stationary "
         "Rayleigh fading destroys fixed temporal waveform shapes, Dense 1D-CNN degrades to $33.24\%$, whereas quantum walk frameworks (Dissipative OQW "
-        "$43.01\%$, ST-GCN $40.40\%$, HQGWN $39.64\%$) maintain sustained accuracy by extracting phase-invariant spectral diffusion coordinates."
+        "$43.01\%$, ST-GCN $40.40\%$, HQGN $39.64\%$) maintain sustained accuracy by extracting phase-invariant spectral diffusion coordinates."
     )
 
     multidomain_headers = ["Model Paradigm", "Clinical Epilepsy ECoG (16 Ch)", "Motor Imagery BCI (16 Ch)", "Multipath Wireless RF (16 Ch)", "Mean Latency (ms)"]
@@ -848,7 +848,7 @@ def generate_elsevier_pr_manuscript(output_docx_path: str):
         ["Unitary CTQW-GNN [26]", "89.20 ± 3.35%", "54.65 ± 4.17%", "38.96 ± 4.53%", "3.23 ms"],
         ["Dissipative OQW [27]", "87.83 ± 1.78%", "50.71 ± 4.30%", "43.01 ± 2.31%", "2.41 ms"],
         ["Riemannian Covariance [3]", "34.06 ± 0.65%", "33.45 ± 3.22%", "25.96 ± 5.63%", "0.12 ms"],
-        ["Full Proposed HQGWN", "91.28 ± 3.98%", "49.96 ± 8.07%", "39.64 ± 1.71%", "3.98 ms"]
+        ["Proposed HQGN", "91.28 ± 3.98%", "49.96 ± 8.07%", "39.64 ± 1.71%", "3.98 ms"]
     ]
     add_booktabs_table(doc, 3, "Cross-Domain Empirical Telemetry Benchmark across 3 Physical Sensing Regimes (5-Fold Cross-Validation, Mean ± Standard Deviation)",
                        multidomain_headers, multidomain_rows, col_widths=[2.1, 1.4, 1.4, 1.4, 1.1])
@@ -868,7 +868,7 @@ def generate_elsevier_pr_manuscript(output_docx_path: str):
         "• A3 (Unitary QW, alpha=0): Unitary continuous quantum walk without Lindblad dissipation, leading to noise circulation ($88.55\%$ F1).\n"
         "• A4 (Quantum Only, Pearson): Open quantum walk on static correlation graphs without vorticity coupling ($88.53\%$ F1).\n"
         "• A5 (No Entropy Collapse): Full hydro-quantum walk but omitting QKL/Bures distance metrics ($88.54\%$ F1).\n"
-        "• A6 (Full Proposed HQGWN): Integrates all three subsystems, achieving top performance ($92.61\%$ Macro-F1, $92.62\%$ Accuracy, $\kappa = 0.852$)."
+        "• A6 (Proposed HQGN): Integrates all three subsystems, achieving top performance ($92.61\%$ Macro-F1, $92.62\%$ Accuracy, $\kappa = 0.852$)."
     )
 
     ablation_headers = ["Ablation Variant", "Macro-F1 (%)", "Accuracy (%)", "Cohen Kappa", "Architectural Role"]
@@ -878,7 +878,7 @@ def generate_elsevier_pr_manuscript(output_docx_path: str):
         ["A3 (Unitary QW, alpha=0)", "88.55 ± 4.57", "88.57 ± 4.57", "0.771 ± 0.091", "Coherent wave interference, lacks noise sink"],
         ["A4 (Quantum Only, Pearson)", "88.53 ± 3.41", "88.60 ± 3.38", "0.772 ± 0.068", "Open quantum walk on static correlation graph"],
         ["A5 (No Entropy Collapse)", "88.54 ± 3.43", "88.60 ± 3.38", "0.772 ± 0.068", "Density probabilities only, no QKL/Bures"],
-        ["A6 (Full Proposed HQGWN)", "92.61 ± 3.26", "92.62 ± 3.26", "0.852 ± 0.065", "Complete tri-domain synthesis (Hydro + Quantum + Thermo)"]
+        ["A6: Proposed HQGN", "92.61 ± 3.26", "92.62 ± 3.26", "0.852 ± 0.065", "Complete tri-domain synthesis (Hydro + Quantum + Thermo)"]
     ]
     add_booktabs_table(doc, 4, "6-Variant Architectural Component Ablation on Clinical ECoG Telemetry (5-Fold Cross-Validation)",
                        ablation_headers, ablation_rows, col_widths=[2.0, 1.1, 1.1, 1.1, 2.2])
@@ -893,19 +893,19 @@ def generate_elsevier_pr_manuscript(output_docx_path: str):
         "$+20$ dB down to $-10$ dB (Fig. 6):"
     )
     add_p_with_math(doc,
-        "• At $\mathrm{SNR} = +5$ dB: Classical Random Walk collapses to $33.33\%$, and Riemannian Covariance collapses to $33.33\%$, whereas Full HQGWN maintains $96.42\%$ F1-score.\n"
-        "• At $\mathrm{SNR} = 0$ dB: Classical models remain completely collapsed at random guessing ($33.33\%$), while Full HQGWN maintains $96.42\%$ accuracy.\n"
+        "• At $\mathrm{SNR} = +5$ dB: Classical Random Walk collapses to $33.33\%$, and Riemannian Covariance collapses to $33.33\%$, whereas Proposed HQGN maintains $96.42\%$ F1-score.\n"
+        "• At $\mathrm{SNR} = 0$ dB: Classical models remain completely collapsed at random guessing ($33.33\%$), while Proposed HQGN maintains $96.42\%$ accuracy.\n"
         "• At $\mathrm{SNR} = -10$ dB: Welch PSD + SVM completely fails, while the open-system Lindblad dephasing jump operators filter high-frequency noise modes as predicted by Theorem 2."
     )
 
     add_figure(doc, 6,
-        "ECE Telemetry Noise Robustness Curve: Macro-F1 (%) degradation across SNR levels from +20 dB down to -10 dB comparing HQGWN against classical baselines.",
+        "ECE Telemetry Noise Robustness Curve: Macro-F1 (%) degradation across SNR levels from +20 dB down to -10 dB comparing HQGN against classical baselines.",
         "figures/fig6_snr_robustness_curve.png", width_in=5.8)
 
     add_subsection_heading(doc, 6, 5, "Dirichlet energy oversmoothing diagnostics and walk-time horizon sensitivity")
     add_p_with_math(doc,
         "Fig. 10(a) empirically confirms Theorem 4: under classical Markov heat diffusion, the Dirichlet energy collapses exponentially toward zero "
-        "($E(5.0) = 4.18 \times 10^{-8} \approx 0$). In sharp contrast, HQGWN maintains non-trivial energy across extended walk horizons ($E(5.0) = 0.023288$), "
+        "($E(5.0) = 4.18 \times 10^{-8} \approx 0$). In sharp contrast, HQGN maintains non-trivial energy across extended walk horizons ($E(5.0) = 0.023288$), "
         "completely preventing representational oversmoothing. Fig. 10(c) demonstrates walk-time horizon stability across $\tau \in [0.1, 10.0]$, confirming "
         "peak performance across $\tau \in [1.0, 3.0]$."
     )
@@ -913,12 +913,12 @@ def generate_elsevier_pr_manuscript(output_docx_path: str):
     add_subsection_heading(doc, 6, 6, "Sample-efficiency and limited-data scaling")
     add_p_with_math(doc,
         "Fig. 10(b) evaluates sample-efficiency by training models on restricted data ratios ($20\%$ to $100\%$). Due to the strong inductive bias "
-        "imposed by physical fluid-quantum equations, HQGWN exhibits superior sample-efficiency, maintaining high classification fidelity even when trained "
+        "imposed by physical fluid-quantum equations, HQGN exhibits superior sample-efficiency, maintaining high classification fidelity even when trained "
         "on only $20\%$ of available telemetry windows."
     )
 
     add_figure(doc, 10,
-        "Theoretical & Empirical Diagnostics: (a) Dirichlet Energy E(rho(t)) showing classical Markov heat decay (E(5.0) -> 0, oversmoothing) vs sustained HQGWN non-trivial energy (E(5.0) = 0.023); (b) Sample-efficiency generalization under limited training data (20% to 100%); (c) Continuous walk-time horizon sensitivity tau in [0.1, 10.0] confirming stable performance across tau in [1.0, 3.0].",
+        "Theoretical & Empirical Diagnostics: (a) Dirichlet Energy E(rho(t)) showing classical Markov heat decay (E(5.0) -> 0, oversmoothing) vs sustained HQGN non-trivial energy (E(5.0) = 0.023); (b) Sample-efficiency generalization under limited training data (20% to 100%); (c) Continuous walk-time horizon sensitivity tau in [0.1, 10.0] confirming stable performance across tau in [1.0, 3.0].",
         "figures/fig10_dirichlet_oversmoothing.png", width_in=6.0)
 
     # =======================================================================
@@ -946,9 +946,9 @@ def generate_elsevier_pr_manuscript(output_docx_path: str):
         "Sensor-level robustness was evaluated against hardware timing errors and lead disconnections (Fig. 9):"
     )
     add_p_with_math(doc,
-        "• Brownian Phase Jitter: Independent noise $\theta_m(t) \leftarrow \theta_m(t) + \delta\theta_m(t)$ with $\sigma \in [0, 1.5]$ rad. HQGWN maintains "
+        "• Brownian Phase Jitter: Independent noise $\theta_m(t) \leftarrow \theta_m(t) + \delta\theta_m(t)$ with $\sigma \in [0, 1.5]$ rad. HQGN maintains "
         "$100.0\%$ accuracy up to $\sigma = 0.5$ rad and $83.5\%$ at severe perturbation $\sigma = 1.5$ rad.\n"
-        "• Sensor Channel Dropout: Stochastic disconnection of up to $62.5\%$ of electrodes. HQGWN maintains $100.0\%$ classification integrity up to "
+        "• Sensor Channel Dropout: Stochastic disconnection of up to $62.5\%$ of electrodes. HQGN maintains $100.0\%$ classification integrity up to "
         "$12.5\%$ channel loss (2/16 channels disconnected)."
     )
 
@@ -974,7 +974,7 @@ def generate_elsevier_pr_manuscript(output_docx_path: str):
     
     add_subsection_heading(doc, 8, 1, "Sub-cubic Krylov-Lanczos subspace projection")
     add_p_with_math(doc,
-        "To scale HQGWN to large-scale telemetry networks ($M \ge 64$), matrix exponential evaluations $\exp(-i H \tau)|\psi_0\rangle$ are projected into "
+        "To scale HQGN to large-scale telemetry networks ($M \ge 64$), matrix exponential evaluations $\exp(-i H \tau)|\psi_0\rangle$ are projected into "
         "a $k$-dimensional Krylov subspace $\mathcal{K}_k(H, |\psi_0\rangle) = \operatorname{span}\{|\psi_0\rangle, H|\psi_0\rangle, \dots, H^{k-1}|\psi_0\rangle\}$. "
         "Tridiagonalizing $H$ via the Lanczos algorithm [23] reduces continuous walk complexity from $\mathcal{O}(M^3)$ down to $\mathcal{O}(k M^2 + k^3)$, "
         "enabling sub-millisecond evaluation on low-power telemetry embedded hardware."
@@ -989,7 +989,7 @@ def generate_elsevier_pr_manuscript(output_docx_path: str):
     add_subsection_heading(doc, 8, 3, "Latency benchmarks and embedded telemetry feasibility")
     add_p_with_math(doc,
         "Execution latency was profiled on an Intel Core i7-11800H @ 2.30 GHz (single thread) and Nvidia RTX 3080 Laptop GPU across batch size = 1. "
-        "Because human clinical EEG telemetry operates on 500 ms window shifts (2 Hz update rate), HQGWN's 4.12 ms execution latency consumes under 1% of the available "
+        "Because human clinical EEG telemetry operates on 500 ms window shifts (2 Hz update rate), HQGN's 4.12 ms execution latency consumes under 1% of the available "
         "time budget, guaranteeing real-time closed-loop feasibility for edge deployment. Table 5 details the computational complexity, parameter count, FLOPs, "
         "and hardware execution latency across target compute platforms:"
     )
@@ -1001,7 +1001,7 @@ def generate_elsevier_pr_manuscript(output_docx_path: str):
         ["Unitary CTQW-GNN (Zhan 2026)", "O(M^3 + M^2 · d)", "198.0 k", "52.1 M", "3.15 ms", "0.84 ms"],
         ["Dissipative OQW (Linck 2026)", "O(M^3 · K_lind)", "215.4 k", "61.4 M", "3.42 ms", "0.92 ms"],
         ["Riemannian Covariance (Barachant 2012)", "O(M^3) (Matrix Log)", "12.8 k", "4.2 M", "0.21 ms", "0.08 ms"],
-        ["Full Proposed HQGWN (Strang)", "O(M^2 + M · K_krylov)", "86.2 k", "24.6 M", "4.12 ms", "1.05 ms"]
+        ["Proposed HQGN (Strang)", "O(M^2 + M · K_krylov)", "86.2 k", "24.6 M", "4.12 ms", "1.05 ms"]
     ]
     add_booktabs_table(doc, 5, "Computational Complexity, FLOPs, Parameter Counts, and Hardware Latency Across Compute Platforms",
                        latency_headers, latency_rows, col_widths=[1.8, 1.4, 0.9, 0.9, 1.1, 1.1])
@@ -1013,7 +1013,7 @@ def generate_elsevier_pr_manuscript(output_docx_path: str):
     
     add_subsection_heading(doc, 9, 1, "Physical interpretability versus black-box deep representations")
     add_p_with_math(doc,
-        "Unlike black-box deep neural networks whose internal representations lack physical grounding, every mathematical intermediate in HQGWN corresponds "
+        "Unlike black-box deep neural networks whose internal representations lack physical grounding, every mathematical intermediate in HQGN corresponds "
         "to a measurable physical property: fluid vorticity $\omega$ reflects phase gradients, density purity $\gamma$ reflects macroscopic synchronization, "
         "and Von Neumann entropy $\mathcal{S}_{vN}$ measures spatial disorder. In safety-critical biomedical applications, this interpretability allows clinicians "
         "to inspect the physical basis of each seizure classification."
@@ -1021,7 +1021,7 @@ def generate_elsevier_pr_manuscript(output_docx_path: str):
 
     add_subsection_heading(doc, 9, 2, "Translation to clinical neurotechnology and wireless IoT")
     add_p_with_math(doc,
-        "The mathematical formulation of HQGWN is directly amenable to low-power edge deployment in implantable neurostimulators (e.g. responsive neurostimulation "
+        "The mathematical formulation of HQGN is directly amenable to low-power edge deployment in implantable neurostimulators (e.g. responsive neurostimulation "
         "devices for epilepsy) and battery-constrained IoT transceivers. Because Strang splitting relies entirely on element-wise operations and 16x16 matrix exponentials, "
         "it can be compiled onto embedded microcontrollers and fixed-point DSPs."
     )
@@ -1030,7 +1030,7 @@ def generate_elsevier_pr_manuscript(output_docx_path: str):
     add_p_with_math(doc,
         "Three limitations warrant future investigation: (1) Scaling to ultra-high-density arrays ($M > 256$) currently requires Krylov truncation; (2) The master "
         "equation assumes Markovian memoryless baths, whereas non-Markovian memory kernels may improve modeling of long-range neural feedback; (3) Future work "
-        "will investigate executing HQGWN directly on analog quantum processors and photonic quantum walk devices."
+        "will investigate executing HQGN directly on analog quantum processors and photonic quantum walk devices."
     )
 
 
@@ -1040,11 +1040,11 @@ def generate_elsevier_pr_manuscript(output_docx_path: str):
     # =======================================================================
     add_section_heading(doc, 10, "Conclusion")
     add_p_with_math(doc,
-        "This article presented the Hydro-Quantum Graph Walk Network (HQGWN), establishing a mathematically rigorous cross-domain synthesis between "
+        "This article presented the Hydro-Quantum Graph Network (HQGN), establishing a mathematically rigorous cross-domain synthesis between "
         "fluid mechanics, open quantum Markovian dynamics, and quantum thermodynamics for spatio-temporal telemetry pattern recognition. Supported by four "
         "formal mathematical theorems, second-order Strang operator splitting, and comprehensive empirical benchmarking across three authentic physical "
-        "domains, HQGWN resolves the longstanding challenges of GNN oversmoothing, phase vorticity blindness, and noise vulnerability. By combining "
-        "sub-millisecond CPU execution, closed-form QFIM explainability, and sustained noise robustness down to -10 dB SNR, HQGWN provides a principled, "
+        "domains, HQGN resolves the longstanding challenges of GNN oversmoothing, phase vorticity blindness, and noise vulnerability. By combining "
+        "sub-millisecond CPU execution, closed-form QFIM explainability, and sustained noise robustness down to -10 dB SNR, HQGN provides a principled, "
         "interpretable, and reliable foundation for next-generation clinical neurotechnology and wireless sensing systems."
     )
 

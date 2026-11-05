@@ -40,7 +40,7 @@
       "AUROC": "100.00 \u00b1 0.00",
       "Latency_ms": 17.31
     },
-    "Full HQGWN (Proposed Framework)": {
+    "Proposed HQGN": {
       "Accuracy": "100.00 \u00b1 0.00",
       "Macro_F1": "100.00 \u00b1 0.00",
       "Sensitivity": "100.00 \u00b1 0.00",
@@ -58,7 +58,7 @@
       1.0
     ],
     "curves": {
-      "Full Proposed HQGWN": [
+      "Proposed HQGN": [
         73.12,
         74.9,
         94.34,

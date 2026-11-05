@@ -69,7 +69,7 @@
       "f1_mean": 34.064558629776016,
       "f1_std": 0.6482695441445359
     },
-    "Full HQGWN (Proposed Framework)": {
+    "Proposed HQGN (Proposed Framework)": {
       "Accuracy": "91.29 \u00b1 3.98",
       "Macro_F1": "91.28 \u00b1 3.98",
       "Sensitivity": "88.25 \u00b1 5.04",
@@ -143,7 +143,7 @@
       "f1_mean": 33.451550387596896,
       "f1_std": 3.222002825168888
     },
-    "Full HQGWN (Proposed Framework)": {
+    "Proposed HQGN (Proposed Framework)": {
       "Accuracy": "50.62 \u00b1 8.52",
       "Macro_F1": "49.96 \u00b1 8.07",
       "Sensitivity": "53.62 \u00b1 16.84",
@@ -217,7 +217,7 @@
       "f1_mean": 25.96242840300053,
       "f1_std": 5.629669493175647
     },
-    "Full HQGWN (Proposed Framework)": {
+    "Proposed HQGN (Proposed Framework)": {
       "Accuracy": "40.83 \u00b1 1.67",
       "Macro_F1": "39.64 \u00b1 1.71",
       "Sensitivity": "40.83 \u00b1 1.67",
@@ -291,7 +291,7 @@
       "f1_mean": 88.54394927879355,
       "f1_std": 3.425233720278088
     },
-    "A6 (Full Proposed HQGWN)": {
+    "A6: Proposed HQGN": {
       "Accuracy": "92.62 \u00b1 3.26",
       "Macro_F1": "92.61 \u00b1 3.26",
       "Sensitivity": "89.58 \u00b1 3.25",

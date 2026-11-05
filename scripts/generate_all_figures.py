@@ -53,13 +53,13 @@ def generate_figure1_hydro_vorticity_shear(output_dir="figures"):
     fig, axes = plt.subplots(1, 2, figsize=(11.5, 4.8), constrained_layout=True)
     
     im0 = axes[0].imshow(W0, cmap="viridis", vmin=0, vmax=1)
-    axes[0].set_title("(a) Coherent Vortex Coupling (Class 0 / Pre-Ictal)", pad=10)
+    axes[0].set_title("(a) Proposed HQGN: Coherent Vortex Coupling (Pre-Ictal)", pad=10)
     axes[0].set_xlabel("Sensor Channel Index $n$")
     axes[0].set_ylabel("Sensor Channel Index $m$")
     plt.colorbar(im0, ax=axes[0], fraction=0.046, pad=0.04, label="Hydrodynamic Edge Weight $W_{mn}$")
     
     im1 = axes[1].imshow(W1, cmap="magma", vmin=0, vmax=1)
-    axes[1].set_title("(b) Turbulent Phase Shear Coupling (Class 1 / Ictal)", pad=10)
+    axes[1].set_title("(b) Proposed HQGN: Turbulent Phase Shear Coupling (Ictal)", pad=10)
     axes[1].set_xlabel("Sensor Channel Index $n$")
     axes[1].set_ylabel("Sensor Channel Index $m$")
     plt.colorbar(im1, ax=axes[1], fraction=0.046, pad=0.04, label="Hydrodynamic Edge Weight $W_{mn}$")
@@ -88,7 +88,7 @@ def generate_figure2_quantum_density_landscape(output_dir="figures"):
     z_surf = np.real(rho_tau)
     
     surf = ax.plot_surface(x_grid, y_grid, z_surf, cmap="plasma", edgecolor='k', linewidth=0.3, alpha=0.92)
-    ax.set_title("Evolved Quantum Density Matrix $\\mathrm{Re}(\\rho(\\tau))$ on Hilbert Space $\\mathcal{H}_{14}$", pad=18)
+    ax.set_title("Proposed HQGN: Density Matrix $\\mathrm{Re}(\\rho(\\tau))$ on Hilbert Space $\\mathcal{H}_{14}$", pad=18)
     ax.set_xlabel("Channel Node $m$", labelpad=10)
     ax.set_ylabel("Channel Node $n$", labelpad=10)
     ax.set_zlabel("Density Amplitude $\\rho_{mn}$", labelpad=10)
@@ -127,17 +127,17 @@ def generate_figure3_entropy_and_purity_dynamics(output_dir="figures"):
     
     fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(11.5, 4.6), constrained_layout=True)
     
-    ax1.plot(taus, svn0, 'b-o', markersize=4, label="Class 0 (Coherent Wave)")
-    ax1.plot(taus, svn1, 'r-s', markersize=4, label="Class 1 (Turbulent Shear)")
-    ax1.set_title("(a) Von Neumann Entanglement Entropy $S_{\\mathrm{VN}}(\\tau)$", pad=10)
+    ax1.plot(taus, svn0, 'b-o', markersize=4, label="Proposed HQGN: Class 0 (Coherent Wave)")
+    ax1.plot(taus, svn1, 'r-s', markersize=4, label="Proposed HQGN: Class 1 (Turbulent Shear)")
+    ax1.set_title("(a) Proposed HQGN: Von Neumann Entropy $S_{\\mathrm{VN}}(\\tau)$", pad=10)
     ax1.set_xlabel("Quantum Walk Horizon $\\tau$")
     ax1.set_ylabel("$S_{\\mathrm{VN}}(\\rho(\\tau)) = -\\mathrm{Tr}(\\rho \\ln \\rho)$")
     ax1.grid(True)
     ax1.legend(loc="lower right")
     
-    ax2.plot(taus, pur0, 'b-o', markersize=4, label="Class 0 (Coherent Wave)")
-    ax2.plot(taus, pur1, 'r-s', markersize=4, label="Class 1 (Turbulent Shear)")
-    ax2.set_title("(b) Quantum State Purity $\\gamma(\\tau) = \\mathrm{Tr}(\\rho(\\tau)^2)$", pad=10)
+    ax2.plot(taus, pur0, 'b-o', markersize=4, label="Proposed HQGN: Class 0 (Coherent Wave)")
+    ax2.plot(taus, pur1, 'r-s', markersize=4, label="Proposed HQGN: Class 1 (Turbulent Shear)")
+    ax2.set_title("(b) Proposed HQGN: State Purity $\\gamma(\\tau) = \\mathrm{Tr}(\\rho(\\tau)^2)$", pad=10)
     ax2.set_xlabel("Quantum Walk Horizon $\\tau$")
     ax2.set_ylabel("Purity $\\gamma$")
     ax2.grid(True)
@@ -178,8 +178,8 @@ def generate_figure4_strang_vs_rk4_trace_drift(output_dir="figures"):
         
     fig, ax = plt.subplots(figsize=(8, 4.6), constrained_layout=True)
     ax.semilogy(range(steps), drift_rk4, 'r--', label="Standard Direct Integrator (Euler/RK Drift)")
-    ax.semilogy(range(steps), np.maximum(drift_strang, 1e-16), 'g-', label="Proposed Strang-Splitting (Exact Unitary Bound)")
-    ax.set_title("Trace Deviation $|\\mathrm{Tr}(\\rho) - 1|$ over Continuous-Time Steps", pad=10)
+    ax.semilogy(range(steps), np.maximum(drift_strang, 1e-16), 'g-', label="Proposed HQGN Strang-Splitting (Exact Unitary Bound)")
+    ax.set_title("Trace Deviation $|\\mathrm{Tr}(\\rho) - 1|$: Proposed HQGN vs Direct RK", pad=10)
     ax.set_xlabel("Integration Time Steps $t_k$")
     ax.set_ylabel("Numerical Trace Drift Error")
     ax.grid(True, which="both")
@@ -208,15 +208,16 @@ def generate_figure5_qfim_attribution(output_dir="figures"):
     colors = ["#e74c3c" if i in [9, 15] else "#3498db" for i in range(M)]
     bars = ax.bar(channels, qfim * 100, color=colors, edgecolor='k', alpha=0.88, width=0.65)
     
-    ax.set_title("Quantum Fisher Information Matrix (QFIM) Channel Attribution Score", pad=12)
+    ax.set_title("Proposed HQGN: Quantum Fisher Information Matrix (QFIM) Channel Attribution", pad=12)
     ax.set_xlabel("Sensor Electrode Channel (10-20 Montage)")
     ax.set_ylabel("Attribution Sensitivity (%)")
-    ax.set_ylim(0, max(qfim * 100) * 1.35)
+    ax.set_ylim(0, max(qfim * 100) * 1.40)
     ax.grid(True, axis='y')
     
     # Text annotation with generous padding to prevent overlap
-    ax.annotate("Primary Epileptogenic Focus\n(Ch10: 44.8% Attribution)", xy=(9, qfim[9]*100), xytext=(9, qfim[9]*100 + 7),
+    ax.annotate("Primary Epileptogenic Focus\n(Ch10: 44.8% Attribution)", xy=(9, qfim[9]*100), xytext=(9, qfim[9]*100 + 8),
                 ha='center', fontsize=9.5, fontweight='bold',
+                bbox=dict(boxstyle='square,pad=0.2', facecolor='white', edgecolor='gray', alpha=0.9),
                 arrowprops=dict(facecolor='black', shrink=0.08, width=1.2, headwidth=6))
                 
     plt.savefig(os.path.join(output_dir, "fig5_qfim_attribution.pdf"), bbox_inches="tight")
@@ -239,7 +240,7 @@ def generate_figure6_snr_stress_curves(results_file="results/snr_stress_results.
     
     fig, ax = plt.subplots(figsize=(9.2, 5.0), constrained_layout=True)
     styles = {
-        "HQGWN_Full": ("#27ae60", "o-", "Full HQGWN (Lindblad $\\alpha=0.15$)"),
+        "HQGWN_Full": ("#27ae60", "o-", "Proposed HQGN (Lindblad $\\alpha=0.15$)"),
         "Unitary_QW_alpha0": ("#e67e22", "^--", "Unitary QW (No Dissipation, $\\alpha=0$)"),
         "Classical_Markov_RW": ("#95a5a6", "s:", "Classical Markov Random Walk"),
         "Welch_PSD_SVM": ("#3498db", "d-.", "Welch PSD + RBF-SVM Baseline"),
@@ -251,7 +252,7 @@ def generate_figure6_snr_stress_curves(results_file="results/snr_stress_results.
             color, fmt, label = styles[name]
             ax.plot(snrs, f1s, fmt, color=color, label=label, linewidth=2.2, markersize=6)
             
-    ax.set_title("Clinical ECoG Noise Robustness: Macro-F1 vs. Channel SNR (dB)", pad=10)
+    ax.set_title("Clinical ECoG Noise Robustness: Proposed HQGN vs. Baselines (SNR dB)", pad=10)
     ax.set_xlabel("Signal-to-Noise Ratio (SNR in dB)")
     ax.set_ylabel("Macro-Averaged F1-Score (%)")
     ax.grid(True, which="both")
@@ -282,25 +283,28 @@ def generate_figure7_ablation_radar_chart(results_file="results/real_multidomain
         "A3: Unitary QW (alpha=0)",
         "A4: Quantum Only (Static)",
         "A5: No Entropy Collapse",
-        "A6: Full Proposed HQGWN"
+        "A6: Proposed HQGN"
     ]
     keys = list(ablation.keys())
     f1_means = [ablation[k]["f1_mean"] for k in keys]
     f1_stds = [ablation[k]["f1_std"] for k in keys]
     
-    fig, ax = plt.subplots(figsize=(10.5, 4.8), constrained_layout=True)
+    fig, ax = plt.subplots(figsize=(10.8, 5.0), constrained_layout=True)
     colors = ["#95a5a6", "#3498db", "#e67e22", "#9b59b6", "#f39c12", "#27ae60"]
     
-    bars = ax.barh(clean_labels, f1_means, xerr=f1_stds, color=colors, edgecolor='k', alpha=0.88, capsize=4, height=0.6)
-    ax.set_xlim(80, 98)
-    ax.set_title("6-Variant Architectural Ablation on Clinical ECoG Telemetry (5-Fold CV Macro-F1)", pad=10)
+    bars = ax.barh(clean_labels, f1_means, xerr=f1_stds, color=colors, edgecolor='k', alpha=0.88, capsize=4, height=0.55)
+    ax.set_xlim(80, 103)
+    ax.set_title("Proposed HQGN: 6-Variant Architectural Component Ablation (Clinical ECoG)", pad=12)
     ax.set_xlabel("Macro-Averaged F1-Score (%)")
     ax.grid(True, axis='x', linestyle='--', alpha=0.6)
     
-    # Position value annotations with generous clearance to prevent text overlap
-    for bar in bars:
+    # Position value annotations strictly beyond the error bar whisker to completely eliminate overlap
+    for bar, std in zip(bars, f1_stds):
         w = bar.get_width()
-        ax.text(w + 0.4, bar.get_y() + bar.get_height()/2.0, f"{w:.2f}%", ha='left', va='center', fontsize=9.5, fontweight='bold')
+        x_pos = w + std + 0.65
+        ax.text(x_pos, bar.get_y() + bar.get_height()/2.0, f"{w:.2f}%", 
+                ha='left', va='center', fontsize=9.5, fontweight='bold',
+                bbox=dict(boxstyle='square,pad=0.15', facecolor='white', edgecolor='none', alpha=0.85))
         
     plt.savefig(os.path.join(output_dir, "fig7_ablation_comparison.pdf"), bbox_inches="tight")
     plt.savefig(os.path.join(output_dir, "fig7_ablation_comparison.png"), bbox_inches="tight", dpi=300)
@@ -318,9 +322,9 @@ def generate_figure8_multidomain_benchmarks(results_file="results/real_multidoma
         
     domain_keys = ["domain1_clinical_ecog", "domain2_bci_scalp_eeg", "domain3_wireless_rf"]
     clean_titles = [
-        "(a) Clinical Epilepsy ECoG\n(Real Intracranial, 16 Ch)",
-        "(b) Motor Imagery BCI\n(Real Scalp EEG, 16 Ch)",
-        "(c) Multipath Wireless RF\n(RadioML 16 Ch, Rayleigh Fading)"
+        "(a) Clinical Epilepsy ECoG\n(Proposed HQGN vs Baselines)",
+        "(b) Motor Imagery BCI\n(Proposed HQGN vs Baselines)",
+        "(c) Multipath Wireless RF\n(Proposed HQGN vs Baselines)"
     ]
     
     models = [
@@ -331,10 +335,10 @@ def generate_figure8_multidomain_benchmarks(results_file="results/real_multidoma
         "Riemannian Covariance (Barachant 2012)",
         "Full HQGWN (Proposed Framework)"
     ]
-    short_labels = ["Dense 1D-CNN", "ST-GCN", "CTQW-GNN", "Dissipative OQW", "Riemannian Cov", "Full HQGWN"]
+    short_labels = ["Dense 1D-CNN", "ST-GCN", "CTQW-GNN", "Dissipative OQW", "Riemannian Cov", "Proposed HQGN"]
     colors = ["#3498db", "#e67e22", "#9b59b6", "#1abc9c", "#95a5a6", "#27ae60"]
     
-    fig, axes = plt.subplots(1, 3, figsize=(16.5, 5.5), constrained_layout=True)
+    fig, axes = plt.subplots(1, 3, figsize=(16.8, 5.8), constrained_layout=True)
     
     for d_idx, d_key in enumerate(domain_keys):
         ax = axes[d_idx]
@@ -347,13 +351,16 @@ def generate_figure8_multidomain_benchmarks(results_file="results/real_multidoma
         ax.set_ylabel("Macro-F1 Score (%)", fontsize=10.5)
         ax.set_xticks(range(len(models)))
         ax.set_xticklabels(short_labels, rotation=30, ha='right', fontsize=9.5)
-        ax.set_ylim(0, 115)
+        ax.set_ylim(0, 122)
         ax.grid(True, axis='y', linestyle='--', alpha=0.5)
         
-        # Numbers above bars with adequate vertical clearance
-        for bar in bars:
+        # Position numbers strictly above the error bar top cap to prevent overlap
+        for bar, err in zip(bars, errs):
             h = bar.get_height()
-            ax.text(bar.get_x() + bar.get_width()/2.0, h + 2.5, f"{h:.1f}%", ha='center', va='bottom', fontsize=8.5, fontweight='bold')
+            y_pos = h + err + 2.8
+            ax.text(bar.get_x() + bar.get_width()/2.0, y_pos, f"{h:.1f}%", 
+                    ha='center', va='bottom', fontsize=8.5, fontweight='bold',
+                    bbox=dict(boxstyle='square,pad=0.12', facecolor='white', edgecolor='none', alpha=0.8))
             
     plt.savefig(os.path.join(output_dir, "fig8_multidomain_benchmarks.pdf"), bbox_inches="tight")
     plt.savefig(os.path.join(output_dir, "fig8_multidomain_benchmarks.png"), bbox_inches="tight", dpi=300)
@@ -381,9 +388,9 @@ def generate_figure9_adversarial_security(results_file="results/adversarial_secu
     fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(11.5, 4.8), constrained_layout=True)
     
     # Phase Jitter
-    ax1.plot(jits, jit_f1, 'r-o', linewidth=2.2, markersize=6)
+    ax1.plot(jits, jit_f1, 'r-o', linewidth=2.2, markersize=6, label="Proposed HQGN Response")
     ax1.axvspan(0.0, 0.5, color='green', alpha=0.15, label="Certified Stability Zone")
-    ax1.set_title("(a) Phase Jitter Robustness (Contact Drift)", pad=10)
+    ax1.set_title("(a) Proposed HQGN: Phase Jitter Robustness", pad=10)
     ax1.set_xlabel("Phase Jitter Standard Deviation $\\sigma_\\theta$ (rad)")
     ax1.set_ylabel("Macro-F1 Score (%)")
     ax1.set_ylim(20, 105)
@@ -391,9 +398,9 @@ def generate_figure9_adversarial_security(results_file="results/adversarial_secu
     ax1.legend(loc="lower left", fontsize=9.5)
     
     # Channel Dropout
-    ax2.plot(drops, drop_f1, 'b-s', linewidth=2.2, markersize=6)
+    ax2.plot(drops, drop_f1, 'b-s', linewidth=2.2, markersize=6, label="Proposed HQGN Response")
     ax2.axvspan(0.0, 12.5, color='green', alpha=0.15, label="High Retention Zone")
-    ax2.set_title("(b) Channel Dropout Tolerance (Sensor Failure)", pad=10)
+    ax2.set_title("(b) Proposed HQGN: Channel Dropout Tolerance", pad=10)
     ax2.set_xlabel("Dropped Sensor Channels (%)")
     ax2.set_ylabel("Macro-F1 Score (%)")
     ax2.set_ylim(20, 105)
@@ -424,10 +431,11 @@ def generate_figure10_dirichlet_and_scaling(results_file="results/comprehensive_
     ax1 = axes[0]
     ax1.plot(dirichlet["times"], dirichlet["classical"], "r--", linewidth=2.0, label="Classical Markov Diffusion (Oversmooths)")
     ax1.plot(dirichlet["times"], dirichlet["unitary_ctqw"], "b-.", linewidth=2.0, label="Unitary CTQW (Zhan 2026, $\\alpha=0$)")
-    ax1.plot(dirichlet["times"], dirichlet["hqgwn"], "g-", linewidth=2.5, label="HQGWN Open System ($\\alpha=0.15$)")
+    dir_hq = dirichlet.get("hqgn", dirichlet.get("hqgwn"))
+    ax1.plot(dirichlet["times"], dir_hq, "g-", linewidth=2.5, label="Proposed HQGN Open System ($\\alpha=0.15$)")
     ax1.set_xlabel("Evolution Horizon $t$")
     ax1.set_ylabel("Dirichlet Energy $E(t)$")
-    ax1.set_title("(a) Dirichlet Energy & Oversmoothing Invariance", pad=10)
+    ax1.set_title("(a) Dirichlet Energy: Proposed HQGN vs Baselines", pad=10)
     ax1.legend(loc="upper right", frameon=True, fontsize=8.5)
     ax1.grid(True, linestyle=":", alpha=0.6)
     
@@ -436,26 +444,32 @@ def generate_figure10_dirichlet_and_scaling(results_file="results/comprehensive_
     ratios = [int(r * 100) for r in efficiency["ratios"]]
     curves = efficiency["curves"]
     for name, vals in curves.items():
-        style = "-" if "HQGWN" in name else "--"
-        lw = 2.5 if "HQGWN" in name else 1.8
-        marker = "o" if "HQGWN" in name else "s"
-        ax2.plot(ratios, vals, style, marker=marker, linewidth=lw, label=name)
+        is_prop = ("HQG" in name or "Proposed" in name)
+        disp_name = "Proposed HQGN" if is_prop else name
+        style = "-" if is_prop else "--"
+        lw = 2.5 if is_prop else 1.8
+        marker = "o" if is_prop else "s"
+        color = "#27ae60" if is_prop else None
+        if color:
+            ax2.plot(ratios, vals, style, marker=marker, linewidth=lw, color=color, label=disp_name)
+        else:
+            ax2.plot(ratios, vals, style, marker=marker, linewidth=lw, label=disp_name)
     ax2.set_xlabel("Training Data Ratio (%)")
     ax2.set_ylabel("Macro-F1 Score (%)")
     ax2.set_title("(b) Sample-Efficiency Generalization", pad=10)
-    ax2.legend(loc="lower right", frameon=True, fontsize=8.0)
-    ax2.set_ylim([78, 103])
+    ax2.legend(loc="lower right", frameon=True, fontsize=8.5)
+    ax2.set_ylim([70, 103])
     ax2.grid(True, linestyle=":", alpha=0.6)
     
     # Subplot 3: Walk-Time Horizon Sensitivity
     ax3 = axes[2]
-    ax3.plot(walk_time["tau_vals"], walk_time["macro_f1"], "m-o", linewidth=2.2, markersize=6, color="#2b5c8f")
-    ax3.axvspan(1.0, 3.0, color="green", alpha=0.15, label="Optimal Window $\\tau \\in [1.0, 3.0]$")
+    ax3.plot(walk_time["tau_vals"], walk_time["macro_f1"], "-o", linewidth=2.2, markersize=6, color="#2b5c8f", label="Proposed HQGN Response")
+    ax3.axvspan(1.0, 3.0, color="green", alpha=0.15, label="Optimal Horizon $\\tau \\in [1.0, 3.0]$")
     ax3.set_xlabel("Continuous Walk Horizon $\\tau$ (s)")
     ax3.set_ylabel("Macro-F1 Score (%)")
-    ax3.set_title("(c) Continuous Walk-Time Sensitivity", pad=10)
+    ax3.set_title("(c) Proposed HQGN Walk-Time Sensitivity", pad=10)
     ax3.legend(loc="lower right", frameon=True, fontsize=9.0)
-    ax3.set_ylim([90, 103])
+    ax3.set_ylim([80, 102])
     ax3.grid(True, linestyle=":", alpha=0.6)
     
     plt.savefig(os.path.join(output_dir, "fig10_dirichlet_oversmoothing.pdf"), bbox_inches="tight")

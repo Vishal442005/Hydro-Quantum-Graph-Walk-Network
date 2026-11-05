@@ -20,9 +20,9 @@ def create_release():
 
     repo = "Vishal442005/Hydro-Quantum-Graph-Walk-Network"
     tag = "v1.1.0"
-    release_name = "v1.1.0: Hydro-Quantum Graph Walk Network (HQGWN) - Pattern Recognition Research Artifact"
+    release_name = "v1.1.0: Hydro-Quantum Graph Network (HQGN) - Pattern Recognition Research Artifact"
     
-    release_body = """# Hydro-Quantum Graph Walk Network (HQGWN) - Release v1.1.0
+    release_body = """# Hydro-Quantum Graph Network (HQGN) - Release v1.1.0
 
 ## Official Research Artifact & Multi-Domain Empirical Benchmarks
 **Target Venue:** *Pattern Recognition* (Elsevier)  
@@ -36,10 +36,10 @@ def create_release():
 
 ### Key Release Highlights
 1. **Authentic Multi-Domain Empirical Benchmarks (`real_multidomain_comparative_results.json`):**
-   - **Clinical Neurophysiology:** Intracranial ECoG Seizure Telemetry (149 windows, 250 Hz) - HQGWN achieves **92.62% Accuracy, 92.61% Macro-F1, 91.80% Sensitivity, 93.44% Specificity, 96.80% AUROC**.
-   - **Sensorimotor BCI:** Scalp EEG Motor Imagery (BCI Competition IV-2a, 144 trials, 250 Hz) - HQGWN achieves **88.75% Macro-F1**.
-   - **Cognitive Radio:** Multi-Carrier Wireless RF Telemetry under Rayleigh Fading (240 frames, 1000 Hz) - HQGWN achieves **84.30% Macro-F1**.
-   - **Extreme Noise Robustness:** Evaluated from +20 dB down to -20 dB SNR; HQGWN sustains stable performance down to -10 dB where classical baselines experience catastrophic collapse.
+   - **Clinical Neurophysiology:** Intracranial ECoG Seizure Telemetry (149 windows, 250 Hz) - HQGN achieves **92.62% Accuracy, 92.61% Macro-F1, 91.80% Sensitivity, 93.44% Specificity, 96.80% AUROC**.
+   - **Sensorimotor BCI:** Scalp EEG Motor Imagery (BCI Competition IV-2a, 144 trials, 250 Hz) - HQGN achieves **88.75% Macro-F1**.
+   - **Cognitive Radio:** Multi-Carrier Wireless RF Telemetry under Rayleigh Fading (240 frames, 1000 Hz) - HQGN achieves **84.30% Macro-F1**.
+   - **Extreme Noise Robustness:** Evaluated from +20 dB down to -20 dB SNR; HQGN sustains stable performance down to -10 dB where classical baselines experience catastrophic collapse.
    - **Dirichlet Energy Stability:** Asymptotically non-vanishing energy ($E(5.0) = 0.023 > 0$), preventing GNN oversmoothing.
    - **Explainability & Security:** Closed-form Quantum Fisher Information Matrix (QFIM) channel attribution and adversarial Brownian phase jitter verification.
 
@@ -58,7 +58,7 @@ This release snapshot is archived with Zenodo under digital object identifier (D
     headers = {
         'Authorization': f'token {token}',
         'Accept': 'application/vnd.github.v3+json',
-        'User-Agent': 'HQGWN-Release-Bot'
+        'User-Agent': 'HQGN-Release-Bot'
     }
 
     # 1. Create Release via GitHub API
@@ -115,7 +115,7 @@ This release snapshot is archived with Zenodo under digital object identifier (D
             'Authorization': f'token {token}',
             'Content-Type': content_type,
             'Content-Length': str(len(file_data)),
-            'User-Agent': 'HQGWN-Release-Bot'
+            'User-Agent': 'HQGN-Release-Bot'
         }
         
         up_req = urllib.request.Request(upload_url, data=file_data, headers=up_headers, method='POST')

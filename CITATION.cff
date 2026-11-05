@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "If you use this research artifact, empirical benchmarks, or software framework, please cite it as below."
-title: "Hydro-Quantum Graph Walk Network (HQGWN): Vorticity-Aware Open Quantum Markov Dynamics and Thermodynamic Invariant Collapse for Robust Spatio-Temporal Telemetry Sensing"
+title: "Hydro-Quantum Graph Network (HQGN): Vorticity-Aware Open Quantum Markov Dynamics and Thermodynamic Invariant Collapse for Robust Spatio-Temporal Telemetry Sensing"
 authors:
   - family-names: "Chandel"
     given-names: "Vishal"
@@ -28,7 +28,7 @@ preferred-citation:
     - family-names: "Chandel"
       given-names: "Vishal"
       orcid: "https://orcid.org/0009-0006-0552-8551"
-  title: "Hydro-Quantum Graph Walk Network (HQGWN): Vorticity-Aware Open Quantum Markov Dynamics and Thermodynamic Invariant Collapse for Robust Spatio-Temporal Telemetry Sensing"
+  title: "Hydro-Quantum Graph Network (HQGN): Vorticity-Aware Open Quantum Markov Dynamics and Thermodynamic Invariant Collapse for Robust Spatio-Temporal Telemetry Sensing"
   journal: "Pattern Recognition"
   year: 2026
   month: 11

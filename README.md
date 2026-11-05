@@ -1,4 +1,4 @@
-# Hydro-Quantum Graph Walk Network (HQGWN)
+# Hydro-Quantum Graph Network (HQGN)
 [![DOI](https://zenodo.org/badge/1445760922.svg)](https://zenodo.org/badge/latestdoi/1445760922)
 [![GitHub Release](https://img.shields.io/github/v/release/Vishal442005/Hydro-Quantum-Graph-Walk-Network?color=blue&label=Release)](https://github.com/Vishal442005/Hydro-Quantum-Graph-Walk-Network/releases/tag/v1.1.0)
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
@@ -7,7 +7,7 @@
 [![Benchmarks](https://img.shields.io/badge/Benchmarks-3_Domains_Empirical-success)](results/real_multidomain_comparative_results.json)
 
 > **Official Implementation & Research Artifact for:**  
-> *Hydro-Quantum Graph Walk Network (HQGWN): Vorticity-Aware Open Quantum Markov Dynamics and Thermodynamic Invariant Collapse for Robust Spatio-Temporal Telemetry Sensing*  
+> *Hydro-Quantum Graph Network (HQGN): Vorticity-Aware Open Quantum Markov Dynamics and Thermodynamic Invariant Collapse for Robust Spatio-Temporal Telemetry Sensing*  
 > **Author:** Vishal Chandel (Department of Electronics and Communication Engineering)  
 > **ORCID:** [`0009-0006-0552-8551`](https://orcid.org/0009-0006-0552-8551)  
 > **Contact:** `vishal442005@outlook.com`  
@@ -58,7 +58,7 @@ Multi-Channel Time-Series X(t) in R^{M x L}
 
 ## 2. Multi-Domain Cross-Paradigm Benchmarks
 
-HQGWN was evaluated against five leading comparative paradigms from 2020–2026 literature across **3 distinct physical telemetry domains** under **5-Fold Stratified Cross-Validation**:
+HQGN was evaluated against five leading comparative paradigms from 2020–2026 literature across **3 distinct physical telemetry domains** under **5-Fold Stratified Cross-Validation**:
 
 | Model Paradigm | Domain 1: Clinical ECoG (16 Ch) | Domain 2: Scalp BCI (16 Ch) | Domain 3: Multipath RF (16 Ch) | Mean Latency |
 | :--- | :---: | :---: | :---: | :---: |
@@ -67,7 +67,7 @@ HQGWN was evaluated against five leading comparative paradigms from 2020–2026 
 | **Unitary CTQW-GNN** *(Zhan et al. 2026)* | $89.20 \pm 3.35\%$ | $54.65 \pm 4.17\%$ | $38.96 \pm 4.53\%$ | $3.23$ ms |
 | **Dissipative OQW** *(Linck et al. 2026)* | $87.83 \pm 1.78\%$ | $50.71 \pm 4.30\%$ | **$43.01 \pm 2.31\%$** | $2.41$ ms |
 | **Riemannian Covariance** *(Barachant 2012)* | $34.06 \pm 0.65\%$ | $33.45 \pm 3.22\%$ | $25.96 \pm 5.63\%$ | **$0.12$ ms** |
-| **Full Proposed HQGWN** | **$91.28 \pm 3.98\%$** | $49.96 \pm 8.07\%$ | **$39.64 \pm 1.71\%$** | $3.98$ ms |
+| **Proposed HQGN** | **$91.28 \pm 3.98\%$** | $49.96 \pm 8.07\%$ | **$39.64 \pm 1.71\%$** | $3.98$ ms |
 
 ---
 
@@ -82,7 +82,7 @@ Evaluated on real human intracranial ECoG recordings ([MNE Epilepsy ECoG](C:/Use
 | Unitary CTQW-GNN *(Zhan 2026)* | $89.24 \pm 3.35$ | $89.20 \pm 3.35$ | $84.42 \pm 6.41$ | $94.38 \pm 5.32$ | $95.21 \pm 2.90$ | $2.98$ ms |
 | Dissipative OQW *(Linck 2026)* | $87.91 \pm 1.72$ | $87.83 \pm 1.78$ | $86.92 \pm 7.39$ | $88.95 \pm 7.15$ | $96.47 \pm 1.44$ | $2.29$ ms |
 | Riemannian Covariance *(Barachant 2012)* | $51.68 \pm 1.49$ | $34.06 \pm 0.65$ | $100.00 \pm 0.00$ | $0.00 \pm 0.00$ | $24.33 \pm 21.14$ | **$0.12$ ms** |
-| **Full Proposed HQGWN** | **$91.29 \pm 3.98$** | **$91.28 \pm 3.98$** | **$88.25 \pm 5.04$** | **$94.57 \pm 5.02$** | **$95.06 \pm 2.50$** | $2.84$ ms |
+| **Proposed HQGN** | **$91.29 \pm 3.98$** | **$91.28 \pm 3.98$** | **$88.25 \pm 5.04$** | **$94.57 \pm 5.02$** | **$95.06 \pm 2.50$** | $2.84$ ms |
 
 ---
 
@@ -95,7 +95,7 @@ Evaluated on real human intracranial ECoG recordings ([MNE Epilepsy ECoG](C:/Use
 | **A3 (Unitary QW, $\alpha=0$)** | $88.55 \pm 4.57$ | $88.57 \pm 4.57$ | $0.771 \pm 0.091$ | Coherent quantum walk without dissipation |
 | **A4 (Quantum Only, Pearson)** | $88.53 \pm 3.41$ | $88.60 \pm 3.38$ | $0.772 \pm 0.068$ | Lindblad quantum walk on static graph |
 | **A5 (No Entropy Collapse)** | $88.54 \pm 3.43$ | $88.60 \pm 3.38$ | $0.772 \pm 0.068$ | Diagonal probabilities only, no QKL/Bures |
-| **A6 (Full Proposed HQGWN)** | **$92.61 \pm 3.26$** | **$92.62 \pm 3.26$** | **$0.852 \pm 0.065$** | Full tri-domain physical synthesis |
+| **A6 (Proposed HQGN)** | **$92.61 \pm 3.26$** | **$92.62 \pm 3.26$** | **$0.852 \pm 0.065$** | Full tri-domain physical synthesis |
 
 ---
 
@@ -128,7 +128,7 @@ Evaluated on real human intracranial ECoG recordings ([MNE Epilepsy ECoG](C:/Use
 │   ├── hydro/                       # Stage I: Poincaré-Cartan phase vorticity
 │   ├── quantum/                     # Stage II: Lindblad Master Equation & Strang splitting
 │   ├── thermo/                      # Stage III: Quantum Relative Entropy & Bures Metric
-│   ├── models/                      # Scikit-learn compliant HQGWN Classifier
+│   ├── models/                      # Scikit-learn compliant HQGN Classifier
 │   └── xai/                         # Explainable AI: QFIM & Bures Counterfactuals
 ├── experiments/                     # Multi-domain benchmarking scripts
 ├── related_papers/                  # 15 Full-text research papers (2020-2026)
@@ -168,7 +168,7 @@ python scripts/generate_elsevier_pr_docx.py
 ```bibtex
 @article{chandel2026hydroquantum,
   author    = {Chandel, Vishal},
-  title     = {Hydro-Quantum Graph Walk Network ({HQGWN}): Vorticity-Aware Open Quantum Markov Dynamics and Thermodynamic Invariant Collapse for Robust Spatio-Temporal Telemetry Sensing},
+  title     = {Hydro-Quantum Graph Network ({HQGN}): Vorticity-Aware Open Quantum Markov Dynamics and Thermodynamic Invariant Collapse for Robust Spatio-Temporal Telemetry Sensing},
   journal   = {Pattern Recognition},
   year      = {2026},
   note      = {Under review}
