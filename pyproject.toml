@@ -4,11 +4,11 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "hqgwn"
-version = "1.0.0"
+version = "1.1.0"
 description = "Hydro-Quantum Graph Walk Networks: Navier-Stokes Vorticity, Open-System Lindblad Quantum Walks, and Von Neumann Entropy Collapse"
 readme = "README.md"
 authors = [
-    { name = "Google DeepMind Advanced Agentic Research Team" }
+    { name = "Vishal Chandel", email = "vishal442005@outlook.com" }
 ]
 license = { text = "Apache-2.0" }
 requires-python = ">=3.9"
@@ -31,5 +31,7 @@ dependencies = [
 include = ["hqgwn*"]
 
 [project.urls]
-"Homepage" = "https://github.com/google-deepmind/hqgwn"
-"Zenodo DOI" = "https://doi.org/10.5281/zenodo.hqgwn.100"
+"Homepage" = "https://github.com/Vishal442005/Hydro-Quantum-Graph-Walk-Network"
+"Repository" = "https://github.com/Vishal442005/Hydro-Quantum-Graph-Walk-Network"
+"ORCID" = "https://orcid.org/0009-0006-0552-8551"
+"Zenodo DOI" = "https://doi.org/10.5281/zenodo.1445760922"

@@ -323,7 +323,7 @@ def generate_elsevier_pr_manuscript(output_docx_path: str):
     p_auth.alignment = WD_ALIGN_PARAGRAPH.CENTER
     p_auth.paragraph_format.space_before = Pt(2)
     p_auth.paragraph_format.space_after = Pt(2)
-    r_author = p_auth.add_run("Vishal Sharma")
+    r_author = p_auth.add_run("Vishal Chandel")
     set_run_font(r_author, font_name=FONT_FAMILY, size_pt=11.0, color=COLOR_BLACK, bold=True)
     r_star = p_auth.add_run(" *")
     set_run_font(r_star, font_name=FONT_FAMILY, size_pt=11.0, color=COLOR_BLACK, bold=True)
@@ -339,7 +339,7 @@ def generate_elsevier_pr_manuscript(output_docx_path: str):
     p_corr.alignment = WD_ALIGN_PARAGRAPH.CENTER
     p_corr.paragraph_format.space_before = Pt(0)
     p_corr.paragraph_format.space_after = Pt(10)
-    r_corr = p_corr.add_run("* Corresponding author. E-mail address: vishal442005@outlook.com")
+    r_corr = p_corr.add_run("* Corresponding author. E-mail address: vishal442005@outlook.com | ORCID: 0009-0006-0552-8551")
     set_run_font(r_corr, font_name=FONT_FAMILY, size_pt=9.5, color=COLOR_BLACK, italic=True)
 
     # Clean dividing horizontal line before abstract
@@ -1057,7 +1057,7 @@ def generate_elsevier_pr_manuscript(output_docx_path: str):
     r_cr_lbl = p_cr_hdr.add_run("CRediT authorship contribution statement")
     set_run_font(r_cr_lbl, font_name=FONT_FAMILY, size_pt=11.0, color=COLOR_BLACK, bold=True)
     add_p_with_math(doc,
-        "Vishal Sharma: Conceptualization, Methodology, Software, Mathematical Derivations, Formal Proofs, Empirical Validation, Data Curation, Writing - Original Draft, Writing - Review & Editing, Visualization, Project administration."
+        "Vishal Chandel: Conceptualization, Methodology, Software, Mathematical Derivations, Formal Proofs, Empirical Validation, Data Curation, Writing - Original Draft, Writing - Review & Editing, Visualization, Project administration."
     )
 
     p_coi_hdr = doc.add_paragraph()
@@ -1149,11 +1149,17 @@ def generate_elsevier_pr_manuscript(output_docx_path: str):
 def main():
     # Target 1: Requested folder 'elseiver' -> elseiver/elseiver_graph.docx
     target_path1 = os.path.join("elseiver", "elseiver_graph.docx")
-    generate_elsevier_pr_manuscript(target_path1)
+    try:
+        generate_elsevier_pr_manuscript(target_path1)
+    except PermissionError:
+        print(f"Warning: {target_path1} is currently open in Word. Skipping write.")
     
     # Target 2: Mirrored standard folder 'elsevier' -> elsevier/elsevier_graph.docx
     target_path2 = os.path.join("elsevier", "elsevier_graph.docx")
-    generate_elsevier_pr_manuscript(target_path2)
+    try:
+        generate_elsevier_pr_manuscript(target_path2)
+    except PermissionError:
+        print(f"Warning: {target_path2} is currently open in Word. Skipping write.")
 
 
 if __name__ == "__main__":

@@ -19,14 +19,15 @@ def create_release():
         sys.exit(1)
 
     repo = "Vishal442005/Hydro-Quantum-Graph-Walk-Network"
-    tag = "v1.0.0"
-    release_name = "v1.0.0: Hydro-Quantum Graph Walk Network (HQGWN) - Pattern Recognition Release"
+    tag = "v1.1.0"
+    release_name = "v1.1.0: Hydro-Quantum Graph Walk Network (HQGWN) - Pattern Recognition Research Artifact"
     
-    release_body = """# Hydro-Quantum Graph Walk Network (HQGWN) - Release v1.0.0
+    release_body = """# Hydro-Quantum Graph Walk Network (HQGWN) - Release v1.1.0
 
-## Official Camera-Ready Research Artifact & Multi-Domain Empirical Benchmarks
+## Official Research Artifact & Multi-Domain Empirical Benchmarks
 **Target Venue:** *Pattern Recognition* (Elsevier)  
-**Author:** Vishal Sharma (Department of Electronics and Communication Engineering)  
+**Author:** Vishal Chandel (Department of Electronics and Communication Engineering)  
+**ORCID:** [`0009-0006-0552-8551`](https://orcid.org/0009-0006-0552-8551)  
 **Author Contact:** `vishal442005@outlook.com`  
 **License:** Apache 2.0  
 **Repository:** [Vishal442005/Hydro-Quantum-Graph-Walk-Network](https://github.com/Vishal442005/Hydro-Quantum-Graph-Walk-Network)

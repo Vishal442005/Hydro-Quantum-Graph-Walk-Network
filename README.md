@@ -1,13 +1,15 @@
 # Hydro-Quantum Graph Walk Network (HQGWN)
 [![DOI](https://zenodo.org/badge/1445760922.svg)](https://zenodo.org/badge/latestdoi/1445760922)
-[![GitHub Release](https://img.shields.io/github/v/release/Vishal442005/Hydro-Quantum-Graph-Walk-Network?color=blue&label=Release)](https://github.com/Vishal442005/Hydro-Quantum-Graph-Walk-Network/releases/tag/v1.0.0)
+[![GitHub Release](https://img.shields.io/github/v/release/Vishal442005/Hydro-Quantum-Graph-Walk-Network?color=blue&label=Release)](https://github.com/Vishal442005/Hydro-Quantum-Graph-Walk-Network/releases/tag/v1.1.0)
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
+[![ORCID](https://img.shields.io/badge/ORCID-0009--0006--0552--8551-green.svg)](https://orcid.org/0009-0006-0552-8551)
 [![Benchmarks](https://img.shields.io/badge/Benchmarks-3_Domains_Empirical-success)](results/real_multidomain_comparative_results.json)
 
 > **Official Implementation & Research Artifact for:**  
 > *Hydro-Quantum Graph Walk Network (HQGWN): Vorticity-Aware Open Quantum Markov Dynamics and Thermodynamic Invariant Collapse for Robust Spatio-Temporal Telemetry Sensing*  
-> **Author:** Vishal Sharma (Department of Electronics and Communication Engineering)  
+> **Author:** Vishal Chandel (Department of Electronics and Communication Engineering)  
+> **ORCID:** [`0009-0006-0552-8551`](https://orcid.org/0009-0006-0552-8551)  
 > **Contact:** `vishal442005@outlook.com`  
 > **Target Journal:** *Pattern Recognition* (Elsevier) / *IEEE TPAMI* / *Nature Machine Intelligence*
 
@@ -164,8 +166,8 @@ python scripts/generate_elsevier_pr_docx.py
 ## 8. Citation
 
 ```bibtex
-@article{sharma2026hydroquantum,
-  author    = {Sharma, Vishal},
+@article{chandel2026hydroquantum,
+  author    = {Chandel, Vishal},
   title     = {Hydro-Quantum Graph Walk Network ({HQGWN}): Vorticity-Aware Open Quantum Markov Dynamics and Thermodynamic Invariant Collapse for Robust Spatio-Temporal Telemetry Sensing},
   journal   = {Pattern Recognition},
   year      = {2026},
@@ -174,4 +176,4 @@ python scripts/generate_elsevier_pr_docx.py
 ```
 
 ---
-*Maintained by Vishal Sharma (`vishal442005@outlook.com`). Apache 2.0 License.*
+*Maintained by Vishal Chandel (`vishal442005@outlook.com`). ORCID: [0009-0006-0552-8551](https://orcid.org/0009-0006-0552-8551). Apache 2.0 License.*
