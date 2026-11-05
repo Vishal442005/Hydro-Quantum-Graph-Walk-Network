@@ -13,18 +13,21 @@ dist/
 build/
 .eggs/
 
-# LaTeX Auxiliary Files (preserve .tex, .pdf, .bib)
-manuscript/*.aux
-manuscript/*.bbl
-manuscript/*.blg
-manuscript/*.log
-manuscript/*.out
-manuscript/*.synctex.gz
+# Manuscripts (Word documents, LaTeX manuscripts, compiled PDFs)
+*.docx
+*.doc
+*.rtf
+elseiver/
+elsevier/
+manuscript/
+
+# LaTeX Auxiliary Files
 *.aux
 *.bbl
 *.blg
 *.log
 *.out
+*.synctex.gz
 
 # Temporary / Scratch files
 scratch/

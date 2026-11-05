@@ -34,16 +34,7 @@ def create_release():
 ---
 
 ### Key Release Highlights
-1. **Elsevier Pattern Recognition Manuscript (`elseiver_graph.docx`):**
-   - Professional submission-ready typography in **Times New Roman** and **100% pure black text/headings** (`#000000`).
-   - 18 native Microsoft Word OMML display equations with right-aligned numbering `(1)` to `(18)`.
-   - Over 237 native inline OMML mathematical symbols throughout.
-   - All 10 publication-quality 300 DPI figures embedded with Elsevier captions.
-   - 5 professional 3-line booktabs tables with authentic empirical results.
-   - 100% strict 3rd-person academic voice verified (`we: 0`, `our: 0`, `us: 0`).
-   - Complete CRediT authorship statement, Declaration of Competing Interest, and Data/Code Availability.
-
-2. **Authentic Multi-Domain Empirical Benchmarks (`real_multidomain_comparative_results.json`):**
+1. **Authentic Multi-Domain Empirical Benchmarks (`real_multidomain_comparative_results.json`):**
    - **Clinical Neurophysiology:** Intracranial ECoG Seizure Telemetry (149 windows, 250 Hz) - HQGWN achieves **92.62% Accuracy, 92.61% Macro-F1, 91.80% Sensitivity, 93.44% Specificity, 96.80% AUROC**.
    - **Sensorimotor BCI:** Scalp EEG Motor Imagery (BCI Competition IV-2a, 144 trials, 250 Hz) - HQGWN achieves **88.75% Macro-F1**.
    - **Cognitive Radio:** Multi-Carrier Wireless RF Telemetry under Rayleigh Fading (240 frames, 1000 Hz) - HQGWN achieves **84.30% Macro-F1**.
@@ -54,9 +45,8 @@ def create_release():
 ---
 
 ### Included Release Assets
-- `elseiver_graph.docx`: Elsevier Pattern Recognition camera-ready Word document (2.57 MB)
-- `manuscript_hqgwn.pdf`: Complete 7-page IEEE-formatted camera-ready PDF (2.96 MB)
 - `real_multidomain_comparative_results.json`: Full empirical 5-fold cross-validation metrics across all physical domains
+- Full source code and reproducibility pipeline
 
 ---
 
@@ -103,10 +93,8 @@ This release snapshot is archived with Zenodo under digital object identifier (D
     # Clean upload url base
     upload_base = upload_url_template.split('{')[0]
 
-    # 2. Upload Binary Assets
+    # 2. Upload Benchmark Assets (Manuscripts are excluded from git and public release)
     assets_to_upload = [
-        ("elseiver/elseiver_graph.docx", "elseiver_graph.docx", "application/vnd.openxmlformats-officedocument.wordprocessingml.document"),
-        ("manuscript/manuscript_hqgwn.pdf", "manuscript_hqgwn.pdf", "application/pdf"),
         ("results/real_multidomain_comparative_results.json", "real_multidomain_comparative_results.json", "application/json")
     ]
 

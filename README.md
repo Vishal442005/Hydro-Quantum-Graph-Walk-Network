@@ -3,8 +3,7 @@
 [![GitHub Release](https://img.shields.io/github/v/release/Vishal442005/Hydro-Quantum-Graph-Walk-Network?color=blue&label=Release)](https://github.com/Vishal442005/Hydro-Quantum-Graph-Walk-Network/releases/tag/v1.0.0)
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
-[![Elsevier-PR-DOCX](https://img.shields.io/badge/Manuscript-Elsevier_PR_DOCX-orange)](https://github.com/Vishal442005/Hydro-Quantum-Graph-Walk-Network/releases/download/v1.0.0/elseiver_graph.docx)
-[![Manuscript-PDF](https://img.shields.io/badge/Manuscript-IEEE_PDF-red)](https://github.com/Vishal442005/Hydro-Quantum-Graph-Walk-Network/releases/download/v1.0.0/manuscript_hqgwn.pdf)
+[![Benchmarks](https://img.shields.io/badge/Benchmarks-3_Domains_Empirical-success)](results/real_multidomain_comparative_results.json)
 
 > **Official Implementation & Research Artifact for:**  
 > *Hydro-Quantum Graph Walk Network (HQGWN): Vorticity-Aware Open Quantum Markov Dynamics and Thermodynamic Invariant Collapse for Robust Spatio-Temporal Telemetry Sensing*  
@@ -110,15 +109,8 @@ Evaluated on real human intracranial ECoG recordings ([MNE Epilepsy ECoG](C:/Use
 ## 6. Directory Structure
 
 ```
-├── elseiver/
-│   └── elseiver_graph.docx          # Elsevier Pattern Recognition camera-ready Word document
-├── elsevier/
-│   └── elsevier_graph.docx          # Mirrored Elsevier document
-├── manuscript/
-│   ├── manuscript_hqgwn.pdf         # Camera-ready IEEE 2-column PDF (7 pages)
-│   ├── manuscript_hqgwn.tex         # Complete LaTeX source
-│   ├── manuscript_hqgwn.docx        # Elsevier Word document with 19 OMML equations
-│   └── references.bib               # 30 BibTeX references
+├── elseiver/                        # Local Elsevier Word submission documents (git-ignored)
+├── manuscript/                      # Local manuscript sources & PDFs (git-ignored)
 ├── figures/
 │   ├── fig1_hydrodynamic_adjacency.{png,pdf}
 │   ├── fig2_density_matrix_3d.{png,pdf}
