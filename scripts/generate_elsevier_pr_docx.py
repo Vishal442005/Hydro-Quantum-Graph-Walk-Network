@@ -572,7 +572,7 @@ def generate_elsevier_pr_manuscript(output_docx_path: str):
     )
 
     add_figure(doc, 1, 
-        "Stage I Hydrodynamic Adjacency Matrix Construction: (a) Navier-Stokes Phase Velocity Vector Field u(x, y); (b) Antisymmetric Vorticity Curl Tensor Omega_ij capturing circulating wave dynamics; (c) Vorticity-Modulated Graph Adjacency W_ij.",
+        "Proposed HQGN Stage I Hydrodynamic Adjacency Matrix Construction: (a) Navier-Stokes Phase Velocity Vector Field u(x, y); (b) Antisymmetric Vorticity Curl Tensor Omega_ij capturing circulating wave dynamics; (c) Vorticity-Modulated Graph Adjacency W_ij.",
         "figures/fig1_hydrodynamic_adjacency.png", width_in=5.8)
 
     add_subsection_heading(doc, 3, 2, "Open Lindblad stochastic quantum walk dynamics")
@@ -598,7 +598,7 @@ def generate_elsevier_pr_manuscript(output_docx_path: str):
     add_display_equation(doc, r"\mathcal{D}[\rho]_{mn} = -\frac{1}{2} (\gamma_m + \gamma_n) \rho_{mn} (1 - \delta_{mn}) + \sum_{k} \kappa_{km} \rho_{kk} \delta_{mn}", eq_num=7)
 
     add_figure(doc, 2,
-        "Stage II Quantum Walk Density Operator Evolution: 3D surface rendering of the real (left) and imaginary (right) components of rho(tau) under Strang-splitting unitary-dissipative integration.",
+        "Proposed HQGN Stage II Quantum Walk Density Operator Evolution: 3D surface rendering of the real and imaginary components of rho(tau) on Hilbert space H_14 under Strang-splitting unitary-dissipative integration.",
         "figures/fig2_density_matrix_3d.png", width_in=5.8)
 
     add_subsection_heading(doc, 3, 3, "Quantum thermodynamic invariants and Umegaki-Bures geometry")
@@ -622,7 +622,7 @@ def generate_elsevier_pr_manuscript(output_docx_path: str):
     add_display_equation(doc, r"d_{\text{Bures}}(\rho, \bar{\rho}_c) = \sqrt{2 \left( 1 - \operatorname{Tr}\left[ (\rho^{1/2} \bar{\rho}_c \rho^{1/2})^{1/2} \right] \right)}", eq_num=12)
 
     add_figure(doc, 3,
-        "Stage III Quantum Thermodynamic Dynamics: Time evolution of Von Neumann Entropy S_vN(t), Quantum Purity gamma(t), and Off-Diagonal Coherence ||rho_off||_1 over continuous horizon tau in [0, 5.0].",
+        "Proposed HQGN Stage III Quantum Thermodynamic Dynamics: Time evolution of Von Neumann Entropy S_vN(t), Quantum Purity gamma(t), and Off-Diagonal Coherence over continuous horizon tau in [0, 5.0].",
         "figures/fig3_entropy_purity_dynamics.png", width_in=5.8)
 
     add_subsection_heading(doc, 3, 4, "Theoretical theorems and formal mathematical proofs")
@@ -732,7 +732,7 @@ def generate_elsevier_pr_manuscript(output_docx_path: str):
     )
 
     add_figure(doc, 4,
-        "Numerical Stability Verification: Trace deviation |Tr(rho(t)) - 1.0| across continuous walk time t in [0, 5.0], validating that Strang splitting maintains unconditional machine-precision trace preservation (< 1e-15).",
+        "Proposed HQGN Numerical Stability Verification: Trace deviation |Tr(rho(t)) - 1.0| across continuous walk time t in [0, 5.0], validating that Strang splitting maintains unconditional machine-precision trace preservation (< 1e-15).",
         "figures/fig4_strang_trace_stability.png", width_in=5.8)
 
     add_subsection_heading(doc, 4, 4, "Stage III: Quantum thermodynamic invariant extraction and prototype collapse")
@@ -854,7 +854,7 @@ def generate_elsevier_pr_manuscript(output_docx_path: str):
                        multidomain_headers, multidomain_rows, col_widths=[2.1, 1.4, 1.4, 1.4, 1.1])
 
     add_figure(doc, 8,
-        "Multi-Domain Macro-F1 (%) Benchmark Comparison across Clinical Epilepsy ECoG, Motor Imagery BCI, and Multipath Wireless RF telemetry.",
+        "Proposed HQGN Multi-Domain Macro-F1 (%) Benchmark Comparison across Clinical Epilepsy ECoG, Motor Imagery BCI, and Multipath Wireless RF telemetry.",
         "figures/fig8_multidomain_benchmarks.png", width_in=5.8)
 
     add_subsection_heading(doc, 6, 3, "6-Variant architectural ablation study")
@@ -884,7 +884,7 @@ def generate_elsevier_pr_manuscript(output_docx_path: str):
                        ablation_headers, ablation_rows, col_widths=[2.0, 1.1, 1.1, 1.1, 2.2])
 
     add_figure(doc, 7,
-        "Cross-Validation Macro-F1 (%) distribution across the 6 ablation variants A1--A6 on the coupled Kuramoto vortex lattice.",
+        "Proposed HQGN 6-Variant Architectural Component Ablation: Cross-Validation Macro-F1 (%) distribution across variants A1--A6 on clinical ECoG telemetry.",
         "figures/fig7_ablation_comparison.png", width_in=5.8)
 
     add_subsection_heading(doc, 6, 4, "Harsh noise robustness sweep (+20 dB to -10 dB)")
@@ -899,7 +899,7 @@ def generate_elsevier_pr_manuscript(output_docx_path: str):
     )
 
     add_figure(doc, 6,
-        "ECE Telemetry Noise Robustness Curve: Macro-F1 (%) degradation across SNR levels from +20 dB down to -10 dB comparing HQGN against classical baselines.",
+        "Proposed HQGN Clinical ECoG Noise Robustness Curve: Macro-F1 (%) degradation across SNR levels from +20 dB down to -10 dB comparing Proposed HQGN against classical baselines.",
         "figures/fig6_snr_robustness_curve.png", width_in=5.8)
 
     add_subsection_heading(doc, 6, 5, "Dirichlet energy oversmoothing diagnostics and walk-time horizon sensitivity")
@@ -918,7 +918,7 @@ def generate_elsevier_pr_manuscript(output_docx_path: str):
     )
 
     add_figure(doc, 10,
-        "Theoretical & Empirical Diagnostics: (a) Dirichlet Energy E(rho(t)) showing classical Markov heat decay (E(5.0) -> 0, oversmoothing) vs sustained HQGN non-trivial energy (E(5.0) = 0.023); (b) Sample-efficiency generalization under limited training data (20% to 100%); (c) Continuous walk-time horizon sensitivity tau in [0.1, 10.0] confirming stable performance across tau in [1.0, 3.0].",
+        "Proposed HQGN Theoretical & Empirical Diagnostics: (a) Dirichlet Energy E(rho(t)) showing classical Markov heat decay (oversmoothing) vs sustained Proposed HQGN non-trivial energy (E(5.0) = 0.023); (b) Sample-efficiency generalization under limited training data (20% to 100%); (c) Continuous walk-time horizon sensitivity tau in [0.1, 10.0] confirming stable performance across tau in [1.0, 3.0].",
         "figures/fig10_dirichlet_oversmoothing.png", width_in=6.0)
 
     # =======================================================================
@@ -938,7 +938,7 @@ def generate_elsevier_pr_manuscript(output_docx_path: str):
     )
 
     add_figure(doc, 5,
-        "Quantum Fisher Information Matrix (QFIM) channel sensitivity ranking pinpointing the focal epileptogenic seizure origin.",
+        "Proposed HQGN Channel Explainability: Quantum Fisher Information Matrix (QFIM) channel sensitivity ranking pinpointing the focal epileptogenic seizure origin (Ch10: 44.8%).",
         "figures/fig5_qfim_attribution.png", width_in=5.8)
 
     add_subsection_heading(doc, 7, 2, "Adversarial Brownian phase jitter and sensor channel dropout robustness")
@@ -964,7 +964,7 @@ def generate_elsevier_pr_manuscript(output_docx_path: str):
     )
 
     add_figure(doc, 9,
-        "Adversarial Security & Counterfactual Trajectories: (a) Brownian Phase Jitter sweep; (b) Random Channel Dropout sweep; (c) Bures-Wasserstein Geodesic Counterfactual Recourse trajectory.",
+        "Proposed HQGN Adversarial Security & Counterfactual Trajectories: (a) Brownian Phase Jitter sweep; (b) Random Channel Dropout sweep; (c) Bures-Wasserstein Geodesic Counterfactual Recourse trajectory.",
         "figures/fig9_adversarial_security.png", width_in=5.8)
 
     # =======================================================================
@@ -1154,12 +1154,27 @@ def main():
     except PermissionError:
         print(f"Warning: {target_path1} is currently open in Word. Skipping write.")
     
+    # Target 1b: Dedicated submission copy in elseiver -> elseiver/elseiver_graph_copy.docx
+    target_copy1 = os.path.join("elseiver", "elseiver_graph_copy.docx")
+    try:
+        generate_elsevier_pr_manuscript(target_copy1)
+    except PermissionError:
+        print(f"Warning: {target_copy1} is currently open in Word. Skipping write.")
+    
     # Target 2: Mirrored standard folder 'elsevier' -> elsevier/elsevier_graph.docx
     target_path2 = os.path.join("elsevier", "elsevier_graph.docx")
     try:
         generate_elsevier_pr_manuscript(target_path2)
     except PermissionError:
         print(f"Warning: {target_path2} is currently open in Word. Skipping write.")
+
+
+    # Target 2b: Dedicated submission copy in elsevier -> elsevier/elsevier_graph_copy.docx
+    target_copy2 = os.path.join("elsevier", "elsevier_graph_copy.docx")
+    try:
+        generate_elsevier_pr_manuscript(target_copy2)
+    except PermissionError:
+        print(f"Warning: {target_copy2} is currently open in Word. Skipping write.")
 
 
 if __name__ == "__main__":

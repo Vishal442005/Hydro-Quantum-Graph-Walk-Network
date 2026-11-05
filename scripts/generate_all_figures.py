@@ -333,7 +333,7 @@ def generate_figure8_multidomain_benchmarks(results_file="results/real_multidoma
         "CTQW-GNN Unitary (Zhan et al. 2026)",
         "Dissipative OQW (Linck et al. 2026)",
         "Riemannian Covariance (Barachant 2012)",
-        "Full HQGWN (Proposed Framework)"
+        "Proposed HQGN (Proposed Framework)"
     ]
     short_labels = ["Dense 1D-CNN", "ST-GCN", "CTQW-GNN", "Dissipative OQW", "Riemannian Cov", "Proposed HQGN"]
     colors = ["#3498db", "#e67e22", "#9b59b6", "#1abc9c", "#95a5a6", "#27ae60"]
