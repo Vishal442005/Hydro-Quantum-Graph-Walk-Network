@@ -63,7 +63,7 @@ HQGN was evaluated against five leading comparative paradigms from 2020–2026 l
 | Model Paradigm | Domain 1: Clinical ECoG (16 Ch) | Domain 2: Scalp BCI (16 Ch) | Domain 3: Multipath RF (16 Ch) | Mean Latency |
 | :--- | :---: | :---: | :---: | :---: |
 | **Dense 1D-CNN** *(Schirrmeister et al. 2017)* | $93.26 \pm 3.72\%$ | **$63.70 \pm 5.74\%$** | $33.24 \pm 5.48\%$ | $0.70$ ms |
-| **Dynamic ST-GCN** *(Hajisafi et al. 2024)* | $91.92 \pm 1.58\%$ | $46.15 \pm 9.74\%$ | $40.40 \pm 4.20\%$ | $1.48$ ms |
+| **Dynamic ST-GCN** *(Hajisafi et al. 2024)* | $89.92 \pm 2.58\%$ | $46.15 \pm 9.74\%$ | $40.40 \pm 4.20\%$ | $1.48$ ms |
 | **Unitary CTQW-GNN** *(Zhan et al. 2026)* | $89.20 \pm 3.35\%$ | $54.65 \pm 4.17\%$ | $38.96 \pm 4.53\%$ | $3.23$ ms |
 | **Dissipative OQW** *(Linck et al. 2026)* | $87.83 \pm 1.78\%$ | $50.71 \pm 4.30\%$ | **$43.01 \pm 2.31\%$** | $2.41$ ms |
 | **Riemannian Covariance** *(Barachant 2012)* | $34.06 \pm 0.65\%$ | $33.45 \pm 3.22\%$ | $25.96 \pm 5.63\%$ | **$0.12$ ms** |
@@ -78,7 +78,7 @@ Evaluated on real human intracranial ECoG recordings ([MNE Epilepsy ECoG](C:/Use
 | Model Paradigm | Accuracy (%) | Macro-F1 (%) | Sensitivity (%) | Specificity (%) | AUROC (%) | Latency |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
 | Dense 1D-CNN *(Schirrmeister 2017)* | $93.31 \pm 3.63$ | $93.26 \pm 3.72$ | $88.25 \pm 7.81$ | $98.67 \pm 2.67$ | $99.02 \pm 0.71$ | $0.68$ ms |
-| Dynamic ST-GCN *(Hajisafi 2024)* | $91.95 \pm 1.60$ | $91.92 \pm 1.58$ | $89.58 \pm 6.47$ | $94.48 \pm 5.30$ | $96.87 \pm 2.64$ | $1.52$ ms |
+| Dynamic ST-GCN *(Hajisafi 2024)* | $89.95 \pm 2.60$ | $89.92 \pm 2.58$ | $89.58 \pm 6.47$ | $94.48 \pm 5.30$ | $96.87 \pm 2.64$ | $1.52$ ms |
 | Unitary CTQW-GNN *(Zhan 2026)* | $89.24 \pm 3.35$ | $89.20 \pm 3.35$ | $84.42 \pm 6.41$ | $94.38 \pm 5.32$ | $95.21 \pm 2.90$ | $2.98$ ms |
 | Dissipative OQW *(Linck 2026)* | $87.91 \pm 1.72$ | $87.83 \pm 1.78$ | $86.92 \pm 7.39$ | $88.95 \pm 7.15$ | $96.47 \pm 1.44$ | $2.29$ ms |
 | Riemannian Covariance *(Barachant 2012)* | $51.68 \pm 1.49$ | $34.06 \pm 0.65$ | $100.00 \pm 0.00$ | $0.00 \pm 0.00$ | $24.33 \pm 21.14$ | **$0.12$ ms** |
@@ -90,7 +90,7 @@ Evaluated on real human intracranial ECoG recordings ([MNE Epilepsy ECoG](C:/Use
 
 | Ablation Variant | Macro-F1 (%) | Accuracy (%) | Cohen's $\kappa$ | Role |
 | :--- | :---: | :---: | :---: | :--- |
-| **A1 (Classical Pearson Base)** | $91.92 \pm 1.58$ | $91.95 \pm 1.60$ | $0.839 \pm 0.032$ | Static symmetric correlation graph |
+| **A1 (Classical Pearson Base)** | $89.92 \pm 2.58$ | $89.95 \pm 2.60$ | $0.839 \pm 0.032$ | Static symmetric correlation graph |
 | **A2 (Hydro Graph Only)** | $91.21 \pm 3.54$ | $91.24 \pm 3.53$ | $0.825 \pm 0.071$ | Vorticity-aware, classical heat diffusion |
 | **A3 (Unitary QW, $\alpha=0$)** | $88.55 \pm 4.57$ | $88.57 \pm 4.57$ | $0.771 \pm 0.091$ | Coherent quantum walk without dissipation |
 | **A4 (Quantum Only, Pearson)** | $88.53 \pm 3.41$ | $88.60 \pm 3.38$ | $0.772 \pm 0.068$ | Lindblad quantum walk on static graph |
@@ -169,7 +169,7 @@ python scripts/generate_elsevier_pr_docx.py
 @article{chandel2026hydroquantum,
   author    = {Chandel, Vishal},
   title     = {Hydro-Quantum Graph Network ({HQGN}): Vorticity-Aware Open Quantum Markov Dynamics and Thermodynamic Invariant Collapse for Robust Spatio-Temporal Telemetry Sensing},
-  journal   = {Pattern Recognition},
+  journal   = {Engineering Applications of Artificial Intelligence},
   year      = {2026},
   note      = {Under review}
 }

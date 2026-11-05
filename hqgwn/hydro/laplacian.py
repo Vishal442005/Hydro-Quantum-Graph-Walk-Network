@@ -53,19 +53,32 @@ def build_hydrodynamic_laplacian(
 def build_hamiltonian(
     Laplacian: np.ndarray, 
     energies: np.ndarray, 
-    gamma_hop: float = 1.2
+    Omega: np.ndarray = None,
+    gamma_hop: float = 1.2,
+    alpha_vort: float = 0.4
 ) -> np.ndarray:
     """
-    Constructs the system Hamiltonian H in Hilbert space H_M:
-        H = - gamma_hop * Laplacian + diag(E / max(E))
+    Constructs the strictly Hermitian system Hamiltonian H in Hilbert space H_M:
+        H = - gamma_hop * L_S + i * alpha_vort * Omega + diag(E / max(E))
+    where L_S is the symmetric graph Laplacian and Omega is the real skew-symmetric
+    vorticity curl operator. Because (i * Omega)^dagger = -i * Omega^T = i * Omega,
+    the Hamiltonian H is guaranteed to be strictly Hermitian (H^dagger = H), ensuring
+    exact unitary evolution U(tau) = exp(-i * H * tau) and complete positivity.
         
     Parameters:
-        Laplacian: shape (M, M)
-        energies: shape (M,)
+        Laplacian: shape (M, M), symmetric Laplacian L_S
+        energies: shape (M,), signal energy per channel
+        Omega: shape (M, M), optional real skew-symmetric vorticity matrix
         gamma_hop: continuous-time quantum walk hopping rate
+        alpha_vort: coupling strength of chiral vorticity gauge rotation
     Returns:
-        H: shape (M, M), Hermitian Hamiltonian matrix
+        H: shape (M, M), strictly Hermitian Hamiltonian matrix
     """
+    M = Laplacian.shape[0]
     E_norm = energies / (np.max(energies) + 1e-12)
     H = -gamma_hop * Laplacian + np.diag(E_norm)
+    if Omega is not None:
+        # Enforce exact skew-symmetry for Omega
+        Omega_skew = 0.5 * (Omega - Omega.T)
+        H = H + 1j * alpha_vort * Omega_skew
     return 0.5 * (H + H.conj().T)
