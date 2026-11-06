@@ -1,0 +1,95 @@
+{
+  "clean_accuracy": 92.45,
+  "phase_jitter_sweep": [
+    {
+      "jitter": 0.0,
+      "accuracy": 92.45,
+      "f1": 92.45
+    },
+    {
+      "jitter": 0.1,
+      "accuracy": 94.34,
+      "f1": 94.34
+    },
+    {
+      "jitter": 0.25,
+      "accuracy": 94.34,
+      "f1": 94.34
+    },
+    {
+      "jitter": 0.5,
+      "accuracy": 90.57,
+      "f1": 90.57
+    },
+    {
+      "jitter": 0.75,
+      "accuracy": 81.13,
+      "f1": 80.96
+    },
+    {
+      "jitter": 1.0,
+      "accuracy": 79.25,
+      "f1": 79.13
+    },
+    {
+      "jitter": 1.5,
+      "accuracy": 81.13,
+      "f1": 80.96
+    }
+  ],
+  "channel_dropout_sweep": [
+    {
+      "dropout": 0.0,
+      "accuracy": 92.45,
+      "f1": 92.45
+    },
+    {
+      "dropout": 0.125,
+      "accuracy": 73.58,
+      "f1": 71.89
+    },
+    {
+      "dropout": 0.25,
+      "accuracy": 62.26,
+      "f1": 56.7
+    },
+    {
+      "dropout": 0.375,
+      "accuracy": 52.83,
+      "f1": 43.01
+    },
+    {
+      "dropout": 0.5,
+      "accuracy": 56.6,
+      "f1": 47.57
+    },
+    {
+      "dropout": 0.625,
+      "accuracy": 60.38,
+      "f1": 52.13
+    }
+  ],
+  "recourse": {
+    "direct_bures_distance": 0.75,
+    "geodesic_length": 0.8033,
+    "path_efficiency": 0.9337
+  },
+  "qfim_attributions": [
+    0.0197,
+    0.0169,
+    0.0141,
+    0.0207,
+    0.0178,
+    0.0235,
+    0.0264,
+    0.0329,
+    0.0385,
+    0.448,
+    0.0225,
+    0.0169,
+    0.0207,
+    0.0188,
+    0.0207,
+    0.2419
+  ]
+}

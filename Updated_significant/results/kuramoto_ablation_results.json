@@ -1,0 +1,158 @@
+{
+  "summary": {
+    "A1_Classical_Base": {
+      "f1_mean": 100.0,
+      "f1_std": 0.0,
+      "acc_mean": 100.0,
+      "acc_std": 0.0,
+      "kappa_mean": 1.0,
+      "kappa_std": 0.0,
+      "fold_f1": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "A2_Hydro_Only": {
+      "f1_mean": 100.0,
+      "f1_std": 0.0,
+      "acc_mean": 100.0,
+      "acc_std": 0.0,
+      "kappa_mean": 1.0,
+      "kappa_std": 0.0,
+      "fold_f1": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "A3_Unitary_QW": {
+      "f1_mean": 100.0,
+      "f1_std": 0.0,
+      "acc_mean": 100.0,
+      "acc_std": 0.0,
+      "kappa_mean": 1.0,
+      "kappa_std": 0.0,
+      "fold_f1": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "A4_Quantum_Only": {
+      "f1_mean": 100.0,
+      "f1_std": 0.0,
+      "acc_mean": 100.0,
+      "acc_std": 0.0,
+      "kappa_mean": 1.0,
+      "kappa_std": 0.0,
+      "fold_f1": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "A5_No_Entropy": {
+      "f1_mean": 100.0,
+      "f1_std": 0.0,
+      "acc_mean": 100.0,
+      "acc_std": 0.0,
+      "kappa_mean": 1.0,
+      "kappa_std": 0.0,
+      "fold_f1": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "A6_Full_HQGWN": {
+      "f1_mean": 100.0,
+      "f1_std": 0.0,
+      "acc_mean": 100.0,
+      "acc_std": 0.0,
+      "kappa_mean": 1.0,
+      "kappa_std": 0.0,
+      "fold_f1": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    }
+  },
+  "friedman": {
+    "stat": 0.0,
+    "p_value": 1.0
+  },
+  "pairwise": {
+    "A1_Classical_Base": {
+      "p_wilcoxon": 1.0,
+      "alpha_holm": 0.01,
+      "cliffs_delta": 0.0,
+      "mcnemar_chi2": 0.0,
+      "mcnemar_p": 1.0,
+      "significant": false
+    },
+    "A2_Hydro_Only": {
+      "p_wilcoxon": 1.0,
+      "alpha_holm": 0.0125,
+      "cliffs_delta": 0.0,
+      "mcnemar_chi2": 0.0,
+      "mcnemar_p": 1.0,
+      "significant": false
+    },
+    "A3_Unitary_QW": {
+      "p_wilcoxon": 1.0,
+      "alpha_holm": 0.016666666666666666,
+      "cliffs_delta": 0.0,
+      "mcnemar_chi2": 0.0,
+      "mcnemar_p": 1.0,
+      "significant": false
+    },
+    "A4_Quantum_Only": {
+      "p_wilcoxon": 1.0,
+      "alpha_holm": 0.025,
+      "cliffs_delta": 0.0,
+      "mcnemar_chi2": 0.0,
+      "mcnemar_p": 1.0,
+      "significant": false
+    },
+    "A5_No_Entropy": {
+      "p_wilcoxon": 1.0,
+      "alpha_holm": 0.05,
+      "cliffs_delta": 0.0,
+      "mcnemar_chi2": 0.0,
+      "mcnemar_p": 1.0,
+      "significant": false
+    }
+  }
+}

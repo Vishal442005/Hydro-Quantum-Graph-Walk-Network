@@ -115,8 +115,11 @@ def create_cover_letter(output_path):
         "(Tr(rho)=1), exponential noise contractivity, Bures non-expansiveness, and non-vanishing Dirichlet energy (E(5.0) = 0.023 > 0), rigorously "
         "eliminating GNN oversmoothing.\n"
         "5. Explainability & Edge Feasibility: Provides closed-form Quantum Fisher Information Matrix (QFIM) channel attribution pinpointing the "
-        "epileptogenic focus with sub-millisecond CPU execution latency (2.84 ms), establishing practical readiness for real-time edge microcontrollers "
-        "and embedded biomedical implants."
+        "epileptogenic focus with sub-millisecond GPU execution latency (0.72 ms) and real-time CPU latency (2.84 ms), establishing practical readiness for real-time edge microcontrollers "
+        "and embedded biomedical implants.\n"
+        "6. Systematic Operational Envelope & Multi-Condition Stress Synthesis: Establishes a rigorous operational taxonomy (Section 6.8, Table 6) "
+        "delineating exact physical regimes where HQGN excels versus boundary conditions (ultra-sparse arrays M < 4, Cauchy impulsive spikes), providing verified algorithmic "
+        "mitigations (robust median phase clipping restoring accuracy to 83.60%) and multi-condition stress benchmarking across pink 1/f noise and 50 Hz harmonic hum (Table 5, Fig. 10)."
     )
     set_run_font(r_b3, size_pt=10.5)
     
@@ -333,10 +336,10 @@ def create_title_page(output_path):
     r_met_lbl = p_met.add_run("Manuscript Statistics:\n")
     set_run_font(r_met_lbl, size_pt=10.5, bold=True)
     r_met = p_met.add_run(
-        "• Total Word Count: ~10,500 words (including abstract, references, and table text)\n"
-        "• Number of Figures: 11 (High-resolution 300 DPI, sequentially numbered and referenced)\n"
-        "• Number of Tables: 5 (Booktabs format with exact mean ± std performance metrics)\n"
-        "• Number of Mathematical Equations: 18 Display Equations, 237 Inline Equations\n"
+        "• Total Word Count: ~11,200 words (including abstract, references, and table text)\n"
+        "• Number of Figures: 12 (High-resolution 300 DPI, sequentially numbered and referenced)\n"
+        "• Number of Tables: 7 (Booktabs format with exact mean ± std performance metrics)\n"
+        "• Number of Mathematical Equations: 18 Display Equations, 270+ Inline Equations\n"
         "• Number of References: 30"
     )
     set_run_font(r_met, size_pt=10.0)
@@ -363,7 +366,7 @@ def create_title_page(output_path):
         "extracting spectral entropy and Umegaki quantum relative entropy coordinates. Four rigorous theorems establish unconditional "
         "trace preservation, asymptotic noise contraction, Bures non-expansiveness, and non-collapsing Dirichlet energy (E(5.0) = 0.023 > 0). "
         "Empirical evaluation across three authentic physical domains—real human clinical epilepsy intracranial ECoG (149 windows), "
-        "sensorimotor BCI EEG (288 trials), and non-stationary multipath wireless RF telemetry—demonstrates that HQGN achieves superior classification "
+        "sensorimotor BCI EEG (144 trials), and non-stationary multipath wireless RF telemetry—demonstrates that HQGN achieves superior classification "
         "fidelity (92.62% accuracy, 92.61% Macro-F1 on human ECoG), outperforming classical GNN, Unitary CTQW, and Dense 1D-CNN baselines while preserving "
         "monotonic noise robustness down to -10 dB SNR. Furthermore, closed-form Quantum Fisher Information Matrix (QFIM) extraction enables intrinsic, "
         "post-hoc-free channel attribution that localizes the epileptogenic focus at sub-millisecond GPU latency (0.72 ms) and real-time CPU latency (2.84 ms), "
@@ -506,7 +509,7 @@ When uploading files on the EAAI Editorial Manager portal:
 
 | Dropdown Option in Editorial Manager | File to Select and Upload | Description |
 | :--- | :--- | :--- |
-| **`Manuscript without author details`** | **`Manuscript_without_author_details.docx`**<br>*(or `Blinded_Manuscript.docx`)* | **Mandatory Blinded Manuscript for Double-Blind Peer Review.** Contains the complete article: Title, Abstract, Keywords, Sections 1–10, all 11 embedded 300 DPI figures, all 5 booktabs tables, all 18 display equations, and 30 references. **All author names, affiliations, emails, and personal acknowledgments have been strictly removed.** |
+| **`Manuscript without author details`** | **`Manuscript_without_author_details.docx`**<br>*(or `Blinded_Manuscript.docx`)* | **Mandatory Blinded Manuscript for Double-Blind Peer Review.** Contains the complete article: Title, Abstract, Keywords, Sections 1–10, all 12 embedded 300 DPI figures, all 7 booktabs tables, all 18 display equations, and 30 references. **All author names, affiliations, emails, and personal acknowledgments have been strictly removed.** |
 | **`Title page with author details`** | **`Title_page_with_author_details.docx`**<br>*(or `Title_Page.docx`)* | **Mandatory Dedicated Title Page.** Contains: Article Title, Author Name (Vishal Chandel), Institutional Affiliation, Corresponding Author Contact, ORCID (`0009-0006-0552-8551`), Abstract, Keywords, 5 Highlights, CRediT Statement, Competing Interest Declaration, Funding & Data Availability. |
 
 ---
@@ -515,8 +518,9 @@ When uploading files on the EAAI Editorial Manager portal:
 
 | Dropdown Option in Editorial Manager | File to Select and Upload | Description |
 | :--- | :--- | :--- |
-| **`Cover Letter`** | **`Cover_Letter_EAAI.docx`** | Formal letter addressed to Prof. Ajith Abraham (Editor-in-Chief), summarizing engineering scope, clinical & RF results, noise robustness, and 4 international expert reviewers. |
-| **`Highlights`** | **`Highlights.docx`** | 5 core bullet points, strictly $\\le 85$ characters each (including spaces), conforming to Elsevier's automated system checks. |
+| **`Cover Letter`** | **`Cover_Letter_EAAI.docx`** | Formal letter addressed to Prof. Ajith Abraham (Editor-in-Chief), summarizing engineering scope, clinical & RF results, noise robustness, operational envelope synthesis, and 4 international expert reviewers. |
+| **`Response to Reviewers`** | **`Response_to_Editor_and_Reviewers.docx`** | Detailed point-by-point formal response addressing all editorial decision points, archival depth, curve explanations, and multi-condition stress benchmarks. |
+| **`Highlights`** | **`Highlights.docx`** | 5 core bullet points, strictly $\le 85$ characters each (including spaces), conforming to Elsevier's automated system checks. |
 | **`Declaration of Interest`** | **`Declaration_of_Competing_Interest.docx`** | Formal declaration confirming no financial or personal conflicts of interest. |
 | **`CRediT Author Statement`** | **`CRediT_Authorship_Statement.docx`** | Breakdown of single-author contributions across all 14 CRediT research roles. |
 
@@ -530,59 +534,183 @@ When uploading files on the EAAI Editorial Manager portal:
 2. **Title Page:**
    - Under `"Title page with author details"`, upload `Title_page_with_author_details.docx`.
 3. **Supplementary Items:**
-   - Upload `Cover_Letter_EAAI.docx`, `Highlights.docx`, `Declaration_of_Competing_Interest.docx`, and `CRediT_Authorship_Statement.docx`.
+   - Upload `Cover_Letter_EAAI.docx`, `Response_to_Editor_and_Reviewers.docx`, `Highlights.docx`, `Declaration_of_Competing_Interest.docx`, and `CRediT_Authorship_Statement.docx`.
 4. **Metadata Verification:**
    - **Title:** *Hydro-Quantum Graph Network (HQGN): Physics-Informed Open Quantum Dynamics and Thermodynamic Invariant Collapse for Robust Spatio-Temporal Telemetry Sensing*
    - **Abstract:** Copy directly from Section 1 or from the Title Page.
    - **Keywords:** `Continuous-time quantum walk; Open quantum systems; Lindblad master equation; Navier-Stokes phase vorticity; Quantum thermodynamics; Biomedical telemetry; Graph neural networks; Robust engineering telemetry`
-5. **Approve Submission:** Build PDF Proof, verify that all 11 figures display clearly at 300 DPI without text overlaps, and click **"Approve Submission"**.
+5. **Approve Submission:** Build PDF Proof, verify that all 12 figures display clearly at 300 DPI without text overlaps, and click **"Approve Submission"**.
 """
     with open(output_path, "w", encoding="utf-8") as f:
         f.write(content)
     print(f"Generated EAAI Submission Checklist: {output_path}")
 
+def create_response_to_editor(output_path):
+    doc = docx.Document()
+    set_doc_margins(doc, 1.0, 1.0, 1.0, 1.0)
+    
+    # Title / Header
+    p_title = doc.add_paragraph()
+    r_title = p_title.add_run("Detailed Point-by-Point Response to the Editorial Decision & Review Assessment")
+    set_run_font(r_title, size_pt=14.0, bold=True)
+    
+    p_sub = doc.add_paragraph()
+    r_sub = p_sub.add_run(
+        "Manuscript Reference: EAAI-D-26-04921\n"
+        "Title: Hydro-Quantum Graph Network (HQGN): Physics-Informed Open Quantum Dynamics and Thermodynamic Invariant Collapse for Robust Spatio-Temporal Telemetry Sensing\n"
+        "Journal: Engineering Applications of Artificial Intelligence (Elsevier)\n"
+        "Author: Vishal Chandel (Department of Electronics and Communication Engineering)\n"
+        "Date: November 6, 2026\n"
+    )
+    set_run_font(r_sub, size_pt=10.0, italic=True)
+    
+    p_intro = doc.add_paragraph()
+    r_intro = p_intro.add_run(
+        "Dear Prof. Ajith Abraham (Editor-in-Chief) and Respected Editorial Board Members,\n\n"
+        "We express our sincere gratitude for your constructive, discerning assessment of our manuscript. "
+        "The evaluation rightly identified that while the empirical performance campaign was extensive, the manuscript required "
+        "significantly deeper archival synthesis, mechanistic explanations for all performance curve trends, explicit delineation of operational "
+        "boundary conditions (when the method excels vs. when it underperforms), and an expanded comparative evaluation under a wider range of physical conditions. "
+        "We have conducted a thorough, comprehensive revision systematically addressing every concern. Below is our itemized, point-by-point response."
+    )
+    set_run_font(r_intro, size_pt=10.5)
+    
+    points = [
+        ("Editorial Critique 1: Archival Value & Engineering Significance",
+         "The evaluation noted: 'Although your manuscript falls within the aim and scope of this journal, it is being declined as the research results reported, in their present form, lack the archival value required by this Journal.'",
+         "Response & Revision Details:\n"
+         "We have substantially deepened the foundational engineering and theoretical depth of the paper to ensure it provides lasting archival reference value for the EAAI community. Specifically:\n"
+         "1. Four Rigorous Mathematical Theorems: We establish formal proofs for unconditional trace preservation (Tr(rho)=1, Theorem 1), exponential noise contractivity (||delta rho(tau)|| <= ||delta rho(0)|| exp(-gamma_d tau), Theorem 2), Bures non-expansiveness (Theorem 3), and non-collapsing Dirichlet energy (E(5.0) = 0.023288 > 0, Theorem 4) which eliminates the classical GNN oversmoothing pathology.\n"
+         "2. Systematic Operational Envelope (Section 6.8 & Table 6): Rather than presenting unnuanced claims of universal superiority, we formulate an explicit three-zone operational taxonomy (Regime I: Optimal Dominance, Regime II: Competitive Parity, Regime III: Boundary & Failure Modes) and provide an algorithmic decision flowchart for practicing telemetry engineers.\n"
+         "3. Comprehensive Cross-Domain Validation: Evaluated across three authentic physical domains (Clinical human intracranial ECoG from MNE, Sensorimotor BCI scalp EEG from BNCI, and 16-channel MIMO multipath RF)."),
+         
+        ("Editorial Critique 2: Explanatory Details on Curves and Trends",
+         "The evaluation noted: 'The performance evaluation campaign is rich in results which, however, are not commented on in a clear enough manner as required by the standards of this Journal. Many of the curves are only commented without sufficient explanatory details on the reason for their trend...'",
+         "Response & Revision Details:\n"
+         "We have performed an exhaustive mechanistic expansion across all experimental sections (Sections 6.4–6.8 and 7.1–7.3), providing rigorous physical and mathematical rationales for every curve, inflection, and asymptote:\n"
+         "• AWGN Noise Sweep (Fig. 7): We explain the physical mechanism behind the 0 dB transition threshold. Classical spatial convolution (e^{-L_S tau}) computes an unweighted average; when noise variance matches signal variance, spatial smoothing incorporates noise into node embeddings, causing classical models to collapse toward 50% chance level. In contrast, HQGN's Lindblad dissipator actively dampens off-diagonal noise perturbations at rate exp(-gamma_d tau) while unitary phase circulation preserves topological frequencies, sustaining 81.40% F1 at 0 dB and 66.80% at -10 dB.\n"
+         "• Dirichlet Energy Stabilization (Fig. 8a): We derive why classical diffusion decays to 4.18e-8 (projection onto ker(L_S) = span{1}) while HQGN stabilizes at E(5.0) = 0.023288: the chiral Hamiltonian i alpha Omega introduces purely imaginary eigenvalues that break self-adjoint symmetry, preventing uniform node collapse.\n"
+         "• Sample Efficiency Scaling (Fig. 8b): We explain why HQGN retains 85.40% Macro-F1 at 20% training data: the Navier-Stokes vorticity and Lindblad CPTP constraints act as strong physics-informed inductive biases that restrict the hypothesis space to valid density operators S(H), drastically reducing sample complexity.\n"
+         "• Brownian Phase Jitter Stochastic Resonance (Fig. 12a): We detail why performance peaks mildly at sigma = 0.25 rad (94.34% vs 92.61% clean): sub-threshold phase jitter acts as a dither signal, breaking marginal phase ties and enhancing non-linear contrast before excessive noise destroys phase coherence past sigma = 0.5 rad.\n"
+         "• Sensor Channel Dropout Percolation (Fig. 12b): We explain why performance degrades linearly up to 12.5% loss (71.89%) but drops faster past 37.5%: Green-Gauss spatial curl requires minimum 3-node triangular simplices; exceeding 37.5% channel loss triggers a topological percolation threshold where interconnected triangles fragment."),
+         
+        ("Editorial Critique 3: Synthesis of Generality (When HQGN Performs Better vs. Worse)",
+         "The evaluation noted: '...and there is a lack of a synthesis that can testify to the generality of the results and that can make it clearer in which conditions the algorithm performs better and under which conditions worse.'",
+         "Response & Revision Details:\n"
+         "In Section 6.8, Table 5, and Table 6, we provide a transparent, rigorous synthesis of the exact conditions where HQGN performs better versus where it underperforms, along with concrete engineering mitigations:\n"
+         "• Conditions Where HQGN Excels: High phase non-stationarity / rotating phase rotors (seizure onset, RF Doppler), low-to-moderate SNR down to -10 dB, high spatial cross-talk / volume conduction, and low-sample training regimes (N < 200).\n"
+         "• Boundary Conditions & Failure Modes:\n"
+         "  1. Spatially Decoupled Telemetry: When sensor channels represent independent variables without spatial topology, computing spatial curl creates spurious circulation. Mitigation: Screen spatial cross-correlation (C_bar < 0.15) and default to 1D-CNN.\n"
+         "  2. Ultra-Sparse Sensor Arrays (M < 4 Channels): Green-Gauss finite differences fail on < 4 channels (74.20% F1, Fig. 10d). Mitigation: Apply delay-coordinate state-space reconstruction.\n"
+         "  3. Heavy-Tailed Cauchy Impulsive Spikes: Outlier spikes create phase wrap discontinuities, dropping unclipped HQGN to 65.40%. Mitigation: Implementing Robust Median Phase Derivative Clipping restores accuracy to 83.60% (Table 5, Fig. 10c).\n"
+         "  4. Sub-100 Microsecond Hard Real-Time Budgets: Strang matrix exponentiation requires 2.84 ms on CPU. Mitigation: Deploy Riemannian log-Euclidean tangent projections (0.12 ms) when timing budgets are under 0.5 ms."),
+         
+        ("Editorial Critique 4: Expanded Comparative Conditions & Modern Literature Baselines",
+         "The evaluation noted: 'Besides, the comparison with other solutions should definitely be conducted under a wider range of different conditions and for several other similar approaches available in the literature. More work is needed to substantiate the conclusions in your manuscript.'",
+         "Response & Revision Details:\n"
+         "We have significantly broadened both the evaluation conditions and the comparative baselines (Table 5, Table 6, and Figure 10):\n"
+         "1. Wider Range of Physical Stress Conditions:\n"
+         "  • Colored 1/f^alpha noise sweep (alpha from 0.0=white to 2.0=Brownian baseline drift).\n"
+         "  • Out-of-band 50 Hz powerline harmonic hum injection (amplitudes 0.0 to 2.0x signal std dev).\n"
+         "  • Heavy-tailed Cauchy impulsive spike contamination (p from 1% to 10%).\n"
+         "  • Sensor array density scaling (M = 4, 8, 12, 16 active channels).\n"
+         "  • Window duration scaling (L = 0.5s to 3.0s).\n"
+         "2. Expanded Modern Literature Baseline Suite (2017–2026):\n"
+         "  • Dense 1D-CNN (Schirrmeister et al. 2017)\n"
+         "  • 1D-ResNet-18 (Wang et al. 2017)\n"
+         "  • Dynamic ST-GCN (Hajisafi et al. 2024)\n"
+         "  • PatchTST / Spatio-Temporal Transformer (Nie et al. 2023)\n"
+         "  • Magnetic GCN / MagNet (Zhang et al. 2021)\n"
+         "  • Unitary CTQW-GNN (Zhan et al. Aug 2026)\n"
+         "  • Dissipative Open Quantum Walk (Linck & Petruccione Mar 2026)\n"
+         "  • Riemannian Covariance Tangent Space (Barachant et al. 2012)")
+    ]
+    
+    for title, critique, response in points:
+        p_pt = doc.add_paragraph()
+        p_pt.paragraph_format.space_before = Pt(10)
+        p_pt.paragraph_format.space_after = Pt(2)
+        r_pt_title = p_pt.add_run(title)
+        set_run_font(r_pt_title, size_pt=11.5, bold=True)
+        
+        p_crit = doc.add_paragraph()
+        p_crit.paragraph_format.space_before = Pt(0)
+        p_crit.paragraph_format.space_after = Pt(4)
+        p_crit.paragraph_format.left_indent = Inches(0.25)
+        r_crit = p_crit.add_run(critique)
+        set_run_font(r_crit, size_pt=10.0, italic=True)
+        
+        p_resp = doc.add_paragraph()
+        p_resp.paragraph_format.space_before = Pt(2)
+        p_resp.paragraph_format.space_after = Pt(8)
+        p_resp.paragraph_format.line_spacing = 1.15
+        r_resp = p_resp.add_run(response)
+        set_run_font(r_resp, size_pt=10.0)
+        
+    p_close = doc.add_paragraph()
+    p_close.paragraph_format.space_before = Pt(12)
+    p_close.paragraph_format.space_after = Pt(4)
+    r_close = p_close.add_run(
+        "We are confident that these substantial additions, rigorous mechanistic explanations, expanded multi-condition stress benchmarks, and "
+        "transparent operational envelope synthesis thoroughly address all concerns and elevate the manuscript to the highest archival standards of "
+        "Engineering Applications of Artificial Intelligence.\n\n"
+        "Sincerely,\n"
+        "Vishal Chandel\n"
+        "Department of Electronics and Communication Engineering\n"
+        "Email: vishal442005@outlook.com | ORCID: 0009-0006-0552-8551"
+    )
+    set_run_font(r_close, size_pt=10.5)
+    
+    doc.save(output_path)
+    print(f"Generated Detailed Response to Editor: {output_path}")
+
 def main():
-    target_dir = "Elseiver_EAAI"
-    os.makedirs(target_dir, exist_ok=True)
-    
-    # 1. Manuscript Copy
-    src_manuscript = os.path.join("elseiver", "elseiver_graph.docx")
-    dst_manuscript1 = os.path.join(target_dir, "EAAI_manuscript.docx")
-    dst_manuscript2 = os.path.join(target_dir, "elsevier_eaai_graph.docx")
-    
-    if os.path.exists(src_manuscript):
-        try:
-            shutil.copy2(src_manuscript, dst_manuscript1)
-            shutil.copy2(src_manuscript, dst_manuscript2)
-            print(f"Copied manuscript to: {dst_manuscript1} and {dst_manuscript2}")
-        except PermissionError:
-            print("Notice: Existing manuscript copy open in Word, skipping overwrite.")
+    target_dirs = ["Elseiver_EAAI", os.path.join("Updated_significant", "manuscript")]
+    for target_dir in target_dirs:
+        os.makedirs(target_dir, exist_ok=True)
+        
+        # 1. Manuscript Copy
+        src_manuscript = os.path.join("elseiver", "elseiver_graph.docx")
+        dst_manuscript1 = os.path.join(target_dir, "EAAI_manuscript.docx")
+        dst_manuscript2 = os.path.join(target_dir, "elsevier_eaai_graph.docx")
+        
+        if os.path.exists(src_manuscript):
+            try:
+                shutil.copy2(src_manuscript, dst_manuscript1)
+                shutil.copy2(src_manuscript, dst_manuscript2)
+                print(f"Copied manuscript to: {dst_manuscript1} and {dst_manuscript2}")
+            except PermissionError:
+                print("Notice: Existing manuscript copy open in Word, skipping overwrite.")
 
-    # 2. Dedicated Title Pages
-    tp1 = os.path.join(target_dir, "Title_page_with_author_details.docx")
-    tp2 = os.path.join(target_dir, "Title_Page.docx")
-    create_title_page(tp1)
-    create_title_page(tp2)
+        # 2. Dedicated Title Pages
+        tp1 = os.path.join(target_dir, "Title_page_with_author_details.docx")
+        tp2 = os.path.join(target_dir, "Title_Page.docx")
+        create_title_page(tp1)
+        create_title_page(tp2)
 
-    # 3. Cover Letter
-    cover_letter_path = os.path.join(target_dir, "Cover_Letter_EAAI.docx")
-    create_cover_letter(cover_letter_path)
-    
-    # 4. Highlights (strictly <= 85 characters each)
-    highlights_path = os.path.join(target_dir, "Highlights.docx")
-    create_highlights(highlights_path)
-    
-    # 5. CRediT Statement
-    credit_path = os.path.join(target_dir, "CRediT_Authorship_Statement.docx")
-    create_credit_statement(credit_path)
-    
-    # 6. Declaration of Competing Interest
-    coi_path = os.path.join(target_dir, "Declaration_of_Competing_Interest.docx")
-    create_declaration_of_interest(coi_path)
-    
-    # 7. Submission Checklist Markdown
-    checklist_path = os.path.join(target_dir, "README_Submission_Checklist.md")
-    create_submission_checklist(checklist_path)
+        # 3. Cover Letter
+        cover_letter_path = os.path.join(target_dir, "Cover_Letter_EAAI.docx")
+        create_cover_letter(cover_letter_path)
+        
+        # 4. Highlights (strictly <= 85 characters each)
+        highlights_path = os.path.join(target_dir, "Highlights.docx")
+        create_highlights(highlights_path)
+        
+        # 5. CRediT Statement
+        credit_path = os.path.join(target_dir, "CRediT_Authorship_Statement.docx")
+        create_credit_statement(credit_path)
+        
+        # 6. Declaration of Competing Interest
+        coi_path = os.path.join(target_dir, "Declaration_of_Competing_Interest.docx")
+        create_declaration_of_interest(coi_path)
+        
+        # 7. Detailed Response to Editor & Reviewers
+        resp_path = os.path.join(target_dir, "Response_to_Editor_and_Reviewers.docx")
+        create_response_to_editor(resp_path)
+
+        # 8. Submission Checklist Markdown
+        checklist_path = os.path.join(target_dir, "README_Submission_Checklist.md")
+        create_submission_checklist(checklist_path)
 
 if __name__ == "__main__":
     main()

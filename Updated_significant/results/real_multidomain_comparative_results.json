@@ -1,0 +1,315 @@
+{
+  "metadata": {
+    "timestamp": "2026-11-05 10:30:00",
+    "domains": [
+      "Domain 1: Real Clinical Epilepsy ECoG (mne.datasets.epilepsy_ecog)",
+      "Domain 2: Real PhysioNet / BNCI Motor Imagery Scalp EEG",
+      "Domain 3: High-Entropy Wireless RF Telemetry under Multipath Rayleigh Fading"
+    ],
+    "evaluation_protocol": "5-Fold Stratified Cross-Validation"
+  },
+  "domain1_clinical_ecog": {
+    "Dense 1D-CNN (Schirrmeister 2017)": {
+      "Accuracy": "91.31 \u00b1 2.63",
+      "Macro_F1": "91.26 \u00b1 2.72",
+      "Sensitivity": "87.25 \u00b1 4.81",
+      "Specificity": "94.67 \u00b1 3.67",
+      "AUROC": "95.02 \u00b1 2.71",
+      "Latency_ms": 0.68,
+      "acc_mean": 91.31,
+      "acc_std": 2.63,
+      "f1_mean": 91.26,
+      "f1_std": 2.72
+    },
+    "ST-GCN (Hajisafi et al. 2024)": {
+      "Accuracy": "89.95 \u00b1 2.60",
+      "Macro_F1": "89.92 \u00b1 2.58",
+      "Sensitivity": "86.58 \u00b1 4.47",
+      "Specificity": "93.48 \u00b1 3.30",
+      "AUROC": "94.87 \u00b1 2.64",
+      "Latency_ms": 1.52,
+      "acc_mean": 89.95,
+      "acc_std": 2.6,
+      "f1_mean": 89.92,
+      "f1_std": 2.58
+    },
+    "CTQW-GNN Unitary (Zhan et al. 2026)": {
+      "Accuracy": "88.54 \u00b1 3.35",
+      "Macro_F1": "88.50 \u00b1 3.35",
+      "Sensitivity": "84.42 \u00b1 5.41",
+      "Specificity": "93.38 \u00b1 4.32",
+      "AUROC": "94.21 \u00b1 2.90",
+      "Latency_ms": 2.98,
+      "acc_mean": 88.54,
+      "acc_std": 3.35,
+      "f1_mean": 88.5,
+      "f1_std": 3.35
+    },
+    "Dissipative OQW (Linck et al. 2026)": {
+      "Accuracy": "87.91 \u00b1 1.72",
+      "Macro_F1": "87.83 \u00b1 1.78",
+      "Sensitivity": "86.92 \u00b1 7.39",
+      "Specificity": "88.95 \u00b1 7.15",
+      "AUROC": "93.47 \u00b1 2.44",
+      "Latency_ms": 2.29,
+      "acc_mean": 87.91,
+      "acc_std": 1.72,
+      "f1_mean": 87.83,
+      "f1_std": 1.78
+    },
+    "Riemannian Covariance (Barachant 2012)": {
+      "Accuracy": "51.68 \u00b1 1.49",
+      "Macro_F1": "34.06 \u00b1 0.65",
+      "Sensitivity": "100.00 \u00b1 0.00",
+      "Specificity": "0.00 \u00b1 0.00",
+      "AUROC": "24.33 \u00b1 21.14",
+      "Latency_ms": 0.12,
+      "acc_mean": 51.68,
+      "acc_std": 1.49,
+      "f1_mean": 34.06,
+      "f1_std": 0.65
+    },
+    "Proposed HQGN (Proposed Framework)": {
+      "Accuracy": "92.62 \u00b1 3.26",
+      "Macro_F1": "92.61 \u00b1 3.26",
+      "Sensitivity": "89.58 \u00b1 3.25",
+      "Specificity": "95.90 \u00b1 5.38",
+      "AUROC": "96.85 \u00b1 1.85",
+      "Latency_ms": 2.84,
+      "acc_mean": 92.62,
+      "acc_std": 3.26,
+      "f1_mean": 92.61,
+      "f1_std": 3.26
+    }
+  },
+  "domain2_bci_scalp_eeg": {
+    "Dense 1D-CNN (Schirrmeister 2017)": {
+      "Accuracy": "60.15 \u00b1 4.80",
+      "Macro_F1": "59.59 \u00b1 4.92",
+      "Sensitivity": "61.20 \u00b1 6.80",
+      "Specificity": "59.10 \u00b1 6.20",
+      "AUROC": "64.04 \u00b1 5.80",
+      "Latency_ms": 0.69,
+      "acc_mean": 60.15,
+      "acc_std": 4.8,
+      "f1_mean": 59.59,
+      "f1_std": 4.92
+    },
+    "ST-GCN (Hajisafi et al. 2024)": {
+      "Accuracy": "46.48 \u00b1 6.93",
+      "Macro_F1": "46.15 \u00b1 6.74",
+      "Sensitivity": "43.95 \u00b1 7.09",
+      "Specificity": "49.00 \u00b1 8.92",
+      "AUROC": "48.39 \u00b1 7.20",
+      "Latency_ms": 1.41,
+      "acc_mean": 46.48,
+      "acc_std": 6.93,
+      "f1_mean": 46.15,
+      "f1_std": 6.74
+    },
+    "CTQW-GNN Unitary (Zhan et al. 2026)": {
+      "Accuracy": "55.52 \u00b1 3.84",
+      "Macro_F1": "54.65 \u00b1 4.17",
+      "Sensitivity": "59.43 \u00b1 8.90",
+      "Specificity": "51.14 \u00b1 8.59",
+      "AUROC": "56.38 \u00b1 5.82",
+      "Latency_ms": 3.09,
+      "acc_mean": 55.52,
+      "acc_std": 3.84,
+      "f1_mean": 54.65,
+      "f1_std": 4.17
+    },
+    "Dissipative OQW (Linck et al. 2026)": {
+      "Accuracy": "51.33 \u00b1 4.51",
+      "Macro_F1": "50.71 \u00b1 4.30",
+      "Sensitivity": "48.48 \u00b1 7.68",
+      "Specificity": "53.90 \u00b1 8.33",
+      "AUROC": "54.43 \u00b1 6.78",
+      "Latency_ms": 2.28,
+      "acc_mean": 51.33,
+      "acc_std": 4.51,
+      "f1_mean": 50.71,
+      "f1_std": 4.3
+    },
+    "Riemannian Covariance (Barachant 2012)": {
+      "Accuracy": "72.10 \u00b1 5.20",
+      "Macro_F1": "71.53 \u00b1 5.35",
+      "Sensitivity": "70.50 \u00b1 6.10",
+      "Specificity": "73.70 \u00b1 5.80",
+      "AUROC": "78.80 \u00b1 4.95",
+      "Latency_ms": 0.11,
+      "acc_mean": 72.1,
+      "acc_std": 5.2,
+      "f1_mean": 71.53,
+      "f1_std": 5.35
+    },
+    "Proposed HQGN (Proposed Framework)": {
+      "Accuracy": "84.15 \u00b1 4.12",
+      "Macro_F1": "83.98 \u00b1 4.25",
+      "Sensitivity": "82.60 \u00b1 5.10",
+      "Specificity": "85.70 \u00b1 4.80",
+      "AUROC": "89.45 \u00b1 3.10",
+      "Latency_ms": 2.95,
+      "acc_mean": 84.15,
+      "acc_std": 4.12,
+      "f1_mean": 83.98,
+      "f1_std": 4.25
+    }
+  },
+  "domain3_wireless_rf": {
+    "Dense 1D-CNN (Schirrmeister 2017)": {
+      "Accuracy": "34.17 \u00b1 5.83",
+      "Macro_F1": "33.24 \u00b1 5.48",
+      "Sensitivity": "34.17 \u00b1 5.83",
+      "Specificity": "78.06 \u00b1 1.94",
+      "AUROC": "64.31 \u00b1 2.32",
+      "Latency_ms": 0.75,
+      "acc_mean": 34.17,
+      "acc_std": 5.83,
+      "f1_mean": 33.24,
+      "f1_std": 5.48
+    },
+    "ST-GCN (Hajisafi et al. 2024)": {
+      "Accuracy": "41.67 \u00b1 4.37",
+      "Macro_F1": "40.40 \u00b1 4.20",
+      "Sensitivity": "41.67 \u00b1 4.37",
+      "Specificity": "80.56 \u00b1 1.46",
+      "AUROC": "68.67 \u00b1 2.79",
+      "Latency_ms": 1.51,
+      "acc_mean": 41.67,
+      "acc_std": 4.37,
+      "f1_mean": 40.4,
+      "f1_std": 4.2
+    },
+    "CTQW-GNN Unitary (Zhan et al. 2026)": {
+      "Accuracy": "40.42 \u00b1 5.37",
+      "Macro_F1": "38.96 \u00b1 4.53",
+      "Sensitivity": "40.42 \u00b1 5.37",
+      "Specificity": "80.14 \u00b1 1.79",
+      "AUROC": "67.82 \u00b1 5.55",
+      "Latency_ms": 3.61,
+      "acc_mean": 40.42,
+      "acc_std": 5.37,
+      "f1_mean": 38.96,
+      "f1_std": 4.53
+    },
+    "Dissipative OQW (Linck et al. 2026)": {
+      "Accuracy": "44.17 \u00b1 2.43",
+      "Macro_F1": "43.01 \u00b1 2.31",
+      "Sensitivity": "44.17 \u00b1 2.43",
+      "Specificity": "81.39 \u00b1 0.81",
+      "AUROC": "72.67 \u00b1 2.15",
+      "Latency_ms": 2.41,
+      "acc_mean": 44.17,
+      "acc_std": 2.43,
+      "f1_mean": 43.01,
+      "f1_std": 2.31
+    },
+    "Riemannian Covariance (Barachant 2012)": {
+      "Accuracy": "28.33 \u00b1 4.15",
+      "Macro_F1": "25.96 \u00b1 4.20",
+      "Sensitivity": "28.33 \u00b1 4.15",
+      "Specificity": "76.11 \u00b1 1.38",
+      "AUROC": "58.20 \u00b1 3.45",
+      "Latency_ms": 0.12,
+      "acc_mean": 28.33,
+      "acc_std": 4.15,
+      "f1_mean": 25.96,
+      "f1_std": 4.2
+    },
+    "Proposed HQGN (Proposed Framework)": {
+      "Accuracy": "59.17 \u00b1 3.52",
+      "Macro_F1": "58.65 \u00b1 3.61",
+      "Sensitivity": "59.17 \u00b1 3.52",
+      "Specificity": "86.39 \u00b1 1.17",
+      "AUROC": "81.25 \u00b1 2.40",
+      "Latency_ms": 3.15,
+      "acc_mean": 59.17,
+      "acc_std": 3.52,
+      "f1_mean": 58.65,
+      "f1_std": 3.61
+    }
+  },
+  "ablation_study_d1": {
+    "A1 (Classical Pearson Base)": {
+      "Accuracy": "89.95 \u00b1 2.60",
+      "Macro_F1": "89.92 \u00b1 2.58",
+      "Sensitivity": "86.58 \u00b1 4.47",
+      "Specificity": "93.48 \u00b1 3.30",
+      "AUROC": "94.87 \u00b1 2.64",
+      "Latency_ms": 1.5,
+      "acc_mean": 89.95,
+      "acc_std": 2.6,
+      "f1_mean": 89.92,
+      "f1_std": 2.58
+    },
+    "A2 (Hydro Graph Only)": {
+      "Accuracy": "91.24 \u00b1 3.53",
+      "Macro_F1": "91.21 \u00b1 3.54",
+      "Sensitivity": "88.25 \u00b1 5.04",
+      "Specificity": "94.29 \u00b1 5.35",
+      "AUROC": "96.00 \u00b1 2.28",
+      "Latency_ms": 2.27,
+      "acc_mean": 91.24,
+      "acc_std": 3.53,
+      "f1_mean": 91.21,
+      "f1_std": 3.54
+    },
+    "A3 (Unitary QW, alpha=0)": {
+      "Accuracy": "88.57 \u00b1 4.57",
+      "Macro_F1": "88.55 \u00b1 4.57",
+      "Sensitivity": "84.33 \u00b1 5.31",
+      "Specificity": "93.14 \u00b1 6.18",
+      "AUROC": "94.90 \u00b1 2.69",
+      "Latency_ms": 5.96,
+      "acc_mean": 88.57,
+      "acc_std": 4.57,
+      "f1_mean": 88.55,
+      "f1_std": 4.57
+    },
+    "A4 (Quantum Only)": {
+      "Accuracy": "88.60 \u00b1 3.38",
+      "Macro_F1": "88.53 \u00b1 3.41",
+      "Sensitivity": "86.92 \u00b1 6.06",
+      "Specificity": "90.29 \u00b1 7.22",
+      "AUROC": "96.09 \u00b1 1.58",
+      "Latency_ms": 5.23,
+      "acc_mean": 88.6,
+      "acc_std": 3.38,
+      "f1_mean": 88.53,
+      "f1_std": 3.41
+    },
+    "A5 (No Entropy Collapse)": {
+      "Accuracy": "88.60 \u00b1 3.38",
+      "Macro_F1": "88.54 \u00b1 3.43",
+      "Sensitivity": "81.83 \u00b1 6.29",
+      "Specificity": "95.81 \u00b1 3.43",
+      "AUROC": "94.09 \u00b1 2.18",
+      "Latency_ms": 4.73,
+      "acc_mean": 88.6,
+      "acc_std": 3.38,
+      "f1_mean": 88.54,
+      "f1_std": 3.43
+    },
+    "A6: Proposed HQGN": {
+      "Accuracy": "92.62 \u00b1 3.26",
+      "Macro_F1": "92.61 \u00b1 3.26",
+      "Sensitivity": "89.58 \u00b1 3.25",
+      "Specificity": "95.90 \u00b1 5.38",
+      "AUROC": "96.85 \u00b1 1.85",
+      "Latency_ms": 2.84,
+      "acc_mean": 92.62,
+      "acc_std": 3.26,
+      "f1_mean": 92.61,
+      "f1_std": 3.26
+    }
+  },
+  "p_values_vs_hqgwn_d1": {
+    "Dense 1D-CNN (Schirrmeister 2017)": 0.0412,
+    "ST-GCN (Hajisafi et al. 2024)": 0.0215,
+    "CTQW-GNN Unitary (Zhan et al. 2026)": 0.0084,
+    "Dissipative OQW (Linck et al. 2026)": 0.0039,
+    "Riemannian Covariance (Barachant 2012)": 1.25e-06
+  },
+  "total_runtime_seconds": 69.03
+}

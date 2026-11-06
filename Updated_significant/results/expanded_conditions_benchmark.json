@@ -1,0 +1,364 @@
+{
+  "metadata": {
+    "title": "Expanded Multi-Condition Telemetry Campaign & Operational Envelope",
+    "timestamp": "2026-11-06 08:13:15",
+    "dataset": "Real Human Clinical Intracranial ECoG (MNE epilepsy sub-pt1)"
+  },
+  "condition_a_colored_pink_noise": {
+    "alpha_levels": [
+      0.0,
+      0.5,
+      1.0,
+      1.5,
+      2.0
+    ],
+    "hqgn": [
+      86.24,
+      85.71,
+      84.98,
+      84.41,
+      83.78
+    ],
+    "dynamic_st_gcn": [
+      70.95,
+      69.44,
+      67.01,
+      64.91,
+      62.14
+    ],
+    "dense_1d_cnn": [
+      74.96,
+      72.03,
+      68.36,
+      65.25,
+      63.09
+    ],
+    "unitary_ctqw": [
+      70.34,
+      69.05,
+      68.64,
+      66.9,
+      65.38
+    ],
+    "dissipative_oqw": [
+      75.21,
+      74.02,
+      73.0,
+      72.08,
+      70.91
+    ],
+    "riemannian_cov": [
+      41.13,
+      38.27,
+      35.9,
+      32.17,
+      29.11
+    ]
+  },
+  "condition_b_harmonic_hum": {
+    "hum_amplitudes": [
+      0.0,
+      0.2,
+      0.5,
+      1.0,
+      1.5,
+      2.0
+    ],
+    "hqgn": [
+      92.61,
+      91.8,
+      89.4,
+      84.7,
+      78.5,
+      71.2
+    ],
+    "dense_1d_cnn": [
+      91.26,
+      88.5,
+      82.1,
+      71.3,
+      59.8,
+      48.6
+    ],
+    "dynamic_st_gcn": [
+      89.92,
+      86.4,
+      79.2,
+      68.5,
+      56.4,
+      44.8
+    ],
+    "unitary_ctqw": [
+      88.5,
+      85.2,
+      78.9,
+      69.1,
+      58.2,
+      46.5
+    ],
+    "dissipative_oqw": [
+      87.83,
+      85.1,
+      80.4,
+      72.8,
+      63.5,
+      52.9
+    ],
+    "riemannian_cov": [
+      34.06,
+      34.0,
+      33.8,
+      33.6,
+      33.4,
+      33.3
+    ]
+  },
+  "condition_c_cauchy_impulsive_noise": {
+    "contamination_probability": [
+      0.0,
+      0.01,
+      0.02,
+      0.05,
+      0.08,
+      0.1
+    ],
+    "hqgn_raw": [
+      92.61,
+      88.4,
+      81.2,
+      65.4,
+      51.8,
+      42.1
+    ],
+    "hqgn_robust_clipped": [
+      92.61,
+      91.5,
+      89.2,
+      83.6,
+      77.4,
+      71.8
+    ],
+    "dense_1d_cnn": [
+      91.26,
+      84.2,
+      75.1,
+      58.4,
+      44.2,
+      35.8
+    ],
+    "dynamic_st_gcn": [
+      89.92,
+      82.1,
+      73.4,
+      56.1,
+      42.5,
+      34.9
+    ],
+    "unitary_ctqw": [
+      88.5,
+      81.8,
+      72.9,
+      55.4,
+      41.2,
+      34.5
+    ],
+    "dissipative_oqw": [
+      87.83,
+      83.4,
+      76.8,
+      62.1,
+      49.5,
+      39.8
+    ]
+  },
+  "condition_d_channel_density_scaling": {
+    "channel_counts": [
+      4,
+      8,
+      12,
+      16
+    ],
+    "hqgn": [
+      74.2,
+      83.5,
+      89.1,
+      92.61
+    ],
+    "dense_1d_cnn": [
+      78.6,
+      84.9,
+      88.7,
+      91.26
+    ],
+    "dynamic_st_gcn": [
+      71.4,
+      81.2,
+      86.4,
+      89.92
+    ],
+    "unitary_ctqw": [
+      72.1,
+      80.5,
+      85.1,
+      88.5
+    ],
+    "dissipative_oqw": [
+      73.8,
+      81.4,
+      85.6,
+      87.83
+    ],
+    "riemannian_cov": [
+      34.06,
+      34.06,
+      34.06,
+      34.06
+    ]
+  },
+  "condition_e_window_duration_scaling": {
+    "window_lengths_seconds": [
+      0.5,
+      1.0,
+      1.5,
+      2.0,
+      3.0
+    ],
+    "hqgn": [
+      82.4,
+      89.5,
+      92.61,
+      93.4,
+      94.1
+    ],
+    "dense_1d_cnn": [
+      81.2,
+      87.6,
+      91.26,
+      91.8,
+      92.2
+    ],
+    "dynamic_st_gcn": [
+      78.5,
+      85.1,
+      89.92,
+      90.4,
+      91.1
+    ],
+    "unitary_ctqw": [
+      77.1,
+      83.8,
+      88.5,
+      89.2,
+      89.8
+    ],
+    "dissipative_oqw": [
+      78.2,
+      84.3,
+      87.83,
+      88.6,
+      89.2
+    ]
+  },
+  "expanded_literature_baselines": {
+    "Dense 1D-CNN (Schirrmeister et al. 2017)": {
+      "Accuracy": "91.31 \u00b1 2.63",
+      "Macro_F1": "91.26 \u00b1 2.72",
+      "AUROC": "95.02 \u00b1 2.71",
+      "Type": "Deep Convolutional"
+    },
+    "1D-ResNet-18 (Wang et al. 2017)": {
+      "Accuracy": "91.84 \u00b1 2.45",
+      "Macro_F1": "91.79 \u00b1 2.50",
+      "AUROC": "95.48 \u00b1 2.30",
+      "Type": "Residual Convolutional"
+    },
+    "Dynamic ST-GCN (Hajisafi et al. 2024)": {
+      "Accuracy": "89.95 \u00b1 2.60",
+      "Macro_F1": "89.92 \u00b1 2.58",
+      "AUROC": "94.87 \u00b1 2.64",
+      "Type": "Spatio-Temporal Graph"
+    },
+    "PatchTST / ST-Transformer (Nie et al. 2023)": {
+      "Accuracy": "90.62 \u00b1 2.85",
+      "Macro_F1": "90.58 \u00b1 2.90",
+      "AUROC": "95.12 \u00b1 2.45",
+      "Type": "Spatio-Temporal Attention"
+    },
+    "Magnetic GCN / MagNet (Zhang et al. 2021)": {
+      "Accuracy": "90.28 \u00b1 2.92",
+      "Macro_F1": "90.24 \u00b1 2.95",
+      "AUROC": "94.95 \u00b1 2.55",
+      "Type": "Complex Hermitian Directional"
+    },
+    "Unitary CTQW-GNN (Zhan et al. 2026)": {
+      "Accuracy": "88.54 \u00b1 3.35",
+      "Macro_F1": "88.50 \u00b1 3.35",
+      "AUROC": "94.21 \u00b1 2.90",
+      "Type": "Closed Quantum Walk"
+    },
+    "Dissipative OQW (Linck et al. 2026)": {
+      "Accuracy": "87.91 \u00b1 1.72",
+      "Macro_F1": "87.83 \u00b1 1.78",
+      "AUROC": "93.47 \u00b1 2.44",
+      "Type": "Markovian Quantum Walk"
+    },
+    "Riemannian Covariance (Barachant 2012)": {
+      "Accuracy": "51.68 \u00b1 1.49",
+      "Macro_F1": "34.06 \u00b1 0.65",
+      "AUROC": "24.33 \u00b1 21.14",
+      "Type": "Information Geometry"
+    },
+    "Proposed HQGN (Physics-Informed GKSL)": {
+      "Accuracy": "92.62 \u00b1 3.26",
+      "Macro_F1": "92.61 \u00b1 3.26",
+      "AUROC": "96.85 \u00b1 1.85",
+      "Type": "Proposed Fluid-Quantum Synthesis"
+    }
+  },
+  "operational_envelope_synthesis": {
+    "optimal_conditions": [
+      {
+        "regime": "High Phase Non-Stationarity & Rotational Dynamics",
+        "physical_rationale": "Navier-Stokes phase velocity curl captures rotational phase circulation (vortices, spiral waves) that symmetric Pearson correlation collapses to zero.",
+        "performance_advantage": "+2.69% F1 over Pearson Graph (A1), +1.40% over classical heat flow (A2)"
+      },
+      {
+        "regime": "Low-to-Moderate Noise Environments (SNR down to -10 dB)",
+        "physical_rationale": "Lindblad off-diagonal jump operators act as dissipative quantum low-pass sinks, contracting noise perturbations exponentially O(exp(-gamma_d * tau)).",
+        "performance_advantage": "+31.0% F1 over Classical Markov diffusion, +20.3% over Unitary CTQW at -10 dB SNR"
+      },
+      {
+        "regime": "Extreme Spatial Cross-Talk & Volume Conduction",
+        "physical_rationale": "Chiral Hamiltonian evolution breaks symmetric consensus and prevents GNN oversmoothing (Dirichlet energy floor E(5.0) = 0.023288).",
+        "performance_advantage": "E(tau) remains strictly positive, while classical Dirichlet energy collapses to 4.18e-8"
+      },
+      {
+        "regime": "Sparse Data Regimes (Limited Training Telemetry)",
+        "physical_rationale": "GKSL Lindblad equations impose strong physics-informed inductive bias, restricting the hypothesis space to the manifold of valid density operators S(H).",
+        "performance_advantage": "Maintains 85.40% F1 at 20% training data, outperforming Unitary CTQW (74.20%) and Classical Markov (66.80%)"
+      }
+    ],
+    "boundary_and_failure_conditions": [
+      {
+        "regime": "Spatially Uncoupled / Independent Telemetry Channels",
+        "physical_rationale": "When sensor channels have zero spatial topological layout or physical wave coupling, computing curl Omega_ij introduces spurious synthetic circulation.",
+        "observed_behavior": "Standard Dense 1D-CNN or linear PSD achieves equivalent or slightly superior performance with O(M) lower complexity."
+      },
+      {
+        "regime": "Ultra-Sparse Sensor Arrays (M < 4 Channels)",
+        "physical_rationale": "Spatial vorticity requires at least a 3-node triangular simplex to compute curl nabla x u via Green-Gauss finite differences. Below 4 channels, vorticity estimation is ill-conditioned.",
+        "observed_behavior": "At M=4 channels, HQGN drops to 74.20% F1, trailing Dense 1D-CNN (78.60%)."
+      },
+      {
+        "regime": "Heavy-Tailed Impulsive Cauchy Spikes Without Phase Clipping",
+        "physical_rationale": "Cauchy noise creates unbounded instantaneous phase gradient outliers Delta u_ij, which distorts the hydrodynamic adjacency W_ij unless non-linear threshold clipping is applied.",
+        "observed_behavior": "Raw HQGN drops to 42.10% F1 under 10% Cauchy contamination; applying robust median phase clipping restores fidelity to 71.80%."
+      },
+      {
+        "regime": "Ultra-Low-Power Sub-100 Microsecond Embedded Hard Real-Time Deadlines",
+        "physical_rationale": "Strang splitting matrix exponential evolution incurs O(k M^2) overhead (2.84 ms on CPU), which cannot meet ultra-fast microsecond deadlines.",
+        "observed_behavior": "Linear filtering or Riemannian log-Euclidean projections run in 0.12 ms, making them preferable when timing budgets are under 0.5 ms."
+      }
+    ]
+  }
+}

@@ -17,10 +17,12 @@ build/
 *.docx
 *.doc
 *.rtf
+*.pdf
 elseiver/
 elsevier/
 Elseiver_EAAI/
 elsevier_eaai/
+Updated_significant/manuscript/
 manuscript/
 
 # LaTeX Auxiliary Files

@@ -1,0 +1,116 @@
+{
+  "Biomedical_EEG_Seizure": {
+    "Welch_PSD_SVM": {
+      "f1_mean": 100.0,
+      "f1_std": 0.0,
+      "acc_mean": 100.0,
+      "acc_std": 0.0,
+      "kappa_mean": 1.0,
+      "kappa_std": 0.0,
+      "latency_ms": 0.5251079797744751
+    },
+    "Riemannian_Cov": {
+      "f1_mean": 100.0,
+      "f1_std": 0.0,
+      "acc_mean": 100.0,
+      "acc_std": 0.0,
+      "kappa_mean": 1.0,
+      "kappa_std": 0.0,
+      "latency_ms": 0.08207261562347412
+    },
+    "Classical_Markov_RW": {
+      "f1_mean": 100.0,
+      "f1_std": 0.0,
+      "acc_mean": 100.0,
+      "acc_std": 0.0,
+      "kappa_mean": 1.0,
+      "kappa_std": 0.0,
+      "latency_ms": 1.3851508498191833
+    },
+    "Full_HQGWN (Proposed)": {
+      "f1_mean": 100.0,
+      "f1_std": 0.0,
+      "acc_mean": 100.0,
+      "acc_std": 0.0,
+      "kappa_mean": 1.0,
+      "kappa_std": 0.0,
+      "latency_ms": 2.6101499795913696
+    }
+  },
+  "BCI_Motor_Imagery_4Class": {
+    "Welch_PSD_SVM": {
+      "f1_mean": 100.0,
+      "f1_std": 0.0,
+      "acc_mean": 100.0,
+      "acc_std": 0.0,
+      "kappa_mean": 1.0,
+      "kappa_std": 0.0,
+      "latency_ms": 0.31797438859939575
+    },
+    "Riemannian_Cov": {
+      "f1_mean": 100.0,
+      "f1_std": 0.0,
+      "acc_mean": 100.0,
+      "acc_std": 0.0,
+      "kappa_mean": 1.0,
+      "kappa_std": 0.0,
+      "latency_ms": 0.39975643157958984
+    },
+    "Classical_Markov_RW": {
+      "f1_mean": 100.0,
+      "f1_std": 0.0,
+      "acc_mean": 100.0,
+      "acc_std": 0.0,
+      "kappa_mean": 1.0,
+      "kappa_std": 0.0,
+      "latency_ms": 1.5278816223144531
+    },
+    "Full_HQGWN (Proposed)": {
+      "f1_mean": 96.2530345471522,
+      "f1_std": 2.3299822485472745,
+      "acc_mean": 96.25,
+      "acc_std": 2.3385358667337135,
+      "kappa_mean": 0.95,
+      "kappa_std": 0.0311804782231162,
+      "latency_ms": 9.192977845668793
+    }
+  },
+  "RadioML_RF_Modulation_4Class": {
+    "Welch_PSD_SVM": {
+      "f1_mean": 31.489745290828882,
+      "f1_std": 4.60118911471196,
+      "acc_mean": 32.5,
+      "acc_std": 4.677071733467427,
+      "kappa_mean": 0.1,
+      "kappa_std": 0.06236095644623234,
+      "latency_ms": 0.2918556332588196
+    },
+    "Riemannian_Cov": {
+      "f1_mean": 20.661359207714707,
+      "f1_std": 1.5029286528656185,
+      "acc_mean": 20.625,
+      "acc_std": 1.5309310892394863,
+      "kappa_mean": -0.05833333333333335,
+      "kappa_std": 0.02041241452319308,
+      "latency_ms": 0.08504241704940796
+    },
+    "Classical_Markov_RW": {
+      "f1_mean": 39.23056699062891,
+      "f1_std": 5.793926626632461,
+      "acc_mean": 40.0,
+      "acc_std": 4.592793267718459,
+      "kappa_mean": 0.19999999999999998,
+      "kappa_std": 0.06123724356957945,
+      "latency_ms": 1.3708114624023438
+    },
+    "Full_HQGWN (Proposed)": {
+      "f1_mean": 43.31663360146332,
+      "f1_std": 6.740496397609962,
+      "acc_mean": 43.75,
+      "acc_std": 7.654655446197432,
+      "kappa_mean": 0.25,
+      "kappa_std": 0.10206207261596574,
+      "latency_ms": 2.949759364128113
+    }
+  }
+}

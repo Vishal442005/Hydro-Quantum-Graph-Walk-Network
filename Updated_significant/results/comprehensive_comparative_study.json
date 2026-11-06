@@ -1,0 +1,189 @@
+{
+  "clinical_comparison": {
+    "Dense 1D-CNN (Schirrmeister 2017)": {
+      "Accuracy": "91.31 \u00b1 2.63",
+      "Macro_F1": "91.26 \u00b1 2.72",
+      "Sensitivity": "87.25 \u00b1 4.81",
+      "Specificity": "94.67 \u00b1 3.67",
+      "AUROC": "95.02 \u00b1 2.71",
+      "Latency_ms": 0.68,
+      "acc_mean": 91.31,
+      "acc_std": 2.63,
+      "f1_mean": 91.26,
+      "f1_std": 2.72
+    },
+    "ST-GCN (Hajisafi et al. 2024)": {
+      "Accuracy": "89.95 \u00b1 2.60",
+      "Macro_F1": "89.92 \u00b1 2.58",
+      "Sensitivity": "86.58 \u00b1 4.47",
+      "Specificity": "93.48 \u00b1 3.30",
+      "AUROC": "94.87 \u00b1 2.64",
+      "Latency_ms": 1.52,
+      "acc_mean": 89.95,
+      "acc_std": 2.6,
+      "f1_mean": 89.92,
+      "f1_std": 2.58
+    },
+    "CTQW-GNN Unitary (Zhan et al. 2026)": {
+      "Accuracy": "88.54 \u00b1 3.35",
+      "Macro_F1": "88.50 \u00b1 3.35",
+      "Sensitivity": "84.42 \u00b1 5.41",
+      "Specificity": "93.38 \u00b1 4.32",
+      "AUROC": "94.21 \u00b1 2.90",
+      "Latency_ms": 2.98,
+      "acc_mean": 88.54,
+      "acc_std": 3.35,
+      "f1_mean": 88.5,
+      "f1_std": 3.35
+    },
+    "Dissipative OQW (Linck et al. 2026)": {
+      "Accuracy": "87.91 \u00b1 1.72",
+      "Macro_F1": "87.83 \u00b1 1.78",
+      "Sensitivity": "86.92 \u00b1 7.39",
+      "Specificity": "88.95 \u00b1 7.15",
+      "AUROC": "93.47 \u00b1 2.44",
+      "Latency_ms": 2.29,
+      "acc_mean": 87.91,
+      "acc_std": 1.72,
+      "f1_mean": 87.83,
+      "f1_std": 1.78
+    },
+    "Riemannian Covariance (Barachant 2012)": {
+      "Accuracy": "51.68 \u00b1 1.49",
+      "Macro_F1": "34.06 \u00b1 0.65",
+      "Sensitivity": "100.00 \u00b1 0.00",
+      "Specificity": "0.00 \u00b1 0.00",
+      "AUROC": "24.33 \u00b1 21.14",
+      "Latency_ms": 0.12,
+      "acc_mean": 51.68,
+      "acc_std": 1.49,
+      "f1_mean": 34.06,
+      "f1_std": 0.65
+    },
+    "Proposed HQGN (Proposed Framework)": {
+      "Accuracy": "92.62 \u00b1 3.26",
+      "Macro_F1": "92.61 \u00b1 3.26",
+      "Sensitivity": "89.58 \u00b1 3.25",
+      "Specificity": "95.90 \u00b1 5.38",
+      "AUROC": "96.85 \u00b1 1.85",
+      "Latency_ms": 2.84,
+      "acc_mean": 92.62,
+      "acc_std": 3.26,
+      "f1_mean": 92.61,
+      "f1_std": 3.26
+    }
+  },
+  "sample_efficiency": {
+    "ratios": [
+      0.2,
+      0.4,
+      0.6,
+      0.8,
+      1.0
+    ],
+    "curves": {
+      "Proposed HQGN": [
+        85.4,
+        88.6,
+        90.7,
+        91.9,
+        92.61
+      ],
+      "Unitary CTQW (Zhan 2026)": [
+        74.2,
+        78.5,
+        82.1,
+        85.3,
+        88.55
+      ],
+      "Classical Markov GNN": [
+        66.8,
+        72.4,
+        79.5,
+        85.1,
+        89.92
+      ]
+    }
+  },
+  "dirichlet_energy": {
+    "times": [
+      0.0,
+      0.5,
+      1.0,
+      1.5,
+      2.0,
+      2.5,
+      3.0,
+      3.5,
+      4.0,
+      4.5,
+      5.0
+    ],
+    "classical": [
+      0.245,
+      0.1486,
+      0.0901,
+      0.0546,
+      0.0331,
+      0.0201,
+      0.0122,
+      0.0074,
+      0.0045,
+      0.0027,
+      0.0016
+    ],
+    "unitary_ctqw": [
+      0.245,
+      0.2312,
+      0.2481,
+      0.2154,
+      0.239,
+      0.2223,
+      0.2415,
+      0.228,
+      0.2351,
+      0.2195,
+      0.2304
+    ],
+    "hqgwn": [
+      0.245,
+      0.1852,
+      0.1421,
+      0.1102,
+      0.0864,
+      0.0682,
+      0.0541,
+      0.0432,
+      0.0348,
+      0.0281,
+      0.0233
+    ]
+  },
+  "walk_time_sensitivity": {
+    "tau_vals": [
+      0.2,
+      0.5,
+      1.0,
+      1.5,
+      2.0,
+      3.0,
+      4.0,
+      6.0,
+      8.0,
+      10.0
+    ],
+    "macro_f1": [
+      90.55,
+      92.45,
+      90.57,
+      92.45,
+      86.79,
+      88.68,
+      84.77,
+      84.86,
+      90.55,
+      90.51
+    ]
+  },
+  "execution_time_seconds": 28.87
+}
