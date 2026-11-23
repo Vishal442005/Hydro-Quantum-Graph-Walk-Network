@@ -36,11 +36,15 @@ def run_audit():
     
     # Check figures
     images = doc._element.xpath('//a:blip')
-    print(f"  [{'OK' if len(images) == 12 else 'FAIL'}] Embedded 300 DPI Images: {len(images)} found (12 target)")
+    print(f"  [{'OK' if len(images) == 14 else 'FAIL'}] Embedded 300 DPI Images: {len(images)} found (14 target)")
     
     # Check Section 6.8
     has_sec68 = any("6.8." in p.text for p in doc.paragraphs)
     print(f"  [{'OK' if has_sec68 else 'FAIL'}] Section 6.8 (Operational Envelope): {'Found' if has_sec68 else 'Missing'}")
+    
+    # Check Section 7.4 (Global Generality Synthesis)
+    has_sec74 = any("7.4." in p.text for p in doc.paragraphs)
+    print(f"  [{'OK' if has_sec74 else 'FAIL'}] Section 7.4 (Global Generality Synthesis): {'Found' if has_sec74 else 'Missing'}")
     
     # Double-Blind Check (Author details must NOT appear in blinded manuscript text)
     full_text = " ".join([p.text for p in doc.paragraphs]).lower()
@@ -72,10 +76,10 @@ def run_audit():
         print("  [FAIL] Missing Response_to_Editor_and_Reviewers.docx")
         all_passed = False
 
-    # 4. Check Figures (1 to 12)
+    # 4. Check Figures (1 to 14)
     print("\n>>> 4. FIGURES INTEGRITY AUDIT (figures/):")
     fig_dir = os.path.join(base_dir, "figures")
-    for i in range(1, 13):
+    for i in range(1, 15):
         png_candidates = [f for f in os.listdir(fig_dir) if f.startswith(f"fig{i}_") and f.endswith(".png")]
         pdf_candidates = [f for f in os.listdir(fig_dir) if f.startswith(f"fig{i}_") and f.endswith(".pdf")]
         has_png = len(png_candidates) > 0
